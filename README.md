@@ -26,13 +26,13 @@ During the program, I gained exposure to the following key areas:
 
 | Service | Purpose |
 |---------|---------|
-| **EC2** 🖥️ | Compute instances for scalable applications |
-| **S3** 📦 | Object storage for data persistence |
-| **IAM** 🔐 | Identity and access management |
-| **VPC** 🌐 | Virtual private cloud networking |
-| **RDS** 🗄️ | Managed relational databases |
-| **Lambda** ⚡ | Serverless compute functions |
-| **CloudWatch** 📊 | Monitoring and logging |
+| ![EC2](assets/icons/EC2.png)  **EC2** | Compute instances for scalable applications |
+| ![S3](assets/icons/S3.png)  **S3** | Object storage for data persistence |
+| ![IAM](assets/icons/IAM.png)  **IAM** | Identity and access management |
+| ![VPC](assets/icons/VPC.png)  **VPC** | Virtual private cloud networking |
+| ![RDS](assets/icons/RDS.png)  **RDS** | Managed relational databases |
+| ![Lambda](assets/icons/Lambda.png)  **Lambda** | Serverless compute functions |
+| ![CloudWatch](assets/icons/CloudWatch.png)  **CloudWatch** | Monitoring and logging |
 
 ### 🌐 Networking & Security
 - 🔌 Networking basics (CIDR, subnets, routing)
@@ -68,7 +68,9 @@ aws-restart-portfolio/
 │   ├── 🌐 Networking/
 │   ├── 🖥️ Compute/
 │   ├── 💾 Storage/
+|   ├── 📊 Database
 │   └── 🔒 Security/
+|   
 ├── 🚀 Projects/
 ├── 🎓 Certs-Badges/
 └── README.md
