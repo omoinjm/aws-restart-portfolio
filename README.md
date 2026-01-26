@@ -54,25 +54,21 @@ During the program, I gained exposure to the following key areas:
 - ✨ Working with labs, tasks, and outcomes
 
 ---
+
+## 📁 Repository Structure
+
 ```
-## R🧪 Labs/
+aws-restart-portfolio/
+├── 🧪 Labs/
 │   ├── 🌐 Networking/
 │   ├── 🖥️ Compute/
 │   ├── 💾 Storage/
-│   ├── 🔒 Security/
-│   └── 🗄️ Databases/
-│
+│   └── 🔒 Security/
 ├── 🚀 Projects/
-│
 ├── 🎓 Certs-Badges/
-│
-└── 📖
-├── Projects/
-│
-├── Certs-Badges/
-│
 └── README.md
 ```
+
 | Aspect | Impact |
 |--------|--------|
 | 🎯 **Practical Knowledge** | Demonstrates real AWS experience, not just theory |
