@@ -53,7 +53,7 @@ During the program, I gained exposure to the following key areas:
 - ✨ Working with labs, tasks, and outcomes
 
 ---
-
+```
 ## R🧪 Labs/
 │   ├── 🌐 Networking/
 │   ├── 🖥️ Compute/
@@ -87,15 +87,15 @@ During the program, I gained exposure to the following key areas:
 ┌─────────────────────────────────────────────────────┐
 │            🌟 AWS re/Start Program 🌟              │
 ├─────────────────────────────────────────────────────┤
-│  ☁️ COMPUTE         🗄️ DATABASES      🔒 SECURITY   │
-│  • EC2             • RDS            • IAM          │
-│  • Lambda          • DynamoDB       • VPC          │
-│  • ECS             • MongoDB        • CloudTrail   │
+│  ☁️ COMPUTE       🗄️ DATABASES     🔒 SECURITY     │
+│  • EC2             • RDS            • IAM           │
+│  • Lambda          • DynamoDB       • VPC           │
+│  • ECS             • MongoDB        • CloudTrail    │
 │                                                     │
-│  💾 STORAGE        🌐 NETWORKING    🛠️ DEVOPS      │
-│  • S3              • VPC            • CloudWatch   │
+│  💾 STORAGE       🌐 NETWORKING   🛠️ DEVOPS        │
+│  • S3              • VPC            • CloudWatch    │
 │  • EBS             • Route 53       • CloudFormation│
-│  • Glacier         • ALB/NLB        • Git/GitHub   │
+│  • Glacier         • ALB/NLB        • Git/GitHub    │
 └─────────────────────────────────────────────────────┘
 ```
 
