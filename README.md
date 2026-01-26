@@ -19,17 +19,15 @@ During the program, I gained exposure to the following key areas:
 
 ### ☁️ Cloud Computing (AWS)
 
-```
-| Service            | Purpose                                     |
-|--------------------|---------------------------------------------|
-| **EC2** 🖥️         | Compute instances for scalable applications |
-| **S3** 📦          | Object storage for data persistence         |
-| **IAM** 🔐         | Identity and access management              |
-| **VPC** 🌐         | Virtual private cloud networking            |
-| **RDS** 🗄️         | Managed relational databases                |
-| **Lambda** ⚡      | Serverless compute functions                |
-| **CloudWatch** 📊  | Monitoring and logging                      |
-```
+| Service | Purpose |
+|---------|---------|
+| **EC2** 🖥️ | Compute instances for scalable applications |
+| **S3** 📦 | Object storage for data persistence |
+| **IAM** 🔐 | Identity and access management |
+| **VPC** 🌐 | Virtual private cloud networking |
+| **RDS** 🗄️ | Managed relational databases |
+| **Lambda** ⚡ | Serverless compute functions |
+| **CloudWatch** 📊 | Monitoring and logging |
 
 ### 🌐 Networking & Security
 - 🔌 Networking basics (CIDR, subnets, routing)
