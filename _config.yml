@@ -8,6 +8,8 @@ url: https://omoinjm.github.io/aws-restart-portfolio
 # Theme
 theme: jekyll-theme-hacker
 
+favicon: /favicon.ico
+
 # Plugins
 plugins:
   - jekyll-feed
