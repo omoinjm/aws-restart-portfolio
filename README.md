@@ -109,8 +109,3 @@ This is a **living repository** 🌱 and will be updated as I continue learning 
 **Nhlanhla Malaza** 👨‍💻  
 AWS re/Start Graduate 🎓  
 Aspiring Cloud Practitioner / Junior Cloud Engineer ☁️
-## Author
-
-**Nhlanhla Malaza**  
-AWS re/Start Graduate  
-Aspiring Cloud Practitioner / Junior Cloud Engineer
