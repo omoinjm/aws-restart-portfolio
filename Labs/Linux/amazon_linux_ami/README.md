@@ -30,3 +30,4 @@ The following images document the successful completion of the AWS EC2 Lab.
 #### Task 2: Exercise - Explore the Linux man pages
 
 ![Step 1](./assets/1.png)
+![Step 2](./assets/2.png)
