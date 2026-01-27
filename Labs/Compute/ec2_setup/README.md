@@ -9,11 +9,11 @@ For a detailed step-by-step guide on how this environment was configured, please
 ---
 
 ## ✅ Lab Results
-Below is the completion certificate/log for the setup. 
+Below is the completion certificate for the setup. Click the image to view the full PDF document.
 
-> **Note:** If the PDF does not display below, you can [download the file here](./lab_completion.pdf).
+[![Lab Completion Preview](https://placehold.co/600x400/2d333b/ffffff?text=Click+to+View+lab_completion.pdf)](./lab_completion.pdf)
 
-<embed src="./lab_completion.pdf" width="100%" height="600px" type="application/pdf">
+> **[📄 Open lab_completion.pdf directly](./lab_completion.pdf)**
 
 ---
 *Last updated: January 2026*
