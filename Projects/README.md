@@ -1,6 +1,6 @@
 # Projects
 
-[← Back](../)
+[🏠 Back to Home](../../README.md)
 
 ## Services Used
 

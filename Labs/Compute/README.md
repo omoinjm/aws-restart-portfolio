@@ -1,6 +1,6 @@
 # Compute Labs
 
-[← Back](../../)
+[⬅️ Back to Labs](../README.md)
 
 ## Services Used
 

@@ -1,6 +1,6 @@
 # Networking Labs
 
-[← Back](../../)
+[⬅️ Back to Labs](../README.md)
 
 ## Services Used
 
