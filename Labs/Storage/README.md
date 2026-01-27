@@ -1,22 +1,11 @@
-# Lab 3: S3 Bucket Creation and Permissions
+# Storage Labs
 
-## Objective
-To create an S3 bucket and manage access permissions securely.
+[← Back](../../)
 
-## AWS Services Used
-- Amazon S3
-- IAM
+## Services Used
 
-## Steps Performed
-1. Created an S3 bucket with a unique name
-2. Enabled versioning
-3. Configured bucket permissions
-4. Uploaded test objects
+*TODO*
 
-## Outcome
-- Secure S3 bucket created
-- Objects managed with version control
+## Key Tasks
 
-## Key Learnings
-- S3 storage concepts
-- Bucket-level vs object-level permissions
+*TODO*

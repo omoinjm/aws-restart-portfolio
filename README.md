@@ -65,13 +65,12 @@ During the program, I gained exposure to the following key areas:
 ```
 aws-restart-portfolio/
 ├── 🧪 Labs/
-│   ├── 🌐 Networking/
-│   ├── 🖥️ Compute/
-│   ├── 💾 Storage/
-|   ├── 📊 Database
-│   └── 🔒 Security/
-|   
-├── 🚀 Projects/
+│   ├── 🌐 [Networking/](./Labs/Networking/)
+│   ├── 🖥️ [Compute/](./Labs/Compute/)
+│   ├── 💾 [Storage/](./Labs/Storage/)
+│   ├── 📊 [Databases/](./Labs/Databases/)
+│   └── 🔒 [Security/](./Labs/Security/)
+├── 🚀 [Projects/](./Projects/)
 ├── 🎓 Certs-Badges/
 └── README.md
 ```
