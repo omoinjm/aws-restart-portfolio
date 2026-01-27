@@ -5,15 +5,19 @@
 This project contains the configuration steps and verification for the AWS EC2 laboratory environment.
 
 ## 📋 Instructions
+
 For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
-* [View AWS EC2 Lab Instructions](./aws_ec2_lab.md)
+
+- [View Instructions](./task.md)
 
 ---
 
 ## ✅ Lab Completion Results
+
 The following images document the successful completion of the AWS EC2 Lab.
 
 ### Documentation Gallery
+
 ![Step 1](./assets/1.jpeg)
 ![Step 2](./assets/2.jpeg)
 ![Step 3](./assets/3.jpeg)
@@ -35,8 +39,3 @@ The following images document the successful completion of the AWS EC2 Lab.
 ![Step 19](./assets/19.jpeg)
 ![Step 20](./assets/20.jpeg)
 ![Step 21](./assets/21.jpeg)
-
----
-> **Reference File:** [Download Full Lab Completion PDF](./lab_completion.pdf)
-
-*Last updated: January 2026*
