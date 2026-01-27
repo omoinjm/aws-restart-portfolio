@@ -26,6 +26,17 @@ Each subfolder contains markdown files describing:
 - Steps performed  
 - Key outcomes and learnings  
 
+## Folder Structure
+
+```
+Labs/
+├── 🌐 [Networking/](./Networking/README.md)
+├── 🖥️ [Compute/](./Compute/README.md)
+├── 💾 [Storage/](./Storage/README.md)
+├── 📊 [Databases/](./Databases/README.md)
+└── 🔒 [Security/](./Security/README.md)
+```
+
 ---
 
 *These labs provide evidence of hands-on AWS experience.*
