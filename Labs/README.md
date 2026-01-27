@@ -14,17 +14,18 @@ Each lab focuses on a specific AWS domain and is designed to reinforce practical
 
 ## Lab Categories
 
-- **Networking** – VPCs, subnets, routing, and connectivity  
-- **Compute** – EC2 instances and compute concepts  
-- **Storage** – S3 and storage fundamentals  
-- **Security** – IAM, permissions, and security best practices  
-- **Databases** – Relational and NoSQL database concepts  
+- **Networking** – VPCs, subnets, routing, and connectivity
+- **Compute** – EC2 instances and compute concepts
+- **Storage** – S3 and storage fundamentals
+- **Security** – IAM, permissions, and security best practices
+- **Databases** – Relational and NoSQL database concepts
 
 Each subfolder contains markdown files describing:
-- Lab objectives  
-- Services used  
-- Steps performed  
-- Key outcomes and learnings  
+
+- Lab objectives
+- Services used
+- Steps performed
+- Key outcomes and learnings
 
 ## Folder Structure
 
@@ -37,6 +38,12 @@ Labs/
 └── 🔒 [Security/](./Security/README.md)
 ```
 
+- 🧪 [Networking](./Networking/README.md)
+- 🚀 [Compute](./Compute/README.md)
+- 🎓 [Storage](./Storage/README.md)
+- 📊 [Databases](./Databases/README.md)
+- 🔒 [Security](./Security/README.md)
+
 ---
 
-*These labs provide evidence of hands-on AWS experience.*
+_These labs provide evidence of hands-on AWS experience._
