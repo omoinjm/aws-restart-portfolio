@@ -1,5 +1,7 @@
 # EC2 Setup Project
 
+[⬅️ Back to Compute Labs](../README.md)
+
 This project contains the configuration steps and verification for the AWS EC2 laboratory environment.
 
 ## 📋 Instructions
