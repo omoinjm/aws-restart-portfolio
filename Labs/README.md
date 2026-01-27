@@ -35,13 +35,16 @@ Labs/
 ├── 🖥️ [Compute/](./Compute/README.md)
 ├── 💾 [Storage/](./Storage/README.md)
 ├── 📊 [Databases/](./Databases/README.md)
+├── 👾 [Linux/](./Linux/README.md)
 └── 🔒 [Security/](./Security/README.md)
+
 ```
 
 - 🧪 [Networking](./Networking/README.md)
 - 🚀 [Compute](./Compute/README.md)
 - 🎓 [Storage](./Storage/README.md)
 - 📊 [Databases](./Databases/README.md)
+- 👾 [Linux](./Linux/README.md)
 - 🔒 [Security](./Security/README.md)
 
 ---
