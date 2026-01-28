@@ -1,12 +1,9 @@
----
-title: AWS re/Start Portfolio
+<!--
 type: directory
 path: .
 parent: null
 tags: [repo, obsidian, documentation, aws, portfolio, cloud]
-description: A portfolio documenting hands-on AWS labs and projects from the AWS re/Start Program
-author: Nhlanhla Malaza
----
+-->
 
 ## [![GitHub contributors](https://img.shields.io/github/contributors/omoinjm/aws-restart-portfolio)](https://github.com/omoinjm/aws-restart-portfolio/graphs/contributors/) [![GitHub Stars](https://img.shields.io/github/stars/omoinjm/aws-restart-portfolio.svg)](https://github.com/omoinjm/aws-restart-portfolio/stargazers)
 
