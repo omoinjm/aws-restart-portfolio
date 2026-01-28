@@ -8,8 +8,9 @@ tags: [repo, obsidian, documentation, labs, aws-restart]
 # Labs
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 📂 Current: [[./]]
+
+- ⬆ [Parent:](../README.md)
+- 📂 [Current:](./README.md)
 
 ## Overview
 
@@ -25,12 +26,12 @@ Each lab focuses on a specific AWS domain and is designed to reinforce practical
 
 ## Lab Categories
 
-- [[./Networking/README|Networking]] – VPCs, subnets, routing, and connectivity
-- [[./Compute/README|Compute]] – EC2 instances and compute concepts
-- [[./Storage/README|Storage]] – S3 and storage fundamentals
-- [[./Security/README|Security]] – IAM, permissions, and security best practices
-- [[./Databases/README|Databases]] – Relational and NoSQL database concepts
-- [[./Linux/README|Linux]] – Linux fundamentals and system administration
+- [Networking](./Networking/README.md) – VPCs, subnets, routing, and connectivity
+- [Compute](./Compute/README.md) – EC2 instances and compute concepts
+- [Storage](./Storage/README.md) – S3 and storage fundamentals
+- [Security](./Security/README.md) – IAM, permissions, and security best practices
+- [Databases](./Databases/README.md) – Relational and NoSQL database concepts
+- [Linux](./Linux/README.md) – Linux fundamentals and system administration
 
 ## Folder Structure
 
