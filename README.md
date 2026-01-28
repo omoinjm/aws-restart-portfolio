@@ -1,10 +1,3 @@
-<!--
-type: directory
-path: .
-parent: null
-tags: [repo, obsidian, documentation, aws, portfolio, cloud]
--->
-
 ## [![GitHub contributors](https://img.shields.io/github/contributors/omoinjm/aws-restart-portfolio)](https://github.com/omoinjm/aws-restart-portfolio/graphs/contributors/) [![GitHub Stars](https://img.shields.io/github/stars/omoinjm/aws-restart-portfolio.svg)](https://github.com/omoinjm/aws-restart-portfolio/stargazers)
 
 ![AWS re/Start Portfolio](assets/aws.png)
