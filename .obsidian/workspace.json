@@ -13,9 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Labs/Compute/README.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "README"
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Labs/Compute/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Labs/Compute/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "Labs/Compute/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -185,7 +185,16 @@
   },
   "active": "412efc99be0f940f",
   "lastOpenFiles": [
+    "Labs/Linux/amazon_linux_ami/README.md~",
+    "Labs/Linux/linux_cli/README.md~",
+    "Labs/Compute/ec2_setup/README.md~",
+    "Labs/Compute/README.md~",
     "Labs/Linux/users_and_groups/README.md~",
+    "Labs/Linux/README.md~",
+    "Labs/Linux/users_and_groups/task.md",
+    "Labs/README.md",
+    "README.md~",
+    "README.md",
     "Labs/Linux/users_and_groups/assets/4.5.png",
     "Labs/Linux/users_and_groups/assets/4.4.png",
     "Labs/Linux/users_and_groups/assets/4.3.png",
@@ -200,17 +209,10 @@
     "Labs/Linux/users_and_groups/assets/labsuser.pem",
     "Labs/Linux/users_and_groups/assets/8cf211f1-11fc-4ca3-bff6-3b116be7b455-0002.jpeg:Zone.Identifier",
     "Labs/Linux/users_and_groups/assets/8cf211f1-11fc-4ca3-bff6-3b116be7b455-0001.jpeg:Zone.Identifier",
-    "Labs/Linux/users_and_groups/assets/8cf211f1-11fc-4ca3-bff6-3b116be7b455-0000.jpeg:Zone.Identifier",
-    "_config.yml~",
-    "README.md~",
-    "Labs/README.md",
     "assets/icons/README.md",
     "assets/README.md",
     "Labs/Linux/users_and_groups/assets/README.md",
-    "Labs/Linux/users_and_groups/task.md",
-    "Labs/Linux/users_and_groups/assets",
     "Labs/Linux/users_and_groups/README.md",
-    "Labs/Linux/users_and_groups",
     "Labs/Linux/linux_cli/assets/README.md",
     "Labs/Linux/amazon_linux_ami/assets/README.md",
     "Labs/Compute/ec2_setup/assets/README.md"

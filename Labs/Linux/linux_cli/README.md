@@ -8,9 +8,12 @@ tags: [repo, obsidian, documentation, linux, cli]
 # Linux Command Line
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 🏠 Root: [[../../../README]]
-- 📂 Current: [[./]]
+
+- ⬆ [Parent:](../README.md)
+- 🏠 [Root:](../../README.md)
+- 📂 [Current:](./README.md)
+
+## Overview
 
 In this lab, you will:
 
@@ -21,18 +24,18 @@ In this lab, you will:
 
 For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
 
-- [[./task.md|View Instructions]]
+- [View Instructions](./task.md)
 
 ## Contents
 
-- `assets/` - [[./assets/README|Screenshots and supporting materials]]
+- `assets/` - Screenshots and supporting materials
 - `task.md` - Detailed lab instructions
 
 ---
 
 ## ✅ Lab Completion Results
 
-The following images document the successful completion of the AWS EC2 Lab.
+The following images document the successful completion of the Linux Command Line Lab.
 
 ### Documentation Gallery
 
