@@ -1,3 +1,10 @@
+---
+type: directory
+path: .
+parent: null
+tags: [repo, obsidian, documentation, aws, portfolio, cloud]
+---
+
 ## [![GitHub contributors](https://img.shields.io/github/contributors/omoinjm/aws-restart-portfolio)](https://github.com/omoinjm/aws-restart-portfolio/graphs/contributors/) [![GitHub Stars](https://img.shields.io/github/stars/omoinjm/aws-restart-portfolio.svg)](https://github.com/omoinjm/aws-restart-portfolio/stargazers)
 
 ![AWS re/Start Portfolio](assets/aws.png)
@@ -69,19 +76,23 @@ During the program, I gained exposure to the following key areas:
 ```
 aws-restart-portfolio/
 ├── 🧪 Labs/
-│   ├── 🌐 [Networking/](./Labs/Networking/README.md)
-│   ├── 🖥️ [Compute/](./Labs/Compute/README.md)
-│   ├── 💾 [Storage/](./Labs/Storage/README.md)
-│   ├── 📊 [Databases/](./Labs/Databases/README.md)
-│   └── 🔒 [Security/](./Labs/Security/README.md)
-├── 🚀 [Projects/](./Projects/README.md)
-├── 🎓 [Certs-Badges/](./Certs-Badges/README.md)
-└── README.md
+│   ├── 🌐 Networking/
+│   ├── 🖥️ Compute/
+│   ├── 💾 Storage/
+│   ├── 📊 Databases/
+│   ├── 🔒 Security/
+│   └── 👾 Linux/
+├── 🚀 Projects/
+├── 🎓 Certs-Badges/
+└── 📦 assets/
 ```
 
-- 🧪 [Labs](./Labs/README.md)
-- 🚀 [Projects](./Projects/README.md)
-- 🎓 [Certs-Badges](./Certs-Badges/README.md)
+## Navigation
+
+- [[./Labs/README|Labs]] - Hands-on AWS labs by service domain
+- [[./Projects/README|Projects]] - Portfolio projects showcasing skills
+- [[./Certs-Badges/README|Certs-Badges]] - Certifications and achievements
+- [[./assets/README|Assets]] - Shared resources and icons
 
 | Aspect                        | Impact                                                       |
 | ----------------------------- | ------------------------------------------------------------ |

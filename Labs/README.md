@@ -1,4 +1,15 @@
+---
+type: directory
+path: Labs
+parent: .
+tags: [repo, obsidian, documentation, labs, aws-restart]
+---
+
 # Labs
+
+## Navigation
+- ⬆ Parent: [[../README]]
+- 📂 Current: [[./]]
 
 ## Overview
 
@@ -14,11 +25,28 @@ Each lab focuses on a specific AWS domain and is designed to reinforce practical
 
 ## Lab Categories
 
-- **Networking** – VPCs, subnets, routing, and connectivity
-- **Compute** – EC2 instances and compute concepts
-- **Storage** – S3 and storage fundamentals
-- **Security** – IAM, permissions, and security best practices
-- **Databases** – Relational and NoSQL database concepts
+- [[./Networking/README|Networking]] – VPCs, subnets, routing, and connectivity
+- [[./Compute/README|Compute]] – EC2 instances and compute concepts
+- [[./Storage/README|Storage]] – S3 and storage fundamentals
+- [[./Security/README|Security]] – IAM, permissions, and security best practices
+- [[./Databases/README|Databases]] – Relational and NoSQL database concepts
+- [[./Linux/README|Linux]] – Linux fundamentals and system administration
+
+## Folder Structure
+
+```
+Labs/
+├── 🌐 Networking/
+├── 🖥️ Compute/
+│   └── ec2_setup/
+├── 💾 Storage/
+├── 📊 Databases/
+├── 👾 Linux/
+│   ├── amazon_linux_ami/
+│   ├── linux_cli/
+│   └── users_and_groups/
+└── 🔒 Security/
+```
 
 Each subfolder contains markdown files describing:
 
@@ -26,26 +54,6 @@ Each subfolder contains markdown files describing:
 - Services used
 - Steps performed
 - Key outcomes and learnings
-
-## Folder Structure
-
-```
-Labs/
-├── 🌐 [Networking/](./Networking/README.md)
-├── 🖥️ [Compute/](./Compute/README.md)
-├── 💾 [Storage/](./Storage/README.md)
-├── 📊 [Databases/](./Databases/README.md)
-├── 👾 [Linux/](./Linux/README.md)
-└── 🔒 [Security/](./Security/README.md)
-
-```
-
-- 🧪 [Networking](./Networking/README.md)
-- 🚀 [Compute](./Compute/README.md)
-- 🎓 [Storage](./Storage/README.md)
-- 📊 [Databases](./Databases/README.md)
-- 👾 [Linux](./Linux/README.md)
-- 🔒 [Security](./Security/README.md)
 
 ---
 

@@ -1,6 +1,16 @@
+---
+type: directory
+path: Labs/Compute/ec2_setup
+parent: Labs/Compute
+tags: [repo, obsidian, documentation, aws, ec2, compute]
+---
+
 # EC2 Setup Project
 
-[⬅️ Back to Compute Labs](../README.md)
+## Navigation
+- ⬆ Parent: [[../README]]
+- 🏠 Root: [[../../../README]]
+- 📂 Current: [[./]]
 
 This project contains the configuration steps and verification for the AWS EC2 laboratory environment.
 
@@ -8,7 +18,12 @@ This project contains the configuration steps and verification for the AWS EC2 l
 
 For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
 
-- [View Instructions](./task.md)
+- [[./task.md|View Instructions]]
+
+## Contents
+
+- `assets/` - [[./assets/README|Screenshots and supporting materials]]
+- `task.md` - Detailed lab instructions
 
 ---
 

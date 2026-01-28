@@ -1,6 +1,16 @@
+---
+type: directory
+path: Labs/Linux/linux_cli
+parent: Labs/Linux
+tags: [repo, obsidian, documentation, linux, cli]
+---
+
 # Linux Command Line
 
-[⬅️ Back to Linux Labs](../README.md)
+## Navigation
+- ⬆ Parent: [[../README]]
+- 🏠 Root: [[../../../README]]
+- 📂 Current: [[./]]
 
 In this lab, you will:
 
@@ -11,7 +21,12 @@ In this lab, you will:
 
 For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
 
-- [View Instructions](./task.md)
+- [[./task.md|View Instructions]]
+
+## Contents
+
+- `assets/` - [[./assets/README|Screenshots and supporting materials]]
+- `task.md` - Detailed lab instructions
 
 ---
 
