@@ -1,6 +1,10 @@
 title: AWS re/Start Portfolio
 description: A portfolio documenting hands-on AWS labs and projects from the AWS re/Start Program
 author: Nhlanhla Malaza
+type: directory
+path: .
+parent: null
+tags: [repo, obsidian, documentation, aws, portfolio, cloud]
 
 url: https://omoinjm.github.io/aws-restart-portfolio
 
