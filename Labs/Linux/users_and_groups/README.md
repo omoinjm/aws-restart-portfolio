@@ -8,6 +8,7 @@ tags: [repo, obsidian, documentation, linux, aws-restart]
 # Users and Groups
 
 ## Navigation
+
 - ⬆ Parent: [[../README]]
 - 🏠 Root: [[../../../README]]
 - 📂 Current: [[./]]
@@ -16,21 +17,45 @@ tags: [repo, obsidian, documentation, linux, aws-restart]
 
 This lab focuses on **Linux user and group management**—fundamental system administration tasks. Covers creating users, managing groups, setting permissions, and understanding the Linux permission model.
 
+## 📋 Instructions
+
+For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
+
+- [[./task.md|View Instructions]
+
 ## Contents
 
-- `assets/` - Supporting materials and screenshots for this lab
-- Lab documentation files on user/group concepts and procedures
+- `assets/` - [[./assets/README|Screenshots and supporting materials]]
+- `task.md` - Detailed lab instructions
 
-## Responsibilities
+## ✅ Lab Completion Results
 
-This directory demonstrates understanding of:
-- User account creation and management
-- Group administration
-- File permissions and ownership
-- Access control in Linux
+The following images document the successful completion of the Managing Users and Groups Lab.
 
-## Relationships
+### Task 1: Use SSH to connect to an Amazon Linux EC2 instance
 
-- Part of: [[../README|Linux Labs]]
-- Related labs: [[../linux_cli/README|Linux CLI]], [[../amazon_linux_ami/README|Amazon Linux AMI]]
-- Domain: [[../../README|Cloud Labs - Linux]]
+![Step 1](./assets/1.1.jpeg)
+![Step 2](./assets/1.2.jpeg)
+![Step 3](./assets/1.3.jpeg)
+![Step 4](./assets/1.4.png)
+
+### Task 2: Create Users
+
+![Step 1](./assets/2.1.png)
+![Step 2](./assets/2.2.png)
+![Step 3](./assets/2.3.png)
+
+### Task 3: Create Groups
+
+![Step 1](./assets/3.1.png)
+![Step 2](./assets/3.2.png)
+![Step 3](./assets/3.3.png)
+![Step 4](./assets/3.4.png)
+
+### Task 4: Log in using the new users
+
+![Step 1](./assets/4.1.png)
+![Step 2](./assets/4.2.png)
+![Step 3](./assets/4.3.png)
+![Step 3](./assets/4.4.png)
+![Step 3](./assets/4.5.png)
