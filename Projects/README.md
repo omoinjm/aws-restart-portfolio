@@ -8,8 +8,9 @@ tags: [repo, obsidian, documentation, projects, portfolio, aws]
 # Projects
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 📂 Current: [[./]]
+
+- [⬆ Parent](../README.md)
+- [📂 Current](./README.md)
 
 ## Overview
 
@@ -26,13 +27,8 @@ To be documented based on completed projects.
 ## Responsibilities
 
 Showcases real-world project experience including:
+
 - End-to-end AWS architecture design
 - Integration of multiple services
 - Solution delivery and optimization
 - Technical problem-solving
-
-## Relationships
-
-- Part of: [[../README|AWS re/Start Portfolio]]
-- Complements: [[../Labs/README|Labs]] (hands-on learning)
-- Supporting: [[../Certs-Badges/README|Certifications]]

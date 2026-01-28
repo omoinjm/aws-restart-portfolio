@@ -9,8 +9,8 @@ tags: [repo, obsidian, documentation, labs, aws-restart]
 
 ## Navigation
 
-- ⬆ [Parent:](../README.md)
-- 📂 [Current:](./README.md)
+- [⬆ Parent](../README.md)
+- [📂 Current](./README.md)
 
 ## Overview
 

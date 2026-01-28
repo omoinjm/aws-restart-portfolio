@@ -9,9 +9,9 @@ tags: [repo, obsidian, documentation, linux, cli]
 
 ## Navigation
 
-- ⬆ [Parent:](../README.md)
-- 🏠 [Root:](../../README.md)
-- 📂 [Current:](./README.md)
+- [⬆ Parent](../README.md)
+- [🏠 Root](../../README.md)
+- [📂 Current](./README.md)
 
 ## Overview
 

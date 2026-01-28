@@ -9,9 +9,9 @@ tags: [repo, obsidian, documentation, aws, ec2, compute]
 
 ## Navigation
 
-- ⬆ [Parent:](../README.md)
-- 🏠 [Root:](../../README.md)
-- 📂 [Current:](./README.md)
+- [⬆ Parent:](../README.md)
+- [🏠 Root:](../../README.md)
+- [📂 Current:](./README.md)
 
 ## Overview
 
