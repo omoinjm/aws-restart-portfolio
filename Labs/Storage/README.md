@@ -8,9 +8,10 @@ tags: [repo, obsidian, documentation, storage, aws, s3]
 # Storage Labs
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 🏠 Root: [[../../README]]
-- 📂 Current: [[./]]
+
+- ⬆ [Parent:](../README.md)
+- 🏠 [Root:](../../README.md)
+- 📂 [Current:](./README.md)
 
 ## Overview
 
@@ -27,11 +28,7 @@ To be documented based on completed labs.
 ## Responsibilities
 
 Documents understanding of:
+
 - Storage service selection and use cases
 - Data persistence and durability
 - Access control and lifecycle management
-
-## Relationships
-
-- Part of: [[../README|Labs]]
-- Related services: [[../Compute/README|Compute Labs]], [[../Databases/README|Databases Labs]]
