@@ -4,11 +4,11 @@ title: AWS re/Start Portfolio
 description: A portfolio documenting hands-on AWS labs and projects from the AWS re/Start Program
 author: Nhlanhla Malaza
 
-url: https://omoinjm.github.io/aws-restart-portfolio
+url: "https://omoinjm.github.io"
+baseurl: "/aws-restart-portfolio"
 
-# Keep favicons in build
 include:
-  - assets/favicons/
+  - assets
 
 # Theme
 theme: jekyll-theme-hacker
