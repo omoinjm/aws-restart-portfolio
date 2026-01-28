@@ -11,10 +11,14 @@
             "id": "412efc99be0f940f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of README"
             }
           }
         ]
@@ -178,6 +185,17 @@
   },
   "active": "412efc99be0f940f",
   "lastOpenFiles": [
-    "README.md~"
+    "README.md~",
+    "Labs/README.md",
+    "assets/icons/README.md",
+    "assets/README.md",
+    "Labs/Linux/users_and_groups/assets/README.md",
+    "Labs/Linux/users_and_groups/task.md",
+    "Labs/Linux/users_and_groups/assets",
+    "Labs/Linux/users_and_groups/README.md",
+    "Labs/Linux/users_and_groups",
+    "Labs/Linux/linux_cli/assets/README.md",
+    "Labs/Linux/amazon_linux_ami/assets/README.md",
+    "Labs/Compute/ec2_setup/assets/README.md"
   ]
 }
