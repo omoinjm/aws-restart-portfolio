@@ -1,6 +1,15 @@
+---
+type: directory
+path: Certs-Badges
+parent: .
+tags: [repo, obsidian, documentation, certifications, achievements, credentials]
+---
+
 # Certifications & Badges
 
-[🏠 Back to Home](../../README.md)
+## Navigation
+- ⬆ Parent: [[../README]]
+- 📂 Current: [[./]]
 
 ## Overview
 
@@ -21,6 +30,19 @@ Each certification or badge is documented to explain:
 
 - Markdown files explaining each certification or badge
 - Proof of completion where applicable
+
+## Responsibilities
+
+Maintains evidence of:
+- Formal credential achievement
+- Knowledge validation
+- Professional development
+
+## Relationships
+
+- Part of: [[../README|AWS re/Start Portfolio]]
+- Complements: [[../Labs/README|Labs]] (practical experience)
+- Supported by: [[../Projects/README|Projects]] (real-world application)
 
 ---
 

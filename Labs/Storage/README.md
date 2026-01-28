@@ -1,11 +1,37 @@
+---
+type: directory
+path: Labs/Storage
+parent: Labs
+tags: [repo, obsidian, documentation, storage, aws, s3]
+---
+
 # Storage Labs
 
-[⬅️ Back to Labs](../README.md)
+## Navigation
+- ⬆ Parent: [[../README]]
+- 🏠 Root: [[../../README]]
+- 📂 Current: [[./]]
+
+## Overview
+
+Labs exploring **AWS storage services**—from object storage (S3) to block storage and archival solutions.
 
 ## Services Used
 
-*TODO*
+To be documented based on completed labs.
 
 ## Key Tasks
 
-*TODO*
+To be documented based on completed labs.
+
+## Responsibilities
+
+Documents understanding of:
+- Storage service selection and use cases
+- Data persistence and durability
+- Access control and lifecycle management
+
+## Relationships
+
+- Part of: [[../README|Labs]]
+- Related services: [[../Compute/README|Compute Labs]], [[../Databases/README|Databases Labs]]
