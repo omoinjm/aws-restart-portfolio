@@ -8,9 +8,12 @@ tags: [repo, obsidian, documentation, linux, ami, aws]
 # Introduction to an Amazon Linux Amazon Machine Image (AMI)
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 🏠 Root: [[../../../README]]
-- 📂 Current: [[./]]
+
+- ⬆ [Parent:](../README.md)
+- 🏠 [Root:](../../README.md)
+- 📂 [Current:](./README.md)
+
+## Overview
 
 This lab is designed to reinforce your knowledge of the basic command line interface functionality and provide a solid foundation from which you can continue to learn about new commands and capabilities within the Linux shell.
 
@@ -18,11 +21,11 @@ This lab is designed to reinforce your knowledge of the basic command line inter
 
 For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
 
-- [[./task.md|View Instructions]]
+- [View Instructions](./task.md)
 
 ## Contents
 
-- `assets/` - [[./assets/README|Screenshots and supporting materials]]
+- `assets/` - Screenshots and supporting materials
 - `task.md` - Detailed lab instructions
 
 ---

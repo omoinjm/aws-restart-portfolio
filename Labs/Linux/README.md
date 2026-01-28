@@ -8,9 +8,10 @@ tags: [repo, obsidian, documentation, linux, aws-restart]
 # Linux Labs
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 🏠 Root: [[../../README]]
-- 📂 Current: [[./]]
+
+- ⬆ [Parent:](../README.md)
+- 🏠 [Root:](../../README.md)
+- 📂 [Current:](./README.md)
 
 ## Overview
 
@@ -18,9 +19,9 @@ Hands-on labs covering **Linux fundamentals and system administration**, essenti
 
 ## Completed Labs
 
-- [[./amazon_linux_ami/README|Introduction to Amazon Linux AMI]]
-- [[./linux_cli/README|Linux Command Line]]
-- [[./users_and_groups/README|Users and Groups]]
+- [Intro to Amazon Linux AMI](./amazon_linux_ami/README.md)
+- [Linux Command Line](./linux_cli/README.md)
+- [Users and Groups](./users_and_groups/README.md)
 
 ## Lab Contents
 
@@ -37,13 +38,8 @@ Linux/
 ## Responsibilities
 
 Documents practical Linux knowledge including:
+
 - System administration basics
 - User and permission management
 - Command-line proficiency
 - Linux distribution fundamentals
-
-## Relationships
-
-- Part of: [[../README|Labs]]
-- Related compute labs: [[../Compute/README|Compute Labs]]
-- Security context: [[../Security/README|Security Labs]]
