@@ -1,3 +1,12 @@
+title: AWS re/Start Portfolio
+description: A portfolio documenting hands-on AWS labs and projects from the AWS re/Start Program
+author: Nhlanhla Malaza
+
+url: https://omoinjm.github.io/aws-restart-portfolio
+
+include:
+  - assets
+
 # Theme
 theme: jekyll-theme-hacker
 
@@ -8,3 +17,20 @@ plugins:
 
 # Markdown
 markdown: kramdown
+
+# Navigation
+nav_links:
+  - text: Home
+    url: /
+  - text: Labs
+    url: /labs/
+  - text: Projects
+    url: /projects/
+  - text: Certificates
+    url: /certs-badges/
+
+# SEO
+google_site_verification: ""
+
+# Analytics (optional)
+# google_analytics: ""
