@@ -82,9 +82,9 @@ aws-restart-portfolio/
 
 ## Navigation
 
-- ![Labs](./Labs/README.md) - Hands-on AWS labs by service domain
-- ![Projects](./Projects/README.md) - Portfolio projects showcasing skills
-- ![Certs-Badges](./Certs-Badges/README.md) - Certifications and achievements
+- [Labs](./Labs/README.md) - Hands-on AWS labs by service domain
+- [Projects](./Projects/README.md) - Portfolio projects showcasing skills
+- [Certs-Badges](./Certs-Badges/README.md) - Certifications and achievements
 
 | Aspect                        | Impact                                                       |
 | ----------------------------- | ------------------------------------------------------------ |
