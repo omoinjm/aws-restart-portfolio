@@ -1,24 +1,24 @@
-Below is the same content rewritten to meet **academic standards**: formal tone, clear structure, consistent terminology, objective language, and corrected spelling/grammar. The technical meaning and scope are unchanged.
-
----
+# Cafena Café Website Redesign and AWS Deployment Demonstration
 
 [View Instructions](./task.md)
 
 [View Project Code](https://github.com/omoinjm/local-coffee-shop)
 
-# Cafena Café Website Redesign and AWS Deployment Demonstration
+---
 
 ## Abstract
 
-This project presents the redesign of the Cafena Café website alongside the migration of its hosting infrastructure from a local cloud provider to Amazon Web Services (AWS). The objective is to improve performance, availability, scalability, and cost efficiency by adopting a cloud-native, serverless architecture. The solution utilises AWS S3 for static website hosting, CloudFront for content delivery, Route 53 for domain management, IAM for access control, and CloudWatch for basic monitoring. The project evaluates technical and financial implications and demonstrates the suitability of AWS for small-to-medium business web workloads.
+This project presents the redesign of the Cafena Café website alongside the migration of its hosting infrastructure from a local cloud provider to Amazon Web Services (AWS). The objective is to improve performance, availability, scalability, and cost efficiency through the adoption of a cloud-native, serverless architecture. The solution utilises Amazon S3 for static website hosting, CloudFront for content delivery, Route 53 for domain management, IAM for access control, and CloudWatch for basic monitoring. The project evaluates both technical and financial considerations and demonstrates that AWS provides a viable and economical hosting platform for static web workloads within small-to-medium business contexts.
 
 ---
 
 ## 1. Introduction
 
-Cafena Café is a locally established business that has expanded into a regional operation through continuous innovation and service improvement. As the business grew, limitations in the existing website infrastructure became more apparent, particularly in terms of scalability, reliability, and operational cost.
+Cafena Café is a locally established business operating within the food and hospitality sector. The business context used in this project is representative of a typical small-to-medium enterprise (SME) seeking to improve its digital presence through modern web infrastructure.
 
-This project aims to redesign the Cafena Café website and modernise its hosting infrastructure using AWS services. The focus is on providing a reliable, scalable, and cost-effective solution that supports current needs while remaining adaptable to future digital expansion.
+As the business expanded, limitations in the existing website hosting environment became increasingly apparent, particularly in relation to scalability, reliability, and operational cost. These constraints highlighted the need for a more flexible and resilient hosting solution.
+
+This project aims to redesign the Cafena Café website and modernise its hosting infrastructure using AWS services. The focus is on delivering a reliable, scalable, and cost-effective solution that supports current operational needs while remaining adaptable to future digital expansion.
 
 ---
 
@@ -27,11 +27,11 @@ This project aims to redesign the Cafena Café website and modernise its hosting
 The existing hosting environment presented several challenges:
 
 * Performance degradation during peak traffic periods
-* Limited scalability combined with fixed and inflexible pricing
-* Inconsistent availability and uptime
-* Difficulty integrating advanced cloud services
+* Limited scalability combined with inflexible pricing models
+* Inconsistent availability and uptime guarantees
+* Difficulty integrating advanced cloud-native services
 
-These challenges negatively impacted both user experience and operational efficiency.
+These challenges negatively affected user experience, operational efficiency, and the ability to support future growth.
 
 ---
 
@@ -39,16 +39,16 @@ These challenges negatively impacted both user experience and operational effici
 
 ### 3.1 Hosting Model Comparison
 
-| Factor            | AWS (S3)    | Local Cloud Provider | On-Premises             |
-| ----------------- | ----------- | -------------------- | ----------------------- |
-| Monthly cost      | Near $0     | Fixed monthly fee    | Fixed + operating costs |
-| Pricing model     | Usage-based | Fixed plan           | Capital + maintenance   |
-| Scalability       | Automatic   | Plan-based           | Manual                  |
-| HTTPS             | Automatic   | Varies               | Complex                 |
-| Maintenance       | None        | Minimal              | High                    |
-| Disaster recovery | Built-in    | Limited              | Manual                  |
+| Factor            | AWS (Amazon S3)          | Local Cloud Provider | On-Premises             |
+| ----------------- | ------------------------ | -------------------- | ----------------------- |
+| Monthly cost      | Low / usage-dependent    | Fixed monthly fee    | Fixed + operating costs |
+| Pricing model     | Usage-based              | Fixed plan           | Capital + maintenance   |
+| Scalability       | Automatic                | Plan-based           | Manual                  |
+| HTTPS             | Managed via AWS services | Varies               | Complex                 |
+| Maintenance       | Minimal                  | Minimal              | High                    |
+| Disaster recovery | Built-in                 | Limited              | Manual                  |
 
-The comparison highlights AWS as the most cost-effective and scalable solution for a static website workload.
+This comparison indicates that AWS is the most cost-effective and scalable solution for static website hosting in an SME context.
 
 ---
 
@@ -56,7 +56,7 @@ The comparison highlights AWS as the most cost-effective and scalable solution f
 
 ### 4.1 Static Website
 
-A fully functional static website hosted on Amazon S3, including:
+A fully functional static website hosted on Amazon S3, consisting of the following components:
 
 * Home page
 * Menu section
@@ -65,14 +65,14 @@ A fully functional static website hosted on Amazon S3, including:
 
 ### 4.2 AWS Migration Presentation
 
-A structured presentation covering:
+A structured presentation addressing:
 
-* Existing challenges and business impact
-* Market cost comparison
-* Detailed cost analysis
+* Existing technical and business challenges
+* Market-based cost comparisons
+* Detailed hosting cost analysis
 * Proposed AWS architecture
-* Support and service considerations
-* Benefits of migration
+* Support and operational considerations
+* Key benefits of cloud migration
 
 ---
 
@@ -88,73 +88,70 @@ A structured presentation covering:
 | Access control    | IAM         | Secure identity and permission management |
 | Monitoring        | CloudWatch  | Basic metrics and operational visibility  |
 
+The selected services collectively provide a serverless architecture that minimises operational overhead while ensuring reliability and scalability.
+
 ---
 
 ## 6. Cost Analysis
 
 ### 6.1 Monthly Cost Scenarios (ZAR)
 
-| Scenario                   | Monthly Cost | Notes                                |
-| -------------------------- | ------------ | ------------------------------------ |
-| S3 only                    | R0           | Replacement for local static hosting |
-| S3 + CloudFront            | R0           | Improved performance and caching     |
-| S3 + CloudFront + Route 53 | ~R10 – R20   | Custom domain support                |
-| CloudWatch                 | R0           | Optional monitoring                  |
+| Scenario                   | Estimated Monthly Cost | Notes                                              |
+| -------------------------- | ---------------------- | -------------------------------------------------- |
+| S3 only                    | Effectively negligible | Suitable for low-traffic static hosting            |
+| S3 + CloudFront            | Effectively negligible | Improved performance through caching               |
+| S3 + CloudFront + Route 53 | ~R9.50 – R20.00        | Includes hosted zone and minimal DNS query charges |
+| CloudWatch                 | Effectively negligible | Basic monitoring within AWS free usage limits      |
 
-**Estimated Monthly Cost:** **~R9.50 – R19.00**
+**Estimated Monthly Cost:** **~R9.50 – R20.00**, depending on traffic volume and DNS query usage.
 
 ### 6.2 Cost Justification
 
-* Route 53 hosted zone: **$0.50/month ≈ R9.50**
-* Minor DNS query charges may increase the total marginally
-* Domain registration (**≈ $12/year ≈ R228/year**) is billed annually
+* Route 53 hosted zone: **$0.50 per month (≈ R9.50)**
+* DNS query charges may marginally increase monthly costs based on usage
+* Domain registration fees (**≈ $12 per year ≈ R228 annually**) are billed separately
 
-This represents a significant reduction compared to fixed-cost local cloud hosting.
-
----
-## 7 Presentation
+Overall, the AWS-based solution represents a substantial cost reduction when compared to fixed-cost local cloud hosting alternatives.
 
 ---
 
 ## 7. Deployment Methodology
 
-1. Website files uploaded to Amazon S3
-2. Static website hosting enabled
-3. Bucket policies configured for controlled public access
-4. CloudFront distribution configured for global delivery
-5. Domain connected using Route 53
+The deployment process followed a structured and repeatable approach:
+
+1. Website assets uploaded to an Amazon S3 bucket
+2. Static website hosting enabled on the S3 bucket
+3. Bucket policies configured to allow controlled public access
+4. CloudFront distribution configured to enable global content delivery
+5. Custom domain integrated using Route 53
 
 ---
 
 ## 8. Testing and Validation
 
-* Website content and media verified for correct loading
-* Forms tested for correct submission behaviour
-* CloudWatch used to observe basic metrics and availability
+Testing and validation activities were conducted to ensure the solution met functional and operational requirements:
+
+* Functional testing to confirm correct rendering, navigation, and media loading
+* Form submission testing to validate expected client-side behaviour
+* Availability and performance observation using basic CloudWatch metrics
+
+These validation steps confirmed that the deployed solution satisfied the project objectives for reliability and usability.
 
 ---
 
 ## 9. Conclusion
 
-This project demonstrates that migrating a static business website from a local cloud provider to AWS can significantly reduce hosting costs while improving reliability, scalability, and security. AWS enables Cafena Café to focus on core business operations while benefiting from enterprise-grade infrastructure with minimal operational overhead. The implemented architecture is suitable for future expansion into additional digital services.
+This project demonstrates that migrating a static business website from a local cloud provider to AWS can significantly reduce hosting costs while improving reliability, scalability, and operational resilience. By leveraging managed AWS services, Cafena Café is able to focus on core business activities while benefiting from enterprise-grade infrastructure with minimal administrative effort. The implemented architecture provides a strong foundation for future digital growth.
 
 ---
 
 ## 10. Future Work
 
-Potential enhancements include:
+Potential future enhancements include:
 
-* Online payment integration
+* Online payment and e-commerce functionality
 * Customer loyalty and engagement features
-* Advanced analytics and reporting
-* Automated deployment using AWS CI/CD services
+* Advanced analytics and reporting capabilities
+* Automated deployment pipelines using AWS CI/CD services
 
 ---
-
-If you want, I can now:
-
-* Align this to a **specific academic rubric**
-* Add **citations and references**
-* Convert it into a **formal report (PDF/Word)**
-
-* Adapt it for **AWS Practitioner assessment language**
