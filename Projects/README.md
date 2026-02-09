@@ -24,6 +24,19 @@ To be documented based on completed projects.
 
 To be documented based on completed projects.
 
+## Project Categories
+
+- [Static Website](./static-website/README.md)
+
+## Folder Structure
+
+```
+Projects/
+├── 🌐 static-website/
+└── 🔒 whatsapp-bot/
+```
+
+
 ## Responsibilities
 
 Showcases real-world project experience including:
