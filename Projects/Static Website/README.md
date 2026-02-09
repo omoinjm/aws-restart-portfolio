@@ -4,6 +4,8 @@ Below is the same content rewritten to meet **academic standards**: formal tone,
 
 [View Instructions](./task.md)
 
+[View Project Code](https://github.com/omoinjm/local-coffee-shop)
+
 # Cafena Café Website Redesign and AWS Deployment Demonstration
 
 ## Abstract
@@ -154,4 +156,5 @@ If you want, I can now:
 * Align this to a **specific academic rubric**
 * Add **citations and references**
 * Convert it into a **formal report (PDF/Word)**
+
 * Adapt it for **AWS Practitioner assessment language**
