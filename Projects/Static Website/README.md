@@ -78,6 +78,8 @@ A structured presentation addressing:
 
 ## 5. AWS Architecture and Implementation
 
+![AWS Architecture Diagram](./assets/aws-architecture.drawio.svg)
+
 ### 5.1 Services Used
 
 | Requirement       | AWS Service | Purpose                                   |
