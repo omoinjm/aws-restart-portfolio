@@ -15,24 +15,24 @@ tags: [repo, obsidian, documentation, linux, ami, aws]
 
 ## Overview
 
-This lab is designed to reinforce your knowledge of the basic command line interface functionality and provide a solid foundation from which you can continue to learn about new commands and capabilities within the Linux shell.
+This lab helped reinforce my knowledge of the basic command line interface functionality and provided a solid foundation from which I could continue to learn about new commands and capabilities within the Linux shell.
 
 ## 📋 Instructions
 
-For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
+For a detailed step-by-step guide on how I configured this environment, please refer to the documentation:
 
-- [View Instructions](./task.md)
+- [View My Instructions](./task.md)
 
 ## Contents
 
-- `assets/` - Screenshots and supporting materials
-- `task.md` - Detailed lab instructions
+- `assets/` - Screenshots and supporting materials I captured
+- `task.md` - Detailed lab instructions I followed
 
 ---
 
 ## ✅ Lab Completion Results
 
-The following images document the successful completion of the AWS EC2 Lab.
+The following images document my successful completion of the AWS EC2 Lab.
 
 ### Documentation Gallery
 

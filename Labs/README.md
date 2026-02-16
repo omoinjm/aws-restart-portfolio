@@ -14,10 +14,10 @@ tags: [repo, obsidian, documentation, labs, aws-restart]
 
 ## Overview
 
-This folder contains hands-on labs completed as part of the **AWS re/Start Program**.  
-Each lab focuses on a specific AWS domain and is designed to reinforce practical understanding through real-world scenarios.
+This folder contains hands-on labs I completed as part of the **AWS re/Start Program**.
+Each lab focuses on a specific AWS domain and helped me reinforce practical understanding through real-world scenarios.
 
-## What These Labs Demonstrate
+## What I Learned From These Labs
 
 - Practical use of AWS services
 - Understanding of core cloud concepts
@@ -49,13 +49,13 @@ Labs/
 └── 🔒 Security/
 ```
 
-Each subfolder contains markdown files describing:
+Each subfolder contains markdown files documenting:
 
-- Lab objectives
-- Services used
-- Steps performed
-- Key outcomes and learnings
+- Lab objectives I achieved
+- Services I worked with
+- Steps I performed
+- Key outcomes and learnings from my experience
 
 ---
 
-_These labs provide evidence of hands-on AWS experience._
+_These labs provide evidence of my hands-on AWS experience._

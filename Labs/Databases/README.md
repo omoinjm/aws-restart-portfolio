@@ -15,19 +15,19 @@ tags: [repo, obsidian, documentation, databases, aws, rds]
 
 ## Overview
 
-Labs exploring **AWS database services**—relational databases, NoSQL options, and data persistence strategies.
+Labs I completed exploring **AWS database services**—relational databases, NoSQL options, and data persistence strategies.
 
-## Services Used
-
-To be documented based on completed labs.
-
-## Key Tasks
+## Services I Worked With
 
 To be documented based on completed labs.
 
-## Responsibilities
+## Key Tasks I Performed
 
-Demonstrates knowledge of:
+To be documented based on completed labs.
+
+## What I Demonstrated
+
+Through these labs, I demonstrated knowledge of:
 
 - Relational vs NoSQL database models
 - AWS managed database services

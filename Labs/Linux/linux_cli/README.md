@@ -15,27 +15,27 @@ tags: [repo, obsidian, documentation, linux, cli]
 
 ## Overview
 
-In this lab, you will:
+In this lab, I learned how to:
 
-- Run commands to gain knowledge of your current system and current session
+- Run commands to gain knowledge of my current system and current session
 - Search and run previous bash commands
 
 ## 📋 Instructions
 
-For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
+For a detailed step-by-step guide on how I configured this environment, please refer to the documentation:
 
-- [View Instructions](./task.md)
+- [View My Instructions](./task.md)
 
 ## Contents
 
-- `assets/` - Screenshots and supporting materials
-- `task.md` - Detailed lab instructions
+- `assets/` - Screenshots and supporting materials I captured
+- `task.md` - Detailed lab instructions I followed
 
 ---
 
 ## ✅ Lab Completion Results
 
-The following images document the successful completion of the Linux Command Line Lab.
+The following images document my successful completion of the Linux Command Line Lab.
 
 ### Documentation Gallery
 

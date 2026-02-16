@@ -15,19 +15,19 @@ tags: [repo, obsidian, documentation, security, aws, iam]
 
 ## Overview
 
-Labs focused on **AWS security best practices**—identity management, access control, and the shared responsibility model.
+Labs I completed focused on **AWS security best practices**—identity management, access control, and the shared responsibility model.
 
-## Services Used
-
-To be documented based on completed labs.
-
-## Key Tasks
+## Services I Worked With
 
 To be documented based on completed labs.
 
-## Responsibilities
+## Key Tasks I Performed
 
-Demonstrates understanding of:
+To be documented based on completed labs.
+
+## What I Demonstrated
+
+Through these labs, I demonstrated understanding of:
 
 - Identity and access management (IAM)
 - Principle of least privilege

@@ -15,7 +15,7 @@ tags: [repo, obsidian, documentation, linux, aws-restart]
 
 ## Overview
 
-Hands-on labs covering **Linux fundamentals and system administration**, essential for cloud practitioners working with EC2 and other compute services.
+Hands-on labs I completed covering **Linux fundamentals and system administration**, essential for cloud practitioners working with EC2 and other compute services.
 
 ## Completed Labs
 
@@ -71,9 +71,9 @@ Linux/
     └── assets/
 ```
 
-## Responsibilities
+## What I Demonstrated
 
-Documents practical Linux knowledge including:
+Through these labs, I documented practical Linux knowledge including:
 
 - System administration basics
 - User and permission management

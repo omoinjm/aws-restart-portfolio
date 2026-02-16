@@ -15,25 +15,25 @@ tags: [repo, obsidian, documentation, linux, aws-restart]
 
 ## Overview
 
-After completing this lab, you will be able to:
+After completing this lab, I was able to:
 
 - Use the vimtutor executable to conduct tasks 1-4
 - Copy content from the /var/log/secure file, and edit it with nano
 
 ## 📋 Instructions
 
-For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
+For a detailed step-by-step guide on how I configured this environment, please refer to the documentation:
 
-- [View Instructions](./task.md)
+- [View My Instructions](./task.md)
 
 ## Contents
 
-- `assets/` - Screenshots and supporting materials
-- `task.md` - Detailed lab instructions
+- `assets/` - Screenshots and supporting materials I captured
+- `task.md` - Detailed lab instructions I followed
 
 ## ✅ Lab Completion Results
 
-The following images document the successful completion of the Managing Users and Groups Lab.
+The following images document my successful completion of the Managing Users and Groups Lab.
 
 ### Task 1: Use SSH to connect to an Amazon Linux EC2 instance
 
