@@ -11,10 +11,14 @@
             "id": "412efc99be0f940f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Labs/Compute/ec2_setup/README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Labs/Compute/ec2_setup/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for README"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Labs/Compute/ec2_setup/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Labs/Compute/ec2_setup/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of README"
             }
           }
         ]
@@ -178,6 +185,37 @@
   },
   "active": "412efc99be0f940f",
   "lastOpenFiles": [
-    "README.md~"
+    "Certs-Badges/README.md~",
+    "Labs/Linux/amazon_linux_ami/README.md~",
+    "Labs/Linux/linux_cli/README.md~",
+    "Labs/Linux/users_and_groups/README.md~",
+    "Labs/Linux/README.md~",
+    "Labs/Storage/README.md~",
+    "Labs/Security/README.md~",
+    "Labs/Networking/README.md~",
+    "Labs/Databases/README.md~",
+    "Labs/Compute/ec2_setup/README.md~",
+    "Labs/Compute/README.md~",
+    "Labs/Compute/README.md",
+    "Labs/Linux/users_and_groups/task.md",
+    "Labs/README.md",
+    "README.md",
+    "Labs/Linux/users_and_groups/assets/4.5.png",
+    "Labs/Linux/users_and_groups/assets/4.4.png",
+    "Labs/Linux/users_and_groups/assets/4.3.png",
+    "Labs/Linux/users_and_groups/assets/4.2.png",
+    "Labs/Linux/users_and_groups/assets/4.1.png",
+    "Labs/Linux/users_and_groups/assets/3.4.png",
+    "Labs/Linux/users_and_groups/assets/3.3.png",
+    "Labs/Linux/users_and_groups/assets/Screenshot 2026-01-28 200516.png",
+    "Labs/Linux/users_and_groups/assets/Screenshot 2026-01-28 200817.png",
+    "Labs/Linux/users_and_groups/assets/Screenshot 2026-01-28 201025.png",
+    "assets/icons/README.md",
+    "assets/README.md",
+    "Labs/Linux/users_and_groups/assets/README.md",
+    "Labs/Linux/users_and_groups/README.md",
+    "Labs/Linux/linux_cli/assets/README.md",
+    "Labs/Linux/amazon_linux_ami/assets/README.md",
+    "Labs/Compute/ec2_setup/assets/README.md"
   ]
 }

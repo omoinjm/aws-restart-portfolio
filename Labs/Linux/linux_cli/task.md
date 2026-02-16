@@ -4,25 +4,25 @@
 
 ## Objectives
 
-In this lab, you will:
+In this lab, I learned how to:
 
-- Run commands to gain knowledge of your current system and session
+- Run commands to gain knowledge of my current system and session
 - Search and run previous Bash commands
 
 ## Duration
 
-This lab requires approximately **30 minutes** to complete.
+This lab took approximately **30 minutes** to complete.
 
 ## AWS Service Restrictions
 
-In this lab environment, access to AWS services and service actions might be restricted to the ones that you need to complete the lab instructions.
+In this lab environment, access to AWS services and service actions were restricted to the ones that I needed to complete the lab instructions.
 
 ## Accessing the AWS Management Console
 
-1. Choose **Start Lab**.
-2. Wait for **Lab status: ready**.
-3. Choose **AWS** to open the console.
-4. Arrange windows for easier execution.
+1. I chose **Start Lab**.
+2. I waited for **Lab status: ready**.
+3. I chose **AWS** to open the console.
+4. I arranged windows for easier execution.
 
 ## Task 1: Use SSH to Connect to an Amazon Linux EC2 Instance
 
@@ -43,6 +43,8 @@ ssh -i labsuser.pem ec2-user@<public-ip>
 
 ## Task 2: Run Familiar Commands
 
+In this task, I ran the following commands to learn about my system:
+
 ```bash
 whoami
 hostname -s
@@ -57,6 +59,8 @@ id ec2-user
 ```
 
 ## Task 3: Improve Workflow Through History and Search
+
+I used the following command to access my command history:
 
 ```bash
 history
@@ -77,11 +81,11 @@ Repeat last command:
 
 ## Lab Complete
 
-Select **End Lab** and confirm deletion.
+I selected **End Lab** and confirmed deletion.
 
 ## AWS Component
 
-This lab uses a **t3.micro** instance (1 vCPU, 1 GiB memory).
+This lab used a **t3.micro** instance (1 vCPU, 1 GiB memory).
 
 ## Additional Resources
 

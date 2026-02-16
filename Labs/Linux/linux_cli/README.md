@@ -8,31 +8,34 @@ tags: [repo, obsidian, documentation, linux, cli]
 # Linux Command Line
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 🏠 Root: [[../../../README]]
-- 📂 Current: [[./]]
 
-In this lab, you will:
+- [⬆ Parent](../README.md)
+- [🏠 Root](../../README.md)
+- [📂 Current](./README.md)
 
-- Run commands to gain knowledge of your current system and current session
+## Overview
+
+In this lab, I learned how to:
+
+- Run commands to gain knowledge of my current system and current session
 - Search and run previous bash commands
 
 ## 📋 Instructions
 
-For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
+For a detailed step-by-step guide on how I configured this environment, please refer to the documentation:
 
-- [[./task.md|View Instructions]]
+- [View My Instructions](./task.md)
 
 ## Contents
 
-- `assets/` - [[./assets/README|Screenshots and supporting materials]]
-- `task.md` - Detailed lab instructions
+- `assets/` - Screenshots and supporting materials I captured
+- `task.md` - Detailed lab instructions I followed
 
 ---
 
 ## ✅ Lab Completion Results
 
-The following images document the successful completion of the AWS EC2 Lab.
+The following images document my successful completion of the Linux Command Line Lab.
 
 ### Documentation Gallery
 

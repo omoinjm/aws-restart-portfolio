@@ -8,28 +8,31 @@ tags: [repo, obsidian, documentation, aws, ec2, compute]
 # EC2 Setup Project
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 🏠 Root: [[../../../README]]
-- 📂 Current: [[./]]
 
-This project contains the configuration steps and verification for the AWS EC2 laboratory environment.
+- [⬆ Parent:](../README.md)
+- [🏠 Root:](../../README.md)
+- [📂 Current:](./README.md)
+
+## Overview
+
+This project documents the configuration steps I followed and verification I completed for the AWS EC2 laboratory environment.
 
 ## 📋 Instructions
 
-For a detailed step-by-step guide on how this environment was configured, please refer to the documentation:
+For a detailed step-by-step guide on how I configured this environment, please refer to the documentation:
 
-- [[./task.md|View Instructions]]
+- [View My Instructions](./task.md)
 
 ## Contents
 
-- `assets/` - [[./assets/README|Screenshots and supporting materials]]
-- `task.md` - Detailed lab instructions
+- `assets/` - Screenshots and supporting materials I captured
+- `task.md` - Detailed lab instructions I followed
 
 ---
 
 ## ✅ Lab Completion Results
 
-The following images document the successful completion of the AWS EC2 Lab.
+The following images document my successful completion of the AWS EC2 Lab.
 
 ### Documentation Gallery
 

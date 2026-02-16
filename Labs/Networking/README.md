@@ -8,32 +8,28 @@ tags: [repo, obsidian, documentation, networking, aws, vpc]
 # Networking Labs
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 🏠 Root: [[../../README]]
-- 📂 Current: [[./]]
+
+- ⬆ [Parent:](../README.md)
+- 🏠 [Root:](../../README.md)
+- 📂 [Current:](./README.md)
 
 ## Overview
 
-Labs covering **AWS networking fundamentals**—VPCs, subnets, routing, and connectivity concepts essential for cloud architecture.
+Labs I completed covering **AWS networking fundamentals**—VPCs, subnets, routing, and connectivity concepts essential for cloud architecture.
 
-## Services Used
-
-To be documented based on completed labs.
-
-## Key Tasks
+## Services I Worked With
 
 To be documented based on completed labs.
 
-## Responsibilities
+## Key Tasks I Performed
 
-Documents foundational knowledge of:
+To be documented based on completed labs.
+
+## What I Demonstrated
+
+Through these labs, I demonstrated foundational knowledge of:
+
 - Virtual Private Cloud (VPC) design
 - Subnets and CIDR notation
 - Routing and network connectivity
 - Network security groups
-
-## Relationships
-
-- Part of: [[../README|Labs]]
-- Related labs: [[../Compute/README|Compute Labs]], [[../Security/README|Security Labs]]
-- Foundational for: All AWS infrastructure

@@ -1,10 +1,3 @@
-<!-- ---
-type: directory
-path: .
-parent: null
-tags: [repo, obsidian, documentation, aws, portfolio, cloud]
---- -->
-
 ## [![GitHub contributors](https://img.shields.io/github/contributors/omoinjm/aws-restart-portfolio)](https://github.com/omoinjm/aws-restart-portfolio/graphs/contributors/) [![GitHub Stars](https://img.shields.io/github/stars/omoinjm/aws-restart-portfolio.svg)](https://github.com/omoinjm/aws-restart-portfolio/stargazers)
 
 ![AWS re/Start Portfolio](assets/aws.png)
@@ -89,10 +82,9 @@ aws-restart-portfolio/
 
 ## Navigation
 
-- [[./Labs/README|Labs]] - Hands-on AWS labs by service domain
-- [[./Projects/README|Projects]] - Portfolio projects showcasing skills
-- [[./Certs-Badges/README|Certs-Badges]] - Certifications and achievements
-- [[./assets/README|Assets]] - Shared resources and icons
+- [Labs](./Labs/README.md) - Hands-on AWS labs by service domain
+- [Projects](./Projects/README.md) - Portfolio projects showcasing skills
+- [Certs-Badges](./Certs-Badges/README.md) - Certifications and achievements
 
 | Aspect                        | Impact                                                       |
 | ----------------------------- | ------------------------------------------------------------ |
@@ -107,14 +99,14 @@ aws-restart-portfolio/
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│            🌟 AWS re/Start Program 🌟              │
+│            🌟 AWS re/Start Program 🌟               │
 ├─────────────────────────────────────────────────────┤
-│  ☁️ COMPUTE       🗄️ DATABASES     🔒 SECURITY     │
+│  ☁️ COMPUTE       🗄️ DATABASES     🔒 SECURITY      │
 │  • EC2             • RDS            • IAM           │
 │  • Lambda          • DynamoDB       • VPC           │
 │  • ECS             • MongoDB        • CloudTrail    │
 │                                                     │
-│  💾 STORAGE       🌐 NETWORKING   🛠️ DEVOPS        │
+│  💾 STORAGE       🌐 NETWORKING   🛠️ DEVOPS         │
 │  • S3              • VPC            • CloudWatch    │
 │  • EBS             • Route 53       • CloudFormation│
 │  • Glacier         • ALB/NLB        • Git/GitHub    │
