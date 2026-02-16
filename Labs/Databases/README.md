@@ -8,32 +8,28 @@ tags: [repo, obsidian, documentation, databases, aws, rds]
 # Databases Labs
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 🏠 Root: [[../../README]]
-- 📂 Current: [[./]]
+
+- [⬆ Parent:](../README.md)
+- [🏠 Root:](../../README.md)
+- [📂 Current:](./README.md)
 
 ## Overview
 
-Labs exploring **AWS database services**—relational databases, NoSQL options, and data persistence strategies.
+Labs I completed exploring **AWS database services**—relational databases, NoSQL options, and data persistence strategies.
 
-## Services Used
-
-To be documented based on completed labs.
-
-## Key Tasks
+## Services I Worked With
 
 To be documented based on completed labs.
 
-## Responsibilities
+## Key Tasks I Performed
 
-Demonstrates knowledge of:
+To be documented based on completed labs.
+
+## What I Demonstrated
+
+Through these labs, I demonstrated knowledge of:
+
 - Relational vs NoSQL database models
 - AWS managed database services
 - Data backup and recovery
 - Database scaling and performance
-
-## Relationships
-
-- Part of: [[../README|Labs]]
-- Related to: [[../Storage/README|Storage Labs]] (data persistence)
-- Security context: [[../Security/README|Security Labs]]

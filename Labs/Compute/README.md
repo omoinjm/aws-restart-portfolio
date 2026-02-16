@@ -8,15 +8,16 @@ tags: [repo, obsidian, documentation, compute, aws, ec2]
 # Compute Labs
 
 ## Navigation
-- ⬆ Parent: [[../README]]
-- 🏠 Root: [[../../README]]
-- 📂 Current: [[./]]
+
+- [⬆ Parent:](../README.md)
+- [🏠 Root:](../../README.md)
+- [📂 Current:](./README.md)
 
 ## Overview
 
-Hands-on labs focused on **AWS compute services**, particularly EC2 instances—the foundation for running applications in the cloud.
+Hands-on labs I completed focused on **AWS compute services**, particularly EC2 instances—the foundation for running applications in the cloud.
 
-## Services Used
+## Services I Worked With
 
 - Amazon EC2
 - Security Groups
@@ -24,7 +25,7 @@ Hands-on labs focused on **AWS compute services**, particularly EC2 instances—
 
 ## Completed Labs
 
-- [[./ec2_setup/README|EC2 Setup Project]]
+- [EC2 Setup Project](./ec2_setup/README.md)
 
 ## Lab Contents
 
@@ -34,21 +35,16 @@ Compute/
     └── assets/
 ```
 
-## Key Tasks
+## Key Tasks I Performed
 
 - Launching and configuring EC2 instances
 - Creating and managing security groups
 - Generating and using key pairs for SSH access
 
-## Responsibilities
+## What I Demonstrated
 
-Demonstrates practical knowledge of:
+Through these labs, I demonstrated practical knowledge of:
+
 - EC2 instance lifecycle management
 - Network security configuration
 - SSH access and key management
-
-## Relationships
-
-- Part of: [[../README|Labs]]
-- Related labs: [[../Networking/README|Networking Labs]], [[../Linux/README|Linux Labs]]
-- AWS domain: [[../README|AWS Services - Compute]]
