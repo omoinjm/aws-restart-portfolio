@@ -15,19 +15,19 @@ tags: [repo, obsidian, documentation, storage, aws, s3]
 
 ## Overview
 
-Labs exploring **AWS storage services**—from object storage (S3) to block storage and archival solutions.
+Labs I completed exploring **AWS storage services**—from object storage (S3) to block storage and archival solutions.
 
-## Services Used
-
-To be documented based on completed labs.
-
-## Key Tasks
+## Services I Worked With
 
 To be documented based on completed labs.
 
-## Responsibilities
+## Key Tasks I Performed
 
-Documents understanding of:
+To be documented based on completed labs.
+
+## What I Demonstrated
+
+Through these labs, I documented understanding of:
 
 - Storage service selection and use cases
 - Data persistence and durability
