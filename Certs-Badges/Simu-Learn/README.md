@@ -14,6 +14,9 @@ This directory contains badges and certifications earned through SimuLearn.
 - [⬆ Parent](../README.md)
 - [🏠 Root](../../README.md)
 - [📂 Current](./README.md)
+
+## Lab Categories
+
 - [File Systems in the Cloud](./1.File-Systems-in-the-Cloud/README.md)
 - [Databases in Practice](./2.Databases-in-Practice/README.md)
 - [Networking Concepts](./3.Networking-Concepts/README.md)
@@ -27,3 +30,4 @@ SimuLearn provides hands-on training and certification in cloud technologies, fo
 - Interactive labs and exercises
 - Certification badges and proof of completion
 - Practical demonstrations of cloud concepts
+
