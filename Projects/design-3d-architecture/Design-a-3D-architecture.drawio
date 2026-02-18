@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net" version="29.3.7">
+  <diagram name="3D E-Commerce Architecture">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Users -->
+        <mxCell id="users" value="Users / Clients" style="shape=mxgraph.aws4.user;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="80" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Route 53 -->
+        <mxCell id="r53" value="Route 53" style="shape=mxgraph.aws4.route_53;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="250" y="80" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- CloudFront -->
+        <mxCell id="cf" value="CloudFront" style="shape=mxgraph.aws4.cloudfront;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="400" y="80" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- WAF -->
+        <mxCell id="waf" value="AWS WAF" style="shape=mxgraph.aws4.waf;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="550" y="80" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ALB -->
+        <mxCell id="alb" value="Application Load Balancer" style="shape=mxgraph.aws4.application_load_balancer;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="700" y="80" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- EC2 -->
+        <mxCell id="ec2" value="EC2 Auto Scaling" style="shape=mxgraph.aws4.ec2;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="250" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Lambda -->
+        <mxCell id="lambda" value="Lambda" style="shape=mxgraph.aws4.lambda;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="250" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- RDS -->
+        <mxCell id="rds" value="RDS Multi-AZ" style="shape=mxgraph.aws4.rds;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="650" y="450" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- DynamoDB -->
+        <mxCell id="ddb" value="DynamoDB" style="shape=mxgraph.aws4.dynamodb;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="800" y="450" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- S3 -->
+        <mxCell id="s3" value="S3 - 3D Assets" style="shape=mxgraph.aws4.s3;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="450" y="450" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- CloudWatch -->
+        <mxCell id="cw" value="CloudWatch" style="shape=mxgraph.aws4.cloudwatch;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="250" y="450" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- IAM -->
+        <mxCell id="iam" value="IAM" style="shape=mxgraph.aws4.identity_and_access_management;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="450" width="70" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- Connections -->
+        <mxCell id="e1" edge="1" parent="1" source="users" target="r53" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+        <mxCell id="e2" edge="1" parent="1" source="r53" target="cf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+        <mxCell id="e3" edge="1" parent="1" source="cf" target="waf" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+        <mxCell id="e4" edge="1" parent="1" source="waf" target="alb" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+
+        <mxCell id="e5" edge="1" parent="1" source="alb" target="ec2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+        <mxCell id="e6" edge="1" parent="1" source="alb" target="lambda" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+
+        <mxCell id="e7" edge="1" parent="1" source="ec2" target="rds" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+        <mxCell id="e8" edge="1" parent="1" source="ec2" target="ddb" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+        <mxCell id="e9" edge="1" parent="1" source="ec2" target="s3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+
+        <mxCell id="e10" edge="1" parent="1" source="lambda" target="ddb" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+        <mxCell id="e11" edge="1" parent="1" source="lambda" target="s3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+
+        <mxCell id="e12" edge="1" parent="1" source="cf" target="s3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;strokeWidth=2;"/>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
