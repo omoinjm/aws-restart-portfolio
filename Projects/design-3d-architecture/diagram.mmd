@@ -1,0 +1,99 @@
+graph TD
+
+    %% =========================
+    %% Global Users
+    %% =========================
+    USERS[Global Users\nWeb & Mobile Browsers]
+
+    %% =========================
+    %% Edge & DNS Layer
+    %% =========================
+    subgraph Edge & DNS
+        R53[Amazon Route 53\nDNS & Health Checks]
+        CF[Amazon CloudFront\nGlobal CDN]
+        WAF[AWS WAF\nWeb Application Firewall]
+    end
+
+    %% =========================
+    %% AWS Cloud Environment
+    %% =========================
+    subgraph AWS Cloud - VPC (Multi-AZ)
+
+        direction LR
+
+        %% ---------------------
+        %% Public Subnets
+        %% ---------------------
+        subgraph Public Subnets (AZ1 & AZ2)
+            ALB[Application Load Balancer\nTraffic Distribution]
+            NAT[NAT Gateway\nOutbound Internet Access]
+        end
+
+        %% ---------------------
+        %% Application Tier
+        %% ---------------------
+        subgraph Private App Tier (Auto Scaling)
+            EC2[Amazon EC2\n3D Rendering Backend\nAuto Scaling Group]
+            LAMBDA[AWS Lambda\nServerless Processing]
+        end
+
+        %% ---------------------
+        %% Database Tier
+        %% ---------------------
+        subgraph Private Database Tier
+            RDS[Amazon RDS\nMulti-AZ Relational DB]
+            DYNAMODB[Amazon DynamoDB\nNoSQL Product Catalog]
+        end
+    end
+
+    %% =========================
+    %% Storage & Assets
+    %% =========================
+    subgraph Storage Services
+        S3[Amazon S3\n3D Models & Static Assets]
+    end
+
+    %% =========================
+    %% Monitoring & Optimization
+    %% =========================
+    subgraph Monitoring & Optimization
+        CW[Amazon CloudWatch\nMetrics & Logs]
+        TA[AWS Trusted Advisor\nCost Optimization]
+        IAM[AWS IAM\nAccess Control]
+    end
+
+
+    %% =========================
+    %% Traffic Flow
+    %% =========================
+    USERS --> R53
+    R53 --> CF
+    CF --> WAF
+    WAF --> ALB
+
+    CF --> S3
+    ALB --> EC2
+    ALB --> LAMBDA
+
+    EC2 --> RDS
+    EC2 --> DYNAMODB
+    EC2 --> S3
+
+    LAMBDA --> DYNAMODB
+    LAMBDA --> S3
+
+    %% Monitoring Connections
+    EC2 --> CW
+    LAMBDA --> CW
+    RDS --> CW
+    DYNAMODB --> CW
+    S3 --> CW
+    ALB --> CW
+    CF --> CW
+    R53 --> CW
+
+    %% IAM Controls
+    IAM --> EC2
+    IAM --> LAMBDA
+    IAM --> RDS
+    IAM --> S3
