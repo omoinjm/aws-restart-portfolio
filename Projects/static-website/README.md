@@ -1,6 +1,6 @@
 # Cafena Café Website Redesign and AWS Deployment Demonstration
 
-[View Instructions](./task.md)
+[View Instructions](./Instructions.md)
 
 [View Project Code](https://github.com/omoinjm/local-coffee-shop)
 
