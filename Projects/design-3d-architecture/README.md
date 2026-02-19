@@ -2,6 +2,8 @@
 
 > A highly available, scalable, and secure cloud infrastructure for a 3D application deployed on AWS.
 
+[View Instructions](./Instructions.md)
+
 ---
 
 ## 📐 Architecture Diagram
