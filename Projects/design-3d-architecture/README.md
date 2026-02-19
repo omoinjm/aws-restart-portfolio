@@ -17,9 +17,7 @@
 | Resource | Description |
 |----------|-------------|
 | 📖 [Architecture Explanation](./ARCHITECTURE.md) | Full technical write-up of every layer |
-| 🔐 [Security Guide](./SECURITY.md) | Security controls and IAM policies |
-| 🚀 [Deployment Guide](./DEPLOYMENT.md) | Step-by-step deployment instructions |
-| 💰 [Cost Optimization](./COST.md) | Cost-saving strategies and estimates |
+
 
 ---
 
