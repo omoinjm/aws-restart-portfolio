@@ -1,11 +1,27 @@
-# Introduction to Amazon EC2
+---
+title: Amazon EC2 Setup Instructions
+description: Step-by-step guide for launching and managing an EC2 instance.
+type: content
+path: /Labs/Compute/ec2_setup/Instructions.md
+tags: [ec2, compute, aws, tutorial]
+---
+
+# 📖 Introduction to Amazon EC2
+
+## 🔗 Navigation
+
+- [⬆ Parent](./README.md)
+- [🏠 Root](../../../README.md)
+- [🖥️ Compute Hub](../../README.md)
+
+---
 
 ## Overview
 architectural diagram
 
-This lab provided me with a basic overview of launching, resizing, managing, and monitoring an Amazon EC2 instance.
+This lab provided me with a basic overview of launching, resizing, managing, and monitoring an [Amazon EC2](../../../Labs/Compute/README.md) instance.
 
-Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
+[Amazon EC2](../../../Labs/Compute/README.md) is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
 
 Amazon EC2's simple web service interface allowed me to obtain and configure capacity with minimal friction. It provided me with complete control of my computing resources and let me run on Amazon's proven computing environment. Amazon EC2 reduced the time required to obtain and boot new server instances to minutes, allowing me to quickly scale capacity, both up and down, as my computing requirements changed.
 

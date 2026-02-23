@@ -1,8 +1,24 @@
-# Introduction to Amazon Aurora
+---
+title: Introduction to Amazon Aurora
+description: Setting up a MySQL-compatible Aurora cluster in a VPC and connecting via EC2.
+type: content
+path: /Labs/Databases/create_an_aurora_mysql_db/Instructions.md
+tags: [aurora, mysql, rds, databases, sql]
+---
+
+# 📊 Introduction to Amazon Aurora
+
+## 🔗 Navigation
+
+- [⬆ Parent](./README.md)
+- [🏠 Root](../../../README.md)
+- [🗄️ Database Hub](../../README.md)
+
+---
 
 ## Overview
 
-This lab introduces you to Amazon Aurora and provides you with a basic understanding of how to use Aurora. You will follow the steps to create an Aurora instance and then connect to it.
+This lab introduces you to [Amazon Aurora](../../../Labs/Databases/README.md) and provides you with a basic understanding of how to use Aurora. You will follow the steps to create an Aurora instance and then connect to it.
 
 ---
 
@@ -11,7 +27,7 @@ This lab introduces you to Amazon Aurora and provides you with a basic understan
 After completing this lab, you will be able to:
 
 - Create an Aurora instance
-- Connect to a pre-created Amazon Elastic Compute Cloud (Amazon EC2) instance
+- Connect to a pre-created [Amazon EC2](../../../Labs/Compute/README.md) instance
 - Configure the Amazon EC2 instance to connect to Aurora
 - Query the Aurora instance
 

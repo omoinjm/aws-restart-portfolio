@@ -1,81 +1,75 @@
 ---
-type: directory
-path: Labs/Linux
-parent: Labs
-tags: [repo, obsidian, documentation, linux, aws-restart]
+title: Linux Fundamentals Labs
+description: Hands-on labs covering Linux CLI, system administration, and shell scripting.
+type: map
+path: /Labs/Linux/README.md
+tags: [linux, cli, bash, administration]
 ---
 
-# Linux Labs
+# 👾 Linux Labs
 
-## Navigation
+## 🔗 Navigation
 
 - [⬆ Parent](../README.md)
 - [🏠 Root](../../README.md)
 - [📂 Current](./README.md)
 
-## Overview
+---
 
-Hands-on labs I completed covering **Linux fundamentals and system administration**, essential for cloud practitioners working with EC2 and other compute services.
+## 📌 Overview
 
-## Completed Labs
+Hands-on labs I completed covering **Linux fundamentals and system administration**, essential for cloud practitioners working with [EC2](../../Labs/Compute/README.md) and other AWS compute services.
 
-- [Intro to Amazon Linux AMI](./amazon_linux_ami/README.md)
-- [Linux Command Line](./linux_cli/README.md)
-- [Users and Groups](./users_and_groups/README.md)
-- [Editing Files](./editing_files/README.md)
-- [Working with the File System](./working_with_the_file_system/README.md)
-- [Working with Files](./working_with_files/README.md)
-- [Managing File Permissions](./managing_file_permissions/README.md)
-- [Working with Commands](./working_with_commands/README.md)
-- [Managing Processes](./managing_processes/README.md)
-- [Managing Services and Monitoring](./managing_services_and_monitoring/README.md)
-- [The Bash Shell](./the_bash_shell/README.md)
-- [Bash Shell Scripts](./bash_shell_scripts/README.md)
-- [Software Management](./software_management/README.md)
-- [Managing Log Files](./managing_log_files/README.md)
-- [[Challenge] Bash Shell Scripting](./[challenge]_bash_shell_scripting/README.md)
+---
 
-## Lab Contents
+## 📁 Contents
 
-```
+| Lab | Description |
+| :--- | :--- |
+| [Intro to Amazon Linux AMI](./amazon_linux_ami/README.md) | Navigating the AWS-optimized Linux environment. |
+| [Linux Command Line](./linux_cli/README.md) | Fundamental [CLI](../../Labs/Linux/README.md) operations. |
+| [Users and Groups](./users_and_groups/README.md) | Identity management in Linux. |
+| [Editing Files](./editing_files/README.md) | Using `vi`, `nano`, and other editors. |
+| [The File System](./working_with_the_file_system/README.md) | Understanding directory structures. |
+| [Bash Shell Scripts](./bash_shell_scripts/README.md) | Automating tasks with shell scripts. |
+| [Software Management](./software_management/README.md) | Using `yum` and `rpm` for packages. |
+| [[Challenge] Scripting](./[challenge]_bash_shell_scripting/README.md) | Advanced task automation. |
+
+### Full Lab Directory
+```text
 Linux/
 ├── amazon_linux_ami/
-│   └── assets/
 ├── linux_cli/
-│   └── assets/
 ├── users_and_groups/
-│   └── assets/
 ├── editing_files/
-│   └── assets/
 ├── working_with_the_file_system/
-│   └── assets/
 ├── working_with_files/
-│   └── assets/
 ├── managing_file_permissions/
-│   └── assets/
 ├── working_with_commands/
-│   └── assets/
 ├── managing_processes/
-│   └── assets/
 ├── managing_services_and_monitoring/
-│   └── assets/
 ├── the_bash_shell/
-│   └── assets/
 ├── bash_shell_scripts/
-│   └── assets/
 ├── software_management/
-│   └── assets/
 ├── managing_log_files/
-│   └── assets/
 └── [challenge]_bash_shell_scripting/
-    └── assets/
 ```
 
-## What I Demonstrated
+---
 
-Through these labs, I documented practical Linux knowledge including:
+## 🧠 Responsibilities
 
-- System administration basics
-- User and permission management
-- Command-line proficiency
-- Linux distribution fundamentals
+- **System Administration:** Mastering file systems, permissions, and process management.
+- **Automation:** Writing scripts to streamline server configuration.
+- **Troubleshooting:** Analyzing log files and monitoring system services.
+
+---
+
+## 🔄 Relationships
+
+- **Upstream:** Part of the [AWS Labs](../README.md) portfolio.
+- **Downstream:** Knowledge applied when managing [EC2](../../Labs/Compute/README.md) instances.
+
+---
+
+_Through these labs, I documented practical Linux knowledge essential for cloud engineering roles._
