@@ -1,3 +1,4 @@
+---
 type: directory
 path: Labs/Databases/create_and_query_dynamo_db
 parent: Labs/Databases
