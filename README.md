@@ -1,72 +1,55 @@
-## [![GitHub contributors](https://img.shields.io/github/contributors/omoinjm/aws-restart-portfolio)](https://github.com/omoinjm/aws-restart-portfolio/graphs/contributors/) [![GitHub Stars](https://img.shields.io/github/stars/omoinjm/aws-restart-portfolio.svg)](https://github.com/omoinjm/aws-restart-portfolio/stargazers)
+---
+title: AWS re/Start Portfolio
+description: A comprehensive record of my journey through the AWS re/Start program, showcasing labs, projects, and certifications.
+type: map
+path: /README.md
+tags: [aws, cloud-practitioner, portfolio, learning-journey]
+---
+
+# ☁️ AWS re/Start Portfolio
+
+## 🔗 Navigation
+
+- [🏠 Root](./README.md)
+- [🧪 Labs](./Labs/README.md)
+- [🚀 Projects](./Projects/README.md)
+- [🎓 Certs & Badges](./Certs-Badges/README.md)
+
+---
+
+## 📌 Overview
 
 ![AWS re/Start Portfolio](assets/aws.png)
 
----
+## [![GitHub contributors](https://img.shields.io/github/contributors/omoinjm/aws-restart-portfolio)](https://github.com/omoinjm/aws-restart-portfolio/graphs/contributors/) [![GitHub Stars](https://img.shields.io/github/stars/omoinjm/aws-restart-portfolio.svg)](https://github.com/omoinjm/aws-restart-portfolio/stargazers)
 
-## About This Repository
+This repository documents my learning journey and hands-on experience through the **AWS re/Start Program**. The program is designed to take individuals from beginner level to **job-ready cloud practitioners**, with a strong focus on practical skills, real-world scenarios, and professional documentation.
 
-This repository documents my learning journey and hands-on experience through the **AWS re/Start Program**.  
-The program is designed to take individuals from beginner level to **job-ready cloud practitioners**, with a strong focus on practical skills, real-world scenarios, and professional documentation.
-
-This repository serves as:
-
-- 📊 A **portfolio** to showcase my AWS labs and projects
-- ✅ Evidence of **hands-on cloud experience**
-- 📚 A structured **learning record** aligned with industry expectations
-- 🔄 A resource I can revisit to reinforce concepts and best practices
-
----
-
-## What I Learned in AWS re/Start
-
+### ☁️ AWS Services Covered
 During the program, I gained exposure to the following key areas:
 
-### ☁️ Cloud Computing (AWS)
-
-| Service                                                   | Purpose                                     |
-| --------------------------------------------------------- | ------------------------------------------- |
-| ![EC2](assets/icons/EC2.png) **EC2**                      | Compute instances for scalable applications |
-| ![S3](assets/icons/S3.png) **S3**                         | Object storage for data persistence         |
-| ![IAM](assets/icons/IAM.png) **IAM**                      | Identity and access management              |
-| ![VPC](assets/icons/VPC.png) **VPC**                      | Virtual private cloud networking            |
-| ![RDS](assets/icons/RDS.png) **RDS**                      | Managed relational databases                |
-| ![Lambda](assets/icons/Lambda.png) **Lambda**             | Serverless compute functions                |
-| ![CloudWatch](assets/icons/CloudWatch.png) **CloudWatch** | Monitoring and logging                      |
-
-### 🌐 Networking & Security
-
-- 🔌 Networking basics (CIDR, subnets, routing)
-- 🛡️ VPC design concepts
-- 🔒 Security best practices
-- 👤 Identity and Access Management (IAM)
-- ↔️ Shared Responsibility Model
-
-### 💾 Databases & Storage
-
-- 📊 Relational vs NoSQL databases
-- 🏗️ AWS storage options and use cases
-- 💿 Data persistence and backups
-
-### 🧑‍💻 Programming & Automation
-
-- 🐍 Python fundamentals
-- 🤖 Scripting for automation
-- 🧠 Logic building and problem-solving
-- 🔗 Using scripts to interact with systems and services
-
-### 🛠️ Professional & DevOps Skills
-
-- 📝 Git & GitHub version control
-- 📖 Writing clear technical documentation
-- 📁 Structuring repositories professionally
-- ✨ Working with labs, tasks, and outcomes
+| Service | Purpose |
+| :--- | :--- |
+| ![EC2](assets/icons/EC2.png) **EC2** | Compute instances for scalable applications |
+| ![S3](assets/icons/S3.png) **S3** | Object storage for data persistence |
+| ![IAM](assets/icons/IAM.png) **IAM** | Identity and access management |
+| ![VPC](assets/icons/VPC.png) **VPC** | Virtual private cloud networking |
+| ![RDS](assets/icons/RDS.png) **RDS** | Managed relational databases |
+| ![Lambda](assets/icons/Lambda.png) **Lambda** | Serverless compute functions |
+| ![CloudWatch](assets/icons/CloudWatch.png) **CloudWatch** | Monitoring and logging |
 
 ---
 
-## 📁 Repository Structure
+## 📁 Contents
 
-```
+| Folder | Description |
+| :--- | :--- |
+| [🧪 Labs](./Labs/README.md) | Hands-on AWS labs organized by service domain (Compute, Storage, Networking, etc.). |
+| [🚀 Projects](./Projects/README.md) | End-to-end portfolio projects showcasing architectural design and deployment. |
+| [🎓 Certs-Badges](./Certs-Badges/README.md) | Official AWS certifications and program achievement badges. |
+
+### Repository Structure
+```text
 aws-restart-portfolio/
 ├── 🧪 Labs/
 │   ├── 🌐 Networking/
@@ -80,44 +63,22 @@ aws-restart-portfolio/
 └── 📦 assets/
 ```
 
-## Navigation
+---
 
-- [Labs](./Labs/README.md) - Hands-on AWS labs by service domain
-- [Projects](./Projects/README.md) - Portfolio projects showcasing skills
-- [Certs-Badges](./Certs-Badges/README.md) - Certifications and achievements
+## 🧠 Responsibilities
 
-| Aspect                        | Impact                                                       |
-| ----------------------------- | ------------------------------------------------------------ |
-| 🎯 **Practical Knowledge**    | Demonstrates real AWS experience, not just theory            |
-| 📢 **Communication Skills**   | Shows ability to document and explain technical work clearly |
-| 📈 **Growth & Progress**      | Reflects consistency, structure, and continuous learning     |
-| 💼 **Professional Portfolio** | Acts as a digital CV for cloud and junior IT roles           |
+- **Portfolio Showcase:** Serving as a digital CV to demonstrate AWS proficiency.
+- **Evidence of Experience:** Providing verifiable proof of hands-on cloud tasks.
+- **Learning Record:** Acting as a structured archive of technical growth.
+- **Reinforcement Tool:** A personal reference for cloud best practices and troubleshooting.
 
 ---
 
-## AWS Services Covered
+## 🔄 Relationships
 
-```
-┌─────────────────────────────────────────────────────┐
-│            🌟 AWS re/Start Program 🌟               │
-├─────────────────────────────────────────────────────┤
-│  ☁️ COMPUTE       🗄️ DATABASES     🔒 SECURITY      │
-│  • EC2             • RDS            • IAM           │
-│  • Lambda          • DynamoDB       • VPC           │
-│  • ECS             • MongoDB        • CloudTrail    │
-│                                                     │
-│  💾 STORAGE       🌐 NETWORKING   🛠️ DEVOPS         │
-│  • S3              • VPC            • CloudWatch    │
-│  • EBS             • Route 53       • CloudFormation│
-│  • Glacier         • ALB/NLB        • Git/GitHub    │
-└─────────────────────────────────────────────────────┘
-```
-
----
-
-## Continuous Improvement
-
-This is a **living repository** 🌱 and will be updated as I continue learning and building.
+- **Upstream:** Aligned with the **AWS re/Start Curriculum**.
+- **Downstream:** Feeds into specialized labs in [Compute](./Labs/Compute/README.md) and [Networking](./Labs/Networking/README.md).
+- **Interconnects:** Projects like the [Static Website](./Projects/static_website/README.md) utilize resources learned in the Labs section.
 
 ---
 
