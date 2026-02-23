@@ -17,9 +17,10 @@ This directory contains badges and certifications earned through SimuLearn.
 
 ## Badges
 
-- [File Systems in the Cloud](./1.File-Systems-in-the-Cloud/README.md)
-- [Databases in Practice](./2.Databases-in-Practice/README.md)
-- [Networking Concepts](./3.Networking-Concepts/README.md)
+- [File Systems in the Cloud](./file_systems_in_the_cloud/README.md)
+- [Databases in Practice](./databases_in_practice/README.md)
+- [Networking Concepts](./networking_concepts/README.md)
+- [ Core Security Concept](./core_security_concept/README.md)
 
 ## Overview
 
