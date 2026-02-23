@@ -1,3 +1,4 @@
+---
 type: directory
 path: Labs/Databases/create_an_aurora_mysql_db
 parent: Labs/Databases
