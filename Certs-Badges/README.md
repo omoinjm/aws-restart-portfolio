@@ -1,46 +1,52 @@
 ---
-type: directory
-path: Certs-Badges
-parent: .
-tags: [repo, obsidian, documentation, certifications, achievements, credentials]
+title: AWS Certifications & Badges
+description: Official AWS certifications and program achievement badges earned during my cloud journey.
+type: map
+path: /Certs-Badges/README.md
+tags: [certifications, badges, credentials, cloud-practitioner]
 ---
 
-# Certifications & Badges
+# 🎓 Certifications & Badges
 
-## Navigation
+## 🔗 Navigation
 
 - [⬆ Parent](../README.md)
-- [🏠 [Root](../../README.md)
-- [📂 [Current](./README.md)
+- [🏠 Root](../README.md)
+- [📂 Current](./README.md)
 
-## Overview
+---
 
-This folder contains certifications, badges, and credentials earned during my cloud learning journey.
+## 📌 Overview
 
-Each certification or badge is documented to explain:
+This folder contains certifications, badges, and credentials earned during my cloud learning journey, specifically through the **AWS re/Start Program**. These represent formal validation of my technical knowledge and professional commitment.
 
-- What the certification represents
-- Skills and knowledge areas covered
-- Relevance to cloud and AWS roles
+### 📜 Credentials
+- **AWS Certified Cloud Practitioner:** (In progress / Achieved)
+- **AWS re/Start Program Completion:** Demonstrating job-ready cloud skills.
+- **Simu-Learn Badges:** Focus on [Networking](../Labs/Networking/README.md), [Security](../Labs/Security/README.md), and [Databases](../Labs/Databases/README.md).
 
-## Why Certifications Matter
+---
 
-- Validate foundational cloud knowledge
-- Show commitment to continuous learning
-- Support job applications and interviews
+## 📁 Contents
 
-## Contents
+| Credential | Description |
+| :--- | :--- |
+| [Simu-Learn](./Simu-Learn/README.md) | Series of achievement badges for core technical concepts. |
 
-- Markdown files explaining each certification or badge
-- Proof of completion where applicable
+---
 
-## Responsibilities
+## 🧠 Responsibilities
 
-Maintains evidence of:
+- **Validation:** Providing verifiable proof of foundational cloud knowledge.
+- **Commitment:** Demonstrating a dedicated path of continuous learning.
+- **Support:** Supplementing hands-on experience for job applications and interviews.
 
-- Formal credential achievement
-- Knowledge validation
-- Professional development
+---
+
+## 🔄 Relationships
+
+- **Upstream:** Part of the [Main Portfolio](../README.md).
+- **Interconnects:** Validates skills developed across all [Labs](../Labs/README.md).
 
 ---
 

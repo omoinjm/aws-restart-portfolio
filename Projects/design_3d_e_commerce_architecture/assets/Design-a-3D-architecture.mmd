@@ -1,0 +1,90 @@
+graph TD
+
+%% =========================
+%% Global Users
+%% =========================
+USERS[Global Users - Web and Mobile Browsers]
+
+%% =========================
+%% Edge and DNS Layer
+%% =========================
+subgraph Edge_and_DNS
+    R53[Amazon Route 53 - DNS and Health Checks]
+    CF[Amazon CloudFront - Global CDN]
+    WAF[AWS WAF - Web Application Firewall]
+end
+
+%% =========================
+%% AWS Cloud VPC
+%% =========================
+subgraph AWS_Cloud_VPC_Multi_AZ
+
+    %% Public Subnets
+    subgraph Public_Subnets_AZ1_AZ2
+        ALB[Application Load Balancer - Traffic Distribution]
+        NAT[NAT Gateway - Outbound Internet]
+    end
+
+    %% Application Tier
+    subgraph Private_App_Tier
+        EC2[Amazon EC2 - 3D Backend - Auto Scaling Group]
+        LAMBDA[AWS Lambda - Serverless Processing]
+    end
+
+    %% Database Tier
+    subgraph Private_Database_Tier
+        RDS[Amazon RDS - Multi AZ Relational Database]
+        DYNAMODB[Amazon DynamoDB - NoSQL Catalog]
+    end
+end
+
+%% =========================
+%% Storage
+%% =========================
+subgraph Storage_Services
+    S3[Amazon S3 - 3D Models and Static Assets]
+end
+
+%% =========================
+%% Monitoring and Optimization
+%% =========================
+subgraph Monitoring_and_Optimization
+    CW[Amazon CloudWatch - Metrics and Logs]
+    TA[AWS Trusted Advisor - Cost Optimization]
+    IAM[AWS IAM - Access Control]
+end
+
+%% =========================
+%% Traffic Flow
+%% =========================
+USERS --> R53
+R53 --> CF
+CF --> WAF
+WAF --> ALB
+
+CF --> S3
+ALB --> EC2
+ALB --> LAMBDA
+
+EC2 --> RDS
+EC2 --> DYNAMODB
+EC2 --> S3
+
+LAMBDA --> DYNAMODB
+LAMBDA --> S3
+
+%% Monitoring
+EC2 --> CW
+LAMBDA --> CW
+RDS --> CW
+DYNAMODB --> CW
+S3 --> CW
+ALB --> CW
+CF --> CW
+R53 --> CW
+
+%% IAM Controls
+IAM --> EC2
+IAM --> LAMBDA
+IAM --> RDS
+IAM --> S3
