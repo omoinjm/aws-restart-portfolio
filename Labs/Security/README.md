@@ -1,35 +1,54 @@
 ---
-type: directory
-path: Labs/Security
-parent: Labs
-tags: [repo, obsidian, documentation, security, aws, iam]
+title: AWS Security Labs
+description: Hands-on labs focusing on IAM, access control, and the Shared Responsibility Model.
+type: map
+path: /Labs/Security/README.md
+tags: [security, iam, aws, access-control]
 ---
 
-# Security Labs
+# 🔒 Security Labs
 
-## Navigation
+## 🔗 Navigation
 
-- ⬆ [Parent:](../README.md)
-- 🏠 [Root:](../../README.md)
-- 📂 [Current:](./README.md)
+- [⬆ Parent](../README.md)
+- [🏠 Root](../../README.md)
+- [📂 Current](./README.md)
 
-## Overview
+---
+
+## 📌 Overview
 
 Labs I completed focused on **AWS security best practices**—identity management, access control, and the shared responsibility model.
 
-## Services I Worked With
+### 🛠️ Services Worked With
+- **AWS IAM:** Managing users, groups, and roles.
+- **Access Control Lists:** Defining granular permissions.
+- **Security Policies:** JSON-based permission logic.
 
-To be documented based on completed labs.
+---
 
-## Key Tasks I Performed
+## 📁 Contents
 
-To be documented based on completed labs.
+| Focus Area | Description |
+| :--- | :--- |
+| **Identity Management** | User creation and policy attachment in [IAM](../../Labs/Security/README.md). |
+| **Access Control** | Implementing the Principle of Least Privilege. |
 
-## What I Demonstrated
+---
 
-Through these labs, I demonstrated understanding of:
+## 🧠 Responsibilities
 
-- Identity and access management (IAM)
-- Principle of least privilege
-- Security best practices
-- Compliance and audit
+- **Identity Governance:** Managing user access and security credentials.
+- **Policy Drafting:** Creating custom JSON policies for service access.
+- **Best Practices:** Implementing MFA and regular security audits.
+
+---
+
+## 🔄 Relationships
+
+- **Upstream:** Part of the [AWS Labs](../README.md) portfolio.
+- **Interconnects:** Knowledge from these labs is applied across [Compute](../../Labs/Compute/README.md), [Storage](../../Labs/Storage/README.md), and [Databases](../../Labs/Databases/README.md).
+
+---
+
+_Through these labs, I demonstrated practical knowledge of the IAM service and AWS security frameworks._

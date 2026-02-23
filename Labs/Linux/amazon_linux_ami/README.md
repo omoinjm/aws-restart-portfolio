@@ -21,12 +21,12 @@ This lab helped reinforce my knowledge of the basic command line interface funct
 
 For a detailed step-by-step guide on how I configured this environment, please refer to the documentation:
 
-- [View My Instructions](./task.md)
+- [View My Instructions](./Instructions.md)
 
 ## Contents
 
 - `assets/` - Screenshots and supporting materials I captured
-- `task.md` - Detailed lab instructions I followed
+- `Instructions.md` - Detailed lab instructions I followed
 
 ---
 
