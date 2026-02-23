@@ -26,16 +26,16 @@ To be documented based on completed projects.
 
 ## Project Categories
 
-- [Static Website](./static-website/README.md)
+- [Static Website](./static_website/README.md)
+- [Design a 3D E -Commerce Platform Architecture on AWS](./design_3d_e_commerce_architecture/README.md)
 
 ## Folder Structure
 
 ```
 Projects/
-├── 🌐 static-website/
-└── 🔒 whatsapp-bot/
+├── 🌐 static_website/
+└── 🫙 design_3d_e_commerce_architecture/
 ```
-
 
 ## Responsibilities
 
