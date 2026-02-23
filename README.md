@@ -1,11 +1,3 @@
----
-title: AWS re/Start Portfolio
-description: A comprehensive record of my journey through the AWS re/Start program, showcasing labs, projects, and certifications.
-type: map
-path: /README.md
-tags: [aws, cloud-practitioner, portfolio, learning-journey]
----
-
 # ☁️ AWS re/Start Portfolio
 
 ## 🔗 Navigation
@@ -26,41 +18,43 @@ tags: [aws, cloud-practitioner, portfolio, learning-journey]
 This repository documents my learning journey and hands-on experience through the **AWS re/Start Program**. The program is designed to take individuals from beginner level to **job-ready cloud practitioners**, with a strong focus on practical skills, real-world scenarios, and professional documentation.
 
 ### ☁️ AWS Services Covered
+
 During the program, I gained exposure to the following key areas:
 
-| Service | Purpose |
-| :--- | :--- |
-| ![EC2](assets/icons/EC2.png) **EC2** | Compute instances for scalable applications |
-| ![S3](assets/icons/S3.png) **S3** | Object storage for data persistence |
-| ![IAM](assets/icons/IAM.png) **IAM** | Identity and access management |
-| ![VPC](assets/icons/VPC.png) **VPC** | Virtual private cloud networking |
-| ![RDS](assets/icons/RDS.png) **RDS** | Managed relational databases |
-| ![Lambda](assets/icons/Lambda.png) **Lambda** | Serverless compute functions |
-| ![CloudWatch](assets/icons/CloudWatch.png) **CloudWatch** | Monitoring and logging |
+| Service                                                   | Purpose                                     |
+| :-------------------------------------------------------- | :------------------------------------------ |
+| ![EC2](assets/icons/EC2.png) **EC2**                      | Compute instances for scalable applications |
+| ![S3](assets/icons/S3.png) **S3**                         | Object storage for data persistence         |
+| ![IAM](assets/icons/IAM.png) **IAM**                      | Identity and access management              |
+| ![VPC](assets/icons/VPC.png) **VPC**                      | Virtual private cloud networking            |
+| ![RDS](assets/icons/RDS.png) **RDS**                      | Managed relational databases                |
+| ![Lambda](assets/icons/Lambda.png) **Lambda**             | Serverless compute functions                |
+| ![CloudWatch](assets/icons/CloudWatch.png) **CloudWatch** | Monitoring and logging                      |
 
 ---
 
-## 📁 Contents
+## Repository Structure
 
-| Folder | Description |
-| :--- | :--- |
-| [🧪 Labs](./Labs/README.md) | Hands-on AWS labs organized by service domain (Compute, Storage, Networking, etc.). |
-| [🚀 Projects](./Projects/README.md) | End-to-end portfolio projects showcasing architectural design and deployment. |
-| [🎓 Certs-Badges](./Certs-Badges/README.md) | Official AWS certifications and program achievement badges. |
-
-### Repository Structure
 ```text
-aws-restart-portfolio/
+.
 ├── 🧪 Labs/
-│   ├── 🌐 Networking/
 │   ├── 🖥️ Compute/
-│   ├── 💾 Storage/
 │   ├── 📊 Databases/
+│   ├── 👾 Linux/
+│   ├── 🌐 Networking/
 │   ├── 🔒 Security/
-│   └── 👾 Linux/
+│   └── 💾 Storage/
 ├── 🚀 Projects/
+│   ├── 🏗️ design_3d_e_commerce_architecture/
+│   └── 🌐 static_website/
 ├── 🎓 Certs-Badges/
+│   └── 🎓 Simu-Learn/
+│       ├── 🔒 core_security_concepts/
+│       ├── 📊 databases_in_practice/
+│       ├── 📂 file_systems_in_the_cloud/
+│       └── 🌐 networking_concepts/
 └── 📦 assets/
+    └── 📂 icons/
 ```
 
 ---
