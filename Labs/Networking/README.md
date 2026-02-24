@@ -29,10 +29,16 @@ Labs I completed covering **AWS networking fundamentals**—VPCs, subnets, routi
 
 ## 📁 Contents
 
-| Focus Area | Description |
+| Lab | Description |
 | :--- | :--- |
-| **VPC Design** | Architecting custom VPC environments with multiple subnets. |
-| **Connectivity** | Implementing Internet Gateways and NAT Gateways. |
+| [🌐 Public & Private IPs](./public_and_private_ip_addresses/README.md) | Understanding IP addressing and connectivity within a VPC. |
+
+### Lab Structure
+```text
+Networking/
+└── public_and_private_ip_addresses/
+    └── assets/
+```
 
 ---
 
