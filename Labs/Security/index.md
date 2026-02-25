@@ -2,7 +2,7 @@
 title: AWS Security Labs
 description: Hands-on labs focusing on IAM, access control, and the Shared Responsibility Model.
 type: map
-path: /Labs/Security/README.md
+path: /Labs/Security/index.md
 tags: [security, iam, aws, access-control]
 ---
 
@@ -10,9 +10,9 @@ tags: [security, iam, aws, access-control]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](../README.md)
-- [🏠 Root](../../README.md)
-- [📂 Current](./README.md)
+- [⬆ Parent](../index.md)
+- [🏠 Root](../../index.md)
+- [📂 Current](./index.md)
 
 ---
 
@@ -31,7 +31,7 @@ Labs I completed focused on **AWS security best practices**—identity managemen
 
 | Focus Area | Description |
 | :--- | :--- |
-| **Identity Management** | User creation and policy attachment in [IAM](../../Labs/Security/README.md). |
+| **Identity Management** | User creation and policy attachment in [IAM](../../Labs/Security/index.md). |
 | **Access Control** | Implementing the Principle of Least Privilege. |
 
 ---
@@ -46,8 +46,8 @@ Labs I completed focused on **AWS security best practices**—identity managemen
 
 ## 🔄 Relationships
 
-- **Upstream:** Part of the [AWS Labs](../README.md) portfolio.
-- **Interconnects:** Knowledge from these labs is applied across [Compute](../../Labs/Compute/README.md), [Storage](../../Labs/Storage/README.md), and [Databases](../../Labs/Databases/README.md).
+- **Upstream:** Part of the [AWS Labs](../index.md) portfolio.
+- **Interconnects:** Knowledge from these labs is applied across [Compute](../../Labs/Compute/index.md), [Storage](../../Labs/Storage/index.md), and [Databases](../../Labs/Databases/index.md).
 
 ---
 

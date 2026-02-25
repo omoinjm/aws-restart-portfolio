@@ -11,6 +11,7 @@ baseurl: "/aws-restart-portfolio"
 
 include:
   - assets
+  - search.json
 
 # Theme
 theme: jekyll-theme-hacker
@@ -22,17 +23,18 @@ plugins:
 
 # Markdown
 markdown: kramdown
+permalink: pretty
 
 # Navigation
 nav_links:
   - text: Home
-    url: /
+    url: /aws-restart-portfolio/
   - text: Labs
-    url: /labs/
+    url: /aws-restart-portfolio/Labs/
   - text: Projects
-    url: /projects/
+    url: /aws-restart-portfolio/Projects/
   - text: Certificates
-    url: /certs-badges/
+    url: /aws-restart-portfolio/Certs-Badges/
 
 # SEO
 google_site_verification: ""
