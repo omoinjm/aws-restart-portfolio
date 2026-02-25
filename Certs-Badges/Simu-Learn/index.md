@@ -11,16 +11,16 @@ This directory contains badges and certifications earned through SimuLearn.
 
 ## Navigation
 
-- [⬆ Parent](../README.md)
-- [🏠 Root](../../README.md)
-- [📂 Current](./README.md)
+- [⬆ Parent](../index.md)
+- [🏠 Root](../../index.md)
+- [📂 Current](./index.md)
 
 ## Badges
 
-- [File Systems in the Cloud](./file_systems_in_the_cloud/README.md)
-- [Databases in Practice](./databases_in_practice/README.md)
-- [Networking Concepts](./networking_concepts/README.md)
-- [Core Security Concepts](./core_security_concepts/README.md)
+- [File Systems in the Cloud](./file_systems_in_the_cloud/index.md)
+- [Databases in Practice](./databases_in_practice/index.md)
+- [Networking Concepts](./networking_concepts/index.md)
+- [Core Security Concepts](./core_security_concepts/index.md)
 
 ## Overview
 
