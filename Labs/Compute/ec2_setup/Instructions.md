@@ -10,18 +10,18 @@ tags: [ec2, compute, aws, tutorial]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](./README.md)
-- [🏠 Root](../../../README.md)
-- [🖥️ Compute Hub](../../README.md)
+- [⬆ Parent](./index.md)
+- [🏠 Root](../../../index.md)
+- [🖥️ Compute Hub](../../index.md)
 
 ---
 
 ## Overview
 architectural diagram
 
-This lab provided me with a basic overview of launching, resizing, managing, and monitoring an [Amazon EC2](../../../Labs/Compute/README.md) instance.
+This lab provided me with a basic overview of launching, resizing, managing, and monitoring an [Amazon EC2](../../../Labs/Compute/index.md) instance.
 
-[Amazon EC2](../../../Labs/Compute/README.md) is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
+[Amazon EC2](../../../Labs/Compute/index.md) is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers.
 
 Amazon EC2's simple web service interface allowed me to obtain and configure capacity with minimal friction. It provided me with complete control of my computing resources and let me run on Amazon's proven computing environment. Amazon EC2 reduced the time required to obtain and boot new server instances to minutes, allowing me to quickly scale capacity, both up and down, as my computing requirements changed.
 

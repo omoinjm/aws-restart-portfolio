@@ -1,34 +1,11 @@
----
-layout: default
-title: Home
----
-
 # ☁️ AWS re/Start Portfolio
-
-## 🔍 Search the Wiki
-<input type="text" id="search-input" placeholder="Type to search labs, projects..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-<ul id="results-container" style="list-style: none; padding-left: 0;"></ul>
-
-<script src="https://unpkg.com/simple-jekyll-search@latest/dest/simple-jekyll-search.min.js"></script>
-
-<script>
-window.simpleJekyllSearch = new SimpleJekyllSearch({
-  searchInput: document.getElementById('search-input'),
-  resultsContainer: document.getElementById('results-container'),
-  json: '{{ site.baseurl }}/search.json',
-  searchResultTemplate: '<li><a href="{url}">📄 {title}</a></li>',
-  noResultsText: 'No results found',
-  limit: 10,
-  fuzzy: false
-})
-</script>
 
 ## 🔗 Navigation
 
-- [🏠 Root](./README.md)
-- [🧪 Labs](./Labs/README.md)
-- [🚀 Projects](./Projects/README.md)
-- [🎓 Certs & Badges](./Certs-Badges/README.md)
+- [🏠 Root](./index.md)
+- [🧪 Labs](./Labs/index.md)
+- [🚀 Projects](./Projects/index.md)
+- [🎓 Certs & Badges](./Certs-Badges/index.md)
 
 ---
 
@@ -94,8 +71,8 @@ During the program, I gained exposure to the following key areas:
 ## 🔄 Relationships
 
 - **Upstream:** Aligned with the **AWS re/Start Curriculum**.
-- **Downstream:** Feeds into specialized labs in [Compute](./Labs/Compute/README.md) and [Networking](./Labs/Networking/README.md).
-- **Interconnects:** Projects like the [Static Website](./Projects/static_website/README.md) utilize resources learned in the Labs section.
+- **Downstream:** Feeds into specialized labs in [Compute](./Labs/Compute/index.md) and [Networking](./Labs/Networking/index.md).
+- **Interconnects:** Projects like the [Static Website](./Projects/static_website/index.md) utilize resources learned in the Labs section.
 
 ---
 

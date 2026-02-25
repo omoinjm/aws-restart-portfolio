@@ -10,15 +10,15 @@ tags: [aurora, mysql, rds, databases, sql]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](./README.md)
-- [🏠 Root](../../../README.md)
-- [🗄️ Database Hub](../../README.md)
+- [⬆ Parent](./index.md)
+- [🏠 Root](../../../index.md)
+- [🗄️ Database Hub](../../index.md)
 
 ---
 
 ## Overview
 
-This lab introduces you to [Amazon Aurora](../../../Labs/Databases/README.md) and provides you with a basic understanding of how to use Aurora. You will follow the steps to create an Aurora instance and then connect to it.
+This lab introduces you to [Amazon Aurora](../../../Labs/Databases/index.md) and provides you with a basic understanding of how to use Aurora. You will follow the steps to create an Aurora instance and then connect to it.
 
 ---
 
@@ -27,7 +27,7 @@ This lab introduces you to [Amazon Aurora](../../../Labs/Databases/README.md) an
 After completing this lab, you will be able to:
 
 - Create an Aurora instance
-- Connect to a pre-created [Amazon EC2](../../../Labs/Compute/README.md) instance
+- Connect to a pre-created [Amazon EC2](../../../Labs/Compute/index.md) instance
 - Configure the Amazon EC2 instance to connect to Aurora
 - Query the Aurora instance
 

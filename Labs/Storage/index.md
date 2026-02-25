@@ -2,7 +2,7 @@
 title: AWS Storage Labs
 description: Hands-on labs focusing on Amazon S3, block storage (EBS), and data archival.
 type: map
-path: /Labs/Storage/README.md
+path: /Labs/Storage/index.md
 tags: [storage, s3, ebs, aws]
 ---
 
@@ -10,15 +10,15 @@ tags: [storage, s3, ebs, aws]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](../README.md)
-- [🏠 Root](../../README.md)
-- [📂 Current](./README.md)
+- [⬆ Parent](../index.md)
+- [🏠 Root](../../index.md)
+- [📂 Current](./index.md)
 
 ---
 
 ## 📌 Overview
 
-Labs I completed exploring **AWS storage services**—from [S3](../../Labs/Storage/README.md) object storage to [EBS](../../Labs/Compute/README.md) block storage and archival solutions.
+Labs I completed exploring **AWS storage services**—from [S3](../../Labs/Storage/index.md) object storage to [EBS](../../Labs/Compute/index.md) block storage and archival solutions.
 
 ### 🛠️ Services Worked With
 - **Amazon S3:** Object storage buckets.
@@ -31,8 +31,8 @@ Labs I completed exploring **AWS storage services**—from [S3](../../Labs/Stora
 
 | Focus Area | Description |
 | :--- | :--- |
-| **Object Storage** | Lifecycle policies and permissions in [S3](../../Labs/Storage/README.md). |
-| **Persistence** | Attaching and resizing [EBS](../../Labs/Compute/README.md) volumes. |
+| **Object Storage** | Lifecycle policies and permissions in [S3](../../Labs/Storage/index.md). |
+| **Persistence** | Attaching and resizing [EBS](../../Labs/Compute/index.md) volumes. |
 
 ---
 
@@ -46,8 +46,8 @@ Labs I completed exploring **AWS storage services**—from [S3](../../Labs/Stora
 
 ## 🔄 Relationships
 
-- **Upstream:** Part of the [AWS Labs](../README.md) portfolio.
-- **Interconnects:** Works alongside [Compute](../../Labs/Compute/README.md) for data persistence.
+- **Upstream:** Part of the [AWS Labs](../index.md) portfolio.
+- **Interconnects:** Works alongside [Compute](../../Labs/Compute/index.md) for data persistence.
 
 ---
 

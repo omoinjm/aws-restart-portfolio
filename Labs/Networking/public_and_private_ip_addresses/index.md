@@ -2,7 +2,7 @@
 title: Public and Private IP Addresses Lab
 description: Analyzing the differences between public and private IP addresses for EC2 connectivity.
 type: content
-path: /Labs/Networking/public_and_private_ip_addresses/README.md
+path: /Labs/Networking/public_and_private_ip_addresses/index.md
 tags: [networking, aws, ec2, ip-addresses, cloud-infrastructure]
 ---
 
@@ -10,9 +10,9 @@ tags: [networking, aws, ec2, ip-addresses, cloud-infrastructure]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](../README.md)
-- [🏠 Root](../../../README.md)
-- [📂 Current](./README.md)
+- [⬆ Parent](../index.md)
+- [🏠 Root](../../../index.md)
+- [📂 Current](./index.md)
 
 ---
 
@@ -41,8 +41,8 @@ In this lab, I investigated a customer scenario involving connectivity issues to
 
 ## 🔄 Relationships
 
-- **Upstream:** Part of the [Networking Hub](../README.md).
-- **Interconnects:** Uses [EC2](../../../Labs/Compute/README.md) instances for connectivity testing.
+- **Upstream:** Part of the [Networking Hub](../index.md).
+- **Interconnects:** Uses [EC2](../../../Labs/Compute/index.md) instances for connectivity testing.
 
 ---
 
