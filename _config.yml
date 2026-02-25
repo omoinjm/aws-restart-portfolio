@@ -7,6 +7,7 @@ parent: null
 tags: [repo, obsidian, documentation, aws, portfolio, cloud]
 
 url: https://omoinjm.github.io/aws-restart-portfolio
+baseurl: "/aws-restart-portfolio"
 
 include:
   - assets
