@@ -2,7 +2,7 @@
 title: EC2 Setup Lab
 description: Detailed steps for launching, monitoring, and resizing an Amazon EC2 instance.
 type: content
-path: /Labs/Compute/ec2_setup/index.md
+path: /Labs/Compute/ec2_setup/README.md
 tags: [ec2, compute, aws, lab-report]
 ---
 
@@ -10,15 +10,15 @@ tags: [ec2, compute, aws, lab-report]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](../index.md)
-- [🏠 Root](../../../index.md)
-- [📂 Current](./index.md)
+- [⬆ Parent](../README.md)
+- [🏠 Root](../../../README.md)
+- [📂 Current](./README.md)
 
 ---
 
 ## 📌 Overview
 
-This project documents the configuration steps I followed and the verification I completed for the [EC2](../../../Labs/Compute/index.md) laboratory environment. It demonstrates the ability to manage the lifecycle of virtual servers in the [Cloud](../../../index.md).
+This project documents the configuration steps I followed and the verification I completed for the [EC2](../../../Labs/Compute/README.md) laboratory environment. It demonstrates the ability to manage the lifecycle of virtual servers in the [Cloud](../../../README.md).
 
 ---
 
@@ -34,16 +34,16 @@ This project documents the configuration steps I followed and the verification I
 ## 🧠 Responsibilities
 
 - **Provisioning:** Launching an instance with specific AMIs and instance types.
-- **Monitoring:** Using [CloudWatch](../../../Labs/index.md) and status checks to ensure health.
+- **Monitoring:** Using [CloudWatch](../../../Labs/README.md) and status checks to ensure health.
 - **Optimization:** Scaling the instance type and EBS volume to meet performance needs.
-- **Security:** Managing [SSH](../../../Labs/Linux/index.md) keys and Security Group rules.
+- **Security:** Managing [SSH](../../../Labs/Linux/README.md) keys and Security Group rules.
 
 ---
 
 ## 🔄 Relationships
 
-- **Upstream:** Part of the [Compute Hub](../index.md).
-- **Interconnects:** Uses [Linux](../../../Labs/Linux/index.md) commands for initial setup and [VPC](../../../Labs/Networking/index.md) for connectivity.
+- **Upstream:** Part of the [Compute Hub](../README.md).
+- **Interconnects:** Uses [Linux](../../../Labs/Linux/README.md) commands for initial setup and [VPC](../../../Labs/Networking/README.md) for connectivity.
 
 ---
 

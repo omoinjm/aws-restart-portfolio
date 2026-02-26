@@ -2,7 +2,7 @@
 title: AWS Compute Labs
 description: Hands-on labs focusing on Amazon EC2, scaling, and compute resource management.
 type: map
-path: /Labs/Compute/index.md
+path: /Labs/Compute/README.md
 tags: [compute, ec2, aws, cloud-computing]
 ---
 
@@ -10,15 +10,15 @@ tags: [compute, ec2, aws, cloud-computing]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](../index.md)
-- [🏠 Root](../../index.md)
-- [📂 Current](./index.md)
+- [⬆ Parent](../README.md)
+- [🏠 Root](../../README.md)
+- [📂 Current](./README.md)
 
 ---
 
 ## 📌 Overview
 
-Hands-on labs focusing on **AWS compute services**, particularly [EC2](../../Labs/Compute/index.md) instances—the foundation for running applications in the cloud. These labs cover the entire lifecycle of virtual servers, from provisioning to scaling.
+Hands-on labs focusing on **AWS compute services**, particularly [EC2](../../Labs/Compute/README.md) instances—the foundation for running applications in the cloud. These labs cover the entire lifecycle of virtual servers, from provisioning to scaling.
 
 ### 🛠️ Services Worked With
 - **Amazon EC2:** Virtual servers in the cloud.
@@ -31,7 +31,7 @@ Hands-on labs focusing on **AWS compute services**, particularly [EC2](../../Lab
 
 | Lab | Description |
 | :--- | :--- |
-| [🚀 EC2 Setup Project](./ec2_setup/index.md) | Initializing, monitoring, and resizing an EC2 instance. |
+| [🚀 EC2 Setup Project](./ec2_setup/README.md) | Initializing, monitoring, and resizing an EC2 instance. |
 
 ### Lab Structure
 ```text
@@ -52,9 +52,9 @@ Compute/
 
 ## 🔄 Relationships
 
-- **Upstream:** Part of the [AWS Labs](../index.md) portfolio.
-- **Downstream:** Specific lab details in [EC2 Setup](./ec2_setup/index.md).
-- **Interconnects:** Relies on [VPC](../../Labs/Networking/index.md) for networking and [IAM](../../Labs/Security/index.md) for permissions.
+- **Upstream:** Part of the [AWS Labs](../README.md) portfolio.
+- **Downstream:** Specific lab details in [EC2 Setup](./ec2_setup/README.md).
+- **Interconnects:** Relies on [VPC](../../Labs/Networking/README.md) for networking and [IAM](../../Labs/Security/README.md) for permissions.
 
 ---
 

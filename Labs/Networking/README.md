@@ -2,7 +2,7 @@
 title: AWS Networking Labs
 description: Hands-on labs focusing on VPC design, subnets, routing, and cloud connectivity.
 type: map
-path: /Labs/Networking/index.md
+path: /Labs/Networking/README.md
 tags: [networking, vpc, cloud-infrastructure, aws]
 ---
 
@@ -10,9 +10,9 @@ tags: [networking, vpc, cloud-infrastructure, aws]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](../index.md)
-- [🏠 Root](../../index.md)
-- [📂 Current](./index.md)
+- [⬆ Parent](../README.md)
+- [🏠 Root](../../README.md)
+- [📂 Current](./README.md)
 
 ---
 
@@ -31,7 +31,7 @@ Labs I completed covering **AWS networking fundamentals**—VPCs, subnets, routi
 
 | Lab | Description |
 | :--- | :--- |
-| [🌐 Public & Private IPs](./public_and_private_ip_addresses/index.md) | Understanding IP addressing and connectivity within a VPC. |
+| [🌐 Public & Private IPs](./public_and_private_ip_addresses/README.md) | Understanding IP addressing and connectivity within a VPC. |
 
 ### Lab Structure
 ```text
@@ -52,8 +52,8 @@ Networking/
 
 ## 🔄 Relationships
 
-- **Upstream:** Part of the [AWS Labs](../index.md) portfolio.
-- **Interconnects:** Fundamental to [Compute](../../Labs/Compute/index.md) and [Databases](../../Labs/Databases/index.md) service operations.
+- **Upstream:** Part of the [AWS Labs](../README.md) portfolio.
+- **Interconnects:** Fundamental to [Compute](../../Labs/Compute/README.md) and [Databases](../../Labs/Databases/README.md) service operations.
 
 ---
 

@@ -9,9 +9,9 @@ tags: [repo, obsidian, documentation, linux, aws-restart]
 
 ## Navigation
 
-- [⬆ Parent](../index.md)
-- [🏠 Root](../../index.md)
-- [📂 Current](./index.md)
+- [⬆ Parent](../README.md)
+- [🏠 Root](../../README.md)
+- [📂 Current](./README.md)
 
 ## Overview
 

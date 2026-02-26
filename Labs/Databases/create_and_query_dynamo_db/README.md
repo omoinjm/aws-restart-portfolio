@@ -9,9 +9,9 @@ tags: [repo, obsidian, documentation, databases, dynamo, aws]
 
 ## Navigation
 
-- [⬆ Parent](../index.md)
-- [🏠 [Root](../../index.md)
-- [📂 [Current](./index.md)
+- [⬆ Parent](../README.md)
+- [🏠 [Root](../../README.md)
+- [📂 [Current](./README.md)
 
 ## Overview
 

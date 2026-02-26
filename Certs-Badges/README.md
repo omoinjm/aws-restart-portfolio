@@ -2,7 +2,7 @@
 title: AWS Certifications & Badges
 description: Official AWS certifications and program achievement badges earned during my cloud journey.
 type: map
-path: /Certs-Badges/index.md
+path: /Certs-Badges/README.md
 tags: [certifications, badges, credentials, cloud-practitioner]
 ---
 
@@ -10,9 +10,9 @@ tags: [certifications, badges, credentials, cloud-practitioner]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](../index.md)
-- [🏠 Root](../index.md)
-- [📂 Current](./index.md)
+- [⬆ Parent](../README.md)
+- [🏠 Root](../README.md)
+- [📂 Current](./README.md)
 
 ---
 
@@ -23,7 +23,7 @@ This folder contains certifications, badges, and credentials earned during my cl
 ### 📜 Credentials
 - **AWS Certified Cloud Practitioner:** (In progress / Achieved)
 - **AWS re/Start Program Completion:** Demonstrating job-ready cloud skills.
-- **Simu-Learn Badges:** Focus on [Networking](../Labs/Networking/index.md), [Security](../Labs/Security/index.md), and [Databases](../Labs/Databases/index.md).
+- **Simu-Learn Badges:** Focus on [Networking](../Labs/Networking/README.md), [Security](../Labs/Security/README.md), and [Databases](../Labs/Databases/README.md).
 
 ---
 
@@ -31,7 +31,7 @@ This folder contains certifications, badges, and credentials earned during my cl
 
 | Credential | Description |
 | :--- | :--- |
-| [Simu-Learn](./Simu-Learn/index.md) | Series of achievement badges for core technical concepts. |
+| [Simu-Learn](./Simu-Learn/README.md) | Series of achievement badges for core technical concepts. |
 
 ---
 
@@ -45,8 +45,8 @@ This folder contains certifications, badges, and credentials earned during my cl
 
 ## 🔄 Relationships
 
-- **Upstream:** Part of the [Main Portfolio](../index.md).
-- **Interconnects:** Validates skills developed across all [Labs](../Labs/index.md).
+- **Upstream:** Part of the [Main Portfolio](../README.md).
+- **Interconnects:** Validates skills developed across all [Labs](../Labs/README.md).
 
 ---
 
