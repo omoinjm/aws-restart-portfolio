@@ -2,7 +2,7 @@
 title: AWS Portfolio Projects
 description: End-to-end cloud architecture projects demonstrating integration of various AWS services.
 type: map
-path: /Projects/index.md
+path: /Projects/README.md
 tags: [projects, architecture, cloud-design, portfolio]
 ---
 
@@ -10,9 +10,9 @@ tags: [projects, architecture, cloud-design, portfolio]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](../index.md)
-- [🏠 Root](../index.md)
-- [📂 Current](./index.md)
+- [⬆ Parent](../README.md)
+- [🏠 Root](../README.md)
+- [📂 Current](./README.md)
 
 ---
 
@@ -31,8 +31,8 @@ Portfolio projects that demonstrate the practical application of AWS knowledge a
 
 | Project | Description |
 | :--- | :--- |
-| [🌐 Static Website](./static_website/index.md) | Deploying a highly available static site using S3 and CloudFront. |
-| [🏗️ 3D E-Commerce Design](./design_3d_e_commerce_architecture/index.md) | Designing a scalable, three-tier architecture for e-commerce. |
+| [🌐 Static Website](./static_website/README.md) | Deploying a highly available static site using S3 and CloudFront. |
+| [🏗️ 3D E-Commerce Design](./design_3d_e_commerce_architecture/README.md) | Designing a scalable, three-tier architecture for e-commerce. |
 
 ### Folder Structure
 ```text
@@ -53,9 +53,9 @@ Projects/
 
 ## 🔄 Relationships
 
-- **Upstream:** Part of the [Main Portfolio](../index.md).
-- **Interconnects:** Leverages foundational skills from [Labs](../Labs/index.md) (Networking, Storage).
-- **Downstream:** Specific implementation details in the [Static Website](./static_website/index.md) folder.
+- **Upstream:** Part of the [Main Portfolio](../README.md).
+- **Interconnects:** Leverages foundational skills from [Labs](../Labs/README.md) (Networking, Storage).
+- **Downstream:** Specific implementation details in the [Static Website](./static_website/README.md) folder.
 
 ---
 
