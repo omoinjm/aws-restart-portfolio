@@ -2,10 +2,10 @@
 
 ## 🔗 Navigation
 
-- [🏠 Root](./index.md)
-- [🧪 Labs](./Labs/index.md)
-- [🚀 Projects](./Projects/index.md)
-- [🎓 Certs & Badges](./Certs-Badges/index.md)
+- [🏠 Root](./README.md)
+- [🧪 Labs](./Labs/README.md)
+- [🚀 Projects](./Projects/README.md)
+- [🎓 Certs & Badges](./Certs-Badges/README.md)
 
 ---
 
@@ -71,8 +71,8 @@ During the program, I gained exposure to the following key areas:
 ## 🔄 Relationships
 
 - **Upstream:** Aligned with the **AWS re/Start Curriculum**.
-- **Downstream:** Feeds into specialized labs in [Compute](./Labs/Compute/index.md) and [Networking](./Labs/Networking/index.md).
-- **Interconnects:** Projects like the [Static Website](./Projects/static_website/index.md) utilize resources learned in the Labs section.
+- **Downstream:** Feeds into specialized labs in [Compute](./Labs/Compute/README.md) and [Networking](./Labs/Networking/README.md).
+- **Interconnects:** Projects like the [Static Website](./Projects/static_website/README.md) utilize resources learned in the Labs section.
 
 ---
 

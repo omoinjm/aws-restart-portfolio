@@ -1,7 +1,7 @@
 # 📖 3D Application — Architecture Explanation
 
 > A detailed technical breakdown of the AWS cloud infrastructure for the 3D Application.  
-> ← Back to [README](./index.md)
+> ← Back to [README](./README.md)
 
 ---
 
@@ -162,4 +162,4 @@ The designed architecture provides a **secure, scalable, and highly available** 
 
 ---
 
-← Back to [README](./index.md)
+← Back to [README](./README.md)
