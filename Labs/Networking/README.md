@@ -32,10 +32,13 @@ Labs I completed covering **AWS networking fundamentals**—VPCs, subnets, routi
 | Lab | Description |
 | :--- | :--- |
 | [🌐 Public & Private IPs](./public_and_private_ip_addresses/README.md) | Understanding IP addressing and connectivity within a VPC. |
+| [📖 Build Your VPC and Launch a Web Server](./build_vpc_and_launch_web_server/README.md) | Launch an Amazon Elastic Compute Cloud (Amazon EC2) instance into a VPC. |
 
 ### Lab Structure
 ```text
 Networking/
+├── build_vpc_and_launch_web_server/
+|    └── assets/
 └── public_and_private_ip_addresses/
     └── assets/
 ```
