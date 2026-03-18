@@ -55,7 +55,7 @@ In this task, you create a new table named **Music** in DynamoDB. Each table req
 3. For the **Table name**, enter: `Music`
 4. For the **Partition key**, enter: `Artist` and leave **String** selected in the dropdown list.
 5. For **Sort key - optional**, enter: `Song` and leave **String** selected.
-6. Your table will use the default settings for indexes and provisioned capacity.
+6. Your table will use the default settings for READMEes and provisioned capacity.
 7. Scroll down, and choose **Create table**.
 
 The table will be created in less than 1 minute. Wait for the Music table to be **Active** before moving on to the next task.
@@ -130,7 +130,7 @@ The item is now updated.
 
 There are two ways to query a DynamoDB table: **query** and **scan**.
 
-A **query** operation finds items based on the primary key and optionally the sort key. It is fully indexed, so it runs very fast.
+A **query** operation finds items based on the primary key and optionally the sort key. It is fully READMEed, so it runs very fast.
 
 ### Using Query
 

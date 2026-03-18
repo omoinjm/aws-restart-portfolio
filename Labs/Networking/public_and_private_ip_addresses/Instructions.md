@@ -10,9 +10,9 @@ tags: [networking, aws, ec2, ip-addresses, troubleshooting, tutorial]
 
 ## 🔗 Navigation
 
-- [⬆ Parent](./index.md)
-- [🏠 Root](../../../index.md)
-- [🌐 Networking Hub](../../index.md)
+- [⬆ Parent](./README.md)
+- [🏠 Root](../../../README.md)
+- [🌐 Networking Hub](../../README.md)
 
 ---
 
