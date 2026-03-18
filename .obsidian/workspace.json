@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Labs/Compute/ec2_setup/index.md",
+                "file": "Labs/Compute/ec2_setup/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Labs/Compute/ec2_setup/index.md",
+                "file": "Labs/Compute/ec2_setup/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Labs/Compute/ec2_setup/index.md",
+                "file": "Labs/Compute/ec2_setup/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Labs/Compute/ec2_setup/index.md",
+                "file": "Labs/Compute/ec2_setup/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -185,21 +185,21 @@
   },
   "active": "412efc99be0f940f",
   "lastOpenFiles": [
-    "Certs-Badges/index.md~",
-    "Labs/Linux/amazon_linux_ami/index.md~",
-    "Labs/Linux/linux_cli/index.md~",
-    "Labs/Linux/users_and_groups/index.md~",
-    "Labs/Linux/index.md~",
-    "Labs/Storage/index.md~",
-    "Labs/Security/index.md~",
-    "Labs/Networking/index.md~",
-    "Labs/Databases/index.md~",
-    "Labs/Compute/ec2_setup/index.md~",
-    "Labs/Compute/index.md~",
-    "Labs/Compute/index.md",
+    "Certs-Badges/README.md~",
+    "Labs/Linux/amazon_linux_ami/README.md~",
+    "Labs/Linux/linux_cli/README.md~",
+    "Labs/Linux/users_and_groups/README.md~",
+    "Labs/Linux/README.md~",
+    "Labs/Storage/README.md~",
+    "Labs/Security/README.md~",
+    "Labs/Networking/README.md~",
+    "Labs/Databases/README.md~",
+    "Labs/Compute/ec2_setup/README.md~",
+    "Labs/Compute/README.md~",
+    "Labs/Compute/README.md",
     "Labs/Linux/users_and_groups/task.md",
-    "Labs/index.md",
-    "index.md",
+    "Labs/README.md",
+    "README.md",
     "Labs/Linux/users_and_groups/assets/4.5.png",
     "Labs/Linux/users_and_groups/assets/4.4.png",
     "Labs/Linux/users_and_groups/assets/4.3.png",
@@ -210,12 +210,12 @@
     "Labs/Linux/users_and_groups/assets/Screenshot 2026-01-28 200516.png",
     "Labs/Linux/users_and_groups/assets/Screenshot 2026-01-28 200817.png",
     "Labs/Linux/users_and_groups/assets/Screenshot 2026-01-28 201025.png",
-    "assets/icons/index.md",
-    "assets/index.md",
-    "Labs/Linux/users_and_groups/assets/index.md",
-    "Labs/Linux/users_and_groups/index.md",
-    "Labs/Linux/linux_cli/assets/index.md",
-    "Labs/Linux/amazon_linux_ami/assets/index.md",
-    "Labs/Compute/ec2_setup/assets/index.md"
+    "assets/icons/README.md",
+    "assets/README.md",
+    "Labs/Linux/users_and_groups/assets/README.md",
+    "Labs/Linux/users_and_groups/README.md",
+    "Labs/Linux/linux_cli/assets/README.md",
+    "Labs/Linux/amazon_linux_ami/assets/README.md",
+    "Labs/Compute/ec2_setup/assets/README.md"
   ]
 }
