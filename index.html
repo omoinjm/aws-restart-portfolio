@@ -425,6 +425,135 @@
       font-family: "SFMono-Regular", Consolas, monospace;
     }
 
+    /* ── Markdown modal ─────────────────────────────────────── */
+    #md-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      backdrop-filter: blur(4px);
+    }
+    #md-modal.open { display: flex; }
+
+    #md-modal-inner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      width: 100%;
+      max-width: 860px;
+      height: 88vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+      animation: modal-in 0.2s ease;
+    }
+
+    #md-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+
+    #md-modal-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--green);
+    }
+
+    #md-modal-close {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 22px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0 4px;
+      transition: color 0.15s;
+    }
+    #md-modal-close:hover { color: var(--text); }
+
+    #md-modal-wrap {
+      flex: 1;
+      overflow-y: auto;
+      padding: 32px;
+    }
+
+    #md-modal-content {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* Inherit all markdown styles inside the modal */
+    #md-modal-content h1, #md-modal-content h2, #md-modal-content h3,
+    #md-modal-content h4, #md-modal-content h5, #md-modal-content h6 {
+      color: #e6edf3; font-weight: 700; line-height: 1.3;
+      margin: 1.5em 0 0.6em; border-bottom: 1px solid var(--border); padding-bottom: 0.3em;
+    }
+    #md-modal-content h1 { font-size: 2em; margin-top: 0; }
+    #md-modal-content h2 { font-size: 1.5em; }
+    #md-modal-content h3 { font-size: 1.25em; border-bottom: none; }
+    #md-modal-content h4, #md-modal-content h5, #md-modal-content h6 { border-bottom: none; font-size: 1em; }
+    #md-modal-content p { margin: 0.8em 0; }
+    #md-modal-content a { color: var(--link); text-decoration: none; }
+    #md-modal-content a:hover { text-decoration: underline; }
+    #md-modal-content ul, #md-modal-content ol { margin: 0.6em 0 0.6em 1.5em; }
+    #md-modal-content li { margin: 0.3em 0; }
+    #md-modal-content blockquote {
+      border-left: 4px solid var(--green-dim); margin: 1em 0;
+      padding: 8px 16px; color: var(--muted);
+      background: rgba(57,211,83,0.04); border-radius: 0 4px 4px 0;
+    }
+    #md-modal-content code {
+      background: rgba(110,118,129,0.15); border-radius: 4px;
+      padding: 2px 6px; font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.875em; color: #f0883e;
+    }
+    #md-modal-content pre {
+      background: #0d1117; border: 1px solid var(--border);
+      border-radius: 8px; padding: 16px; overflow-x: auto; margin: 1em 0;
+    }
+    #md-modal-content pre code { background: none; padding: 0; color: inherit; font-size: 0.875em; }
+    #md-modal-content table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 14px; }
+    #md-modal-content th {
+      background: rgba(57,211,83,0.08); color: var(--green);
+      font-weight: 600; text-align: left; padding: 8px 12px; border: 1px solid var(--border);
+    }
+    #md-modal-content td { padding: 8px 12px; border: 1px solid var(--border); vertical-align: middle; }
+    #md-modal-content tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    #md-modal-content img { max-width: 100%; border-radius: 6px; margin: 0.5em 0; }
+    #md-modal-content hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
+
+    /* ── Inline instructions button ─────────────────────────── */
+    .md-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      background: rgba(88, 166, 255, 0.08);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+      border-radius: 6px;
+      color: var(--link);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, transform 0.1s;
+      margin: 4px 0;
+    }
+    .md-link-btn:hover {
+      background: rgba(88, 166, 255, 0.16);
+      border-color: var(--link);
+      transform: translateY(-1px);
+    }
+    .md-link-btn:active { transform: translateY(0); }
+
     /* ── PDF button ─────────────────────────────────────────── */
     .pdf-btn {
       display: inline-flex;
@@ -624,7 +753,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Compute/ec2_setup/README.md"
                   data-instr="Labs/Compute/ec2_setup/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
             </div>
           </div>
@@ -646,7 +775,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Databases/create_an_aurora_mysql_db/README.md"
                   data-instr="Labs/Databases/create_an_aurora_mysql_db/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
               <div class="nav-leaf">
                 <a class="nav-item" data-path="Labs/Databases/create_and_query_dynamo_db/README.md"
@@ -654,7 +783,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Databases/create_and_query_dynamo_db/README.md"
                   data-instr="Labs/Databases/create_and_query_dynamo_db/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
             </div>
           </div>
@@ -676,7 +805,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Linux/amazon_linux_ami/README.md"
                   data-instr="Labs/Linux/amazon_linux_ami/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
               <div class="nav-leaf">
                 <a class="nav-item" data-path="Labs/Linux/editing_files/README.md"
@@ -684,7 +813,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Linux/editing_files/README.md"
                   data-instr="Labs/Linux/editing_files/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
               <div class="nav-leaf">
                 <a class="nav-item" data-path="Labs/Linux/linux_cli/README.md"
@@ -692,7 +821,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Linux/linux_cli/README.md"
                   data-instr="Labs/Linux/linux_cli/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
               <div class="nav-leaf">
                 <a class="nav-item" data-path="Labs/Linux/users_and_groups/README.md"
@@ -700,7 +829,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Linux/users_and_groups/README.md"
                   data-instr="Labs/Linux/users_and_groups/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
             </div>
           </div>
@@ -722,7 +851,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Networking/build_vpc_and_launch_web_server/README.md"
                   data-instr="Labs/Networking/build_vpc_and_launch_web_server/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
               <div class="nav-leaf">
                 <a class="nav-item" data-path="Labs/Networking/public_and_private_ip_addresses/README.md"
@@ -730,7 +859,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Networking/public_and_private_ip_addresses/README.md"
                   data-instr="Labs/Networking/public_and_private_ip_addresses/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
             </div>
           </div>
@@ -752,7 +881,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Security/data_protection_using_encryption/README.md"
                   data-instr="Labs/Security/data_protection_using_encryption/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
               <div class="nav-leaf">
                 <a class="nav-item" data-path="Labs/Security/firewall_malware/README.md"
@@ -760,7 +889,7 @@
                 <button class="instr-toggle"
                   data-readme="Labs/Security/firewall_malware/README.md"
                   data-instr="Labs/Security/firewall_malware/Instructions.md"
-                  onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+                  onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
               </div>
             </div>
           </div>
@@ -801,7 +930,7 @@
             <button class="instr-toggle"
               data-readme="Projects/design_3d_e_commerce_architecture/README.md"
               data-instr="Projects/design_3d_e_commerce_architecture/Instructions.md"
-              onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+              onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
           </div>
 
           <div class="nav-leaf">
@@ -810,7 +939,7 @@
             <button class="instr-toggle"
               data-readme="Projects/static_website/README.md"
               data-instr="Projects/static_website/Instructions.md"
-              onclick="toggleInstructions(this)" title="Toggle Instructions">📄</button>
+              onclick="openMdModal(this.dataset.instr, 'Instructions')" title="Toggle Instructions">📄</button>
           </div>
         </div>
       </div>
@@ -885,7 +1014,18 @@
 
 </div><!-- /app -->
 
-<!-- ── PDF Preview Modal ──────────────────────────────────── -->
+<!-- ── Markdown Preview Modal ─────────────────────────────── -->
+<div id="md-modal" role="dialog" aria-modal="true" aria-label="Markdown Preview">
+  <div id="md-modal-inner">
+    <div id="md-modal-header">
+      <span id="md-modal-title">Instructions</span>
+      <button id="md-modal-close" onclick="closeMdModal()" aria-label="Close">&times;</button>
+    </div>
+    <div id="md-modal-wrap">
+      <div id="md-modal-content"></div>
+    </div>
+  </div>
+</div>
 <div id="pdf-modal" role="dialog" aria-modal="true" aria-label="PDF Preview">
   <div id="pdf-modal-inner">
     <div id="pdf-modal-header">
@@ -934,6 +1074,11 @@
       </div>`;
   }
 
+  function stripNavigation(body) {
+    // Remove the ## 🔗 Navigation section and its trailing --- divider
+    return body.replace(/^##[^\n]*Navigation[^\n]*\n[\s\S]*?\n---/m, '');
+  }
+
   /* ── marked.js config ────────────────────────────────────── */
   marked.setOptions({
     breaks: true,
@@ -961,6 +1106,16 @@
       return `<button class="pdf-btn" onclick="openPdf('${resolved}', '${label}')">📄 ${label}</button>`;
     }
 
+    const isMdPopup = !isExternal && (
+      href.endsWith('Instructions.md') || href.endsWith('ARCHITECTURE.md')
+    );
+
+    if (isMdPopup) {
+      const resolved = resolvePath(currentPath, href);
+      const label = text || title || href.split('/').pop().replace('.md', '');
+      return `<button class="md-link-btn" onclick="openMdModal('${resolved}', '${label}')">${label}</button>`;
+    }
+
     if (isMd) {
       // Resolve relative path against current file's directory
       const resolved = resolvePath(currentPath, href);
@@ -978,7 +1133,6 @@
 
   /* ── State ───────────────────────────────────────────────── */
   let currentPath = 'README.md';
-  let instrVisible = false;   // whether instructions panel is currently appended
 
   /* ── Path helpers ────────────────────────────────────────── */
   function resolvePath(base, relative) {
@@ -1015,7 +1169,6 @@
 
   async function navigate(path, appendInstr = false) {
     currentPath = path;
-    instrVisible = false;
 
     // Update hash without triggering hashchange loop
     history.replaceState(null, '', '#' + path);
@@ -1045,7 +1198,7 @@
         document.getElementById('breadcrumb-text').textContent =
           pathToLabel(path) + (pathToLabel(path) !== 'Home' ? ' › ' + meta.title : meta.title);
       }
-      contentEl.innerHTML = buildMetaCard(meta) + marked.parse(body);
+      contentEl.innerHTML = buildMetaCard(meta) + marked.parse(stripNavigation(body));
       contentEl.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
     } catch (e) {
       contentEl.innerHTML = `
@@ -1057,53 +1210,42 @@
     }
   }
 
-  /* ── Instructions toggle ─────────────────────────────────── */
-  async function toggleInstructions(btn) {
-    const readmePath = btn.dataset.readme;
-    const instrPath  = btn.dataset.instr;
-    const contentEl  = document.getElementById('content');
+  /* ── Markdown modal controls ─────────────────────────────── */
+  async function openMdModal(path, title) {
+    const modal   = document.getElementById('md-modal');
+    const content = document.getElementById('md-modal-content');
 
-    // If a different page is active, navigate to its README first
-    if (currentPath !== readmePath) {
-      await navigate(readmePath);
-    }
-
-    const existingInstr = document.getElementById('instr-section');
-
-    if (existingInstr) {
-      // Hide instructions
-      existingInstr.remove();
-      btn.classList.remove('active');
-      btn.title = 'Show Instructions';
-      instrVisible = false;
-      return;
-    }
-
-    // Show instructions
-    btn.classList.add('active');
-    btn.title = 'Hide Instructions';
-    instrVisible = true;
-
-    const placeholder = document.createElement('div');
-    placeholder.id = 'instr-section';
-    placeholder.innerHTML = `<div class="state-msg" style="height:auto;padding:2em 0"><div class="icon" style="font-size:24px">⏳</div><p>Loading instructions…</p></div>`;
-    contentEl.appendChild(placeholder);
+    document.getElementById('md-modal-title').textContent = title || 'Preview';
+    content.innerHTML = `<div class="state-msg"><div class="icon">⏳</div><p>Loading…</p></div>`;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('md-modal-wrap').scrollTop = 0;
 
     try {
-      const md = await fetchMd(instrPath);
-      placeholder.innerHTML = `
-        <div class="instr-separator"><span>📄 Instructions</span></div>
-        ${renderHtml(md)}`;
-      placeholder.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
+      const md = await fetchMd(path);
+      const { meta, body } = parseFrontMatter(md);
+      content.innerHTML = buildMetaCard(meta) + marked.parse(stripNavigation(body));
+      content.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
     } catch (e) {
-      placeholder.innerHTML = `
-        <div class="instr-separator"><span>📄 Instructions</span></div>
-        <div class="state-msg" style="height:auto;padding:1em 0">
-          <div class="icon" style="font-size:24px">⚠️</div>
-          <p style="font-size:13px">Instructions not available: ${e.message}</p>
+      content.innerHTML = `
+        <div class="state-msg">
+          <div class="icon">⚠️</div>
+          <p>Could not load <code>${path}</code></p>
+          <p style="font-size:12px;color:var(--muted)">${e.message}</p>
         </div>`;
     }
   }
+
+  function closeMdModal() {
+    document.getElementById('md-modal').classList.remove('open');
+    document.getElementById('md-modal-content').innerHTML = '';
+    document.body.style.overflow = '';
+  }
+
+  // Close on overlay click
+  document.getElementById('md-modal').addEventListener('click', e => {
+    if (e.target === document.getElementById('md-modal')) closeMdModal();
+  });
 
   /* ── Nav click delegation ────────────────────────────────── */
   document.getElementById('nav').addEventListener('click', e => {
@@ -1178,9 +1320,9 @@
     if (e.target === document.getElementById('pdf-modal')) closePdf();
   });
 
-  // Close on Escape
+  // Close both modals on Escape
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closePdf();
+    if (e.key === 'Escape') { closePdf(); closeMdModal(); }
   });
 
   /* ── Init ────────────────────────────────────────────────── */
