@@ -93,6 +93,12 @@ function toTitle(relPath) {
   return base.replace(/[-_]/g, ' ');
 }
 
+function sanitizeMarkdown(body) {
+  return body
+    .replace(/^##[^\n]*Navigation[^\n]*\n[\s\S]*?\n---/m, '')
+    .replace(/^[^\n]*img\.shields\.io[^\n]*$/gm, '');
+}
+
 export function loadDoc(relPath) {
   const absPath = path.join(REPO_ROOT, relPath);
   const raw = fs.readFileSync(absPath, 'utf8');
@@ -110,7 +116,7 @@ export function loadDoc(relPath) {
   }
 
   const marked = buildMarkedForDoc(relPath);
-  const html = marked.parse(parsedContent);
+  const html = marked.parse(sanitizeMarkdown(parsedContent));
 
   return {
     relPath,

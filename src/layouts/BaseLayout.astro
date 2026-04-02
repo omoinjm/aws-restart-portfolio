@@ -1,5 +1,6 @@
 ---
 import Sidebar from '../components/Sidebar.astro';
+import '../styles/site.css';
 
 interface Props {
   title: string;
@@ -13,18 +14,164 @@ const { title, description } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} | AWS re/Start Portfolio</title>
     {description && <meta name="description" content={description} />}
     <link rel="icon" type="image/png" href="/assets/aws.png" />
-    <link rel="stylesheet" href="/src/styles/site.css" />
+    <link id="hljs-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" />
+    <script is:inline>
+      (() => {
+        const key = 'portfolio-theme';
+        const saved = localStorage.getItem(key);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = saved === 'light' || saved === 'dark' ? saved : (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
   </head>
   <body>
-    <div class="app-shell">
-      <Sidebar />
-      <main class="content-shell">
-        <slot />
-      </main>
+    <!-- Mobile topbar -->
+    <div id="topbar">
+      <button id="hamburger" aria-label="Toggle sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <div id="topbar-title">AWS re/Start Portfolio</div>
+      <button class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle color theme" title="Toggle color theme">
+        <span class="theme-icon" aria-hidden="true">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <line x1="12" y1="2" x2="12" y2="5"></line>
+            <line x1="12" y1="19" x2="12" y2="22"></line>
+            <line x1="2" y1="12" x2="5" y2="12"></line>
+            <line x1="19" y1="12" x2="22" y2="12"></line>
+            <line x1="4.93" y1="4.93" x2="7.05" y2="7.05"></line>
+            <line x1="16.95" y1="16.95" x2="19.07" y2="19.07"></line>
+            <line x1="4.93" y1="19.07" x2="7.05" y2="16.95"></line>
+            <line x1="16.95" y1="7.05" x2="19.07" y2="4.93"></line>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3c0.5 0 0.74 0.59 0.4 0.96A7 7 0 1 0 20.04 12.4c0.37-0.34 0.96-0.1 0.96 0.39z"></path>
+          </svg>
+        </span>
+        <span class="sr-only">Toggle theme</span>
+      </button>
     </div>
+
+    <div id="app">
+      <Sidebar />
+      <div id="main">
+        <div id="content-header">
+          <div id="breadcrumb">📍 <span>{title}</span></div>
+          <div class="toolbar-actions">
+            <button class="theme-toggle" data-theme-toggle type="button" aria-label="Toggle color theme" title="Toggle color theme">
+              <span class="theme-icon" aria-hidden="true">
+                <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <line x1="12" y1="2" x2="12" y2="5"></line>
+                  <line x1="12" y1="19" x2="12" y2="22"></line>
+                  <line x1="2" y1="12" x2="5" y2="12"></line>
+                  <line x1="19" y1="12" x2="22" y2="12"></line>
+                  <line x1="4.93" y1="4.93" x2="7.05" y2="7.05"></line>
+                  <line x1="16.95" y1="16.95" x2="19.07" y2="19.07"></line>
+                  <line x1="4.93" y1="19.07" x2="7.05" y2="16.95"></line>
+                  <line x1="16.95" y1="7.05" x2="19.07" y2="4.93"></line>
+                </svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3c0.5 0 0.74 0.59 0.4 0.96A7 7 0 1 0 20.04 12.4c0.37-0.34 0.96-0.1 0.96 0.39z"></path>
+                </svg>
+              </span>
+              <span class="sr-only">Toggle theme</span>
+            </button>
+          </div>
+        </div>
+        <div id="content-wrap">
+          <div id="content">
+            <slot />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      const THEME_KEY = 'portfolio-theme';
+      const HLJS_THEMES = {
+        dark: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css',
+        light: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css'
+      };
+
+      function readSavedTheme() {
+        try {
+          return localStorage.getItem(THEME_KEY);
+        } catch {
+          return null;
+        }
+      }
+
+      function saveTheme(theme) {
+        try {
+          localStorage.setItem(THEME_KEY, theme);
+        } catch {
+          // Ignore storage failures and keep runtime theme only.
+        }
+      }
+
+      function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        saveTheme(theme);
+
+        const hljsTheme = document.getElementById('hljs-theme');
+        if (hljsTheme) {
+          hljsTheme.setAttribute('href', HLJS_THEMES[theme]);
+        }
+
+        document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
+          const nextTheme = theme === 'dark' ? 'light' : 'dark';
+          btn.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
+          btn.setAttribute('title', `Switch to ${nextTheme} mode`);
+          btn.setAttribute('aria-pressed', String(theme === 'dark'));
+        });
+      }
+
+      const storedTheme = readSavedTheme();
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const currentTheme = storedTheme === 'light' || storedTheme === 'dark'
+        ? storedTheme
+        : (document.documentElement.getAttribute('data-theme') || (systemDark ? 'dark' : 'light'));
+      applyTheme(currentTheme);
+
+      document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const active = document.documentElement.getAttribute('data-theme') || 'dark';
+          applyTheme(active === 'dark' ? 'light' : 'dark');
+        });
+      });
+
+      // Hamburger toggle for mobile
+      const hamburger = document.getElementById('hamburger');
+      const sidebar = document.getElementById('sidebar');
+      if (hamburger && sidebar) {
+        hamburger.addEventListener('click', () => sidebar.classList.toggle('open'));
+        // Close sidebar when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+            sidebar.classList.remove('open');
+          }
+        });
+      }
+
+      // Syntax highlight code blocks
+      if (typeof hljs !== 'undefined') {
+        document.querySelectorAll('pre code').forEach((el) => hljs.highlightElement(el));
+      }
+
+      // Mark active nav link
+      const currentPath = window.location.pathname;
+      document.querySelectorAll('#nav .nav-item').forEach((link) => {
+        if (link.getAttribute('href') === currentPath) {
+          link.classList.add('active');
+        }
+      });
+    </script>
   </body>
 </html>

@@ -22,7 +22,7 @@
         },
         {
           "id": "sec-databases",
-          "label": "Databases",
+          "icon": "🔒",
           "icon": "\ud83d\udcca",
           "overview": "Labs/Databases/README.md",
           "entries": [

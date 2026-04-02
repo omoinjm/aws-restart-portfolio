@@ -2,75 +2,76 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-type NavEntry = {
-  label: string;
-  path: string;
-  instructions?: boolean;
-};
-
-type NavSection = {
-  id: string;
-  label: string;
-  overview?: string;
-  entries?: NavEntry[];
-  children?: NavSection[];
-};
-
-type NavRoot = {
-  home: string;
-  sections: NavSection[];
-};
-
 const navPath = path.join(process.cwd(), 'nav.json');
-const nav = JSON.parse(fs.readFileSync(navPath, 'utf8')) as NavRoot;
+const nav = JSON.parse(fs.readFileSync(navPath, 'utf8'));
 
-function markdownPathToHref(mdPath: string): string {
+function mdToHref(mdPath) {
   const normalized = mdPath.replace(/\\/g, '/');
   const parts = normalized.split('/');
   const file = parts[parts.length - 1].toLowerCase();
-
   if (file === 'readme.md') {
     const dir = parts.slice(0, -1).join('/');
-    if (!dir) return '/';
-    return `/${dir}/`;
+    return dir ? `/${dir}/` : '/';
   }
-
   return `/${normalized.replace(/\.md$/i, '')}`;
 }
 ---
 
-<aside class="sidebar">
-  <h1>AWS re/Start</h1>
-  <p>Portfolio Navigator</p>
+<aside id="sidebar">
+  <div id="sidebar-header">
+    <h1>☁️ AWS re/Start</h1>
+    <p>Portfolio Navigator</p>
+  </div>
 
-  <nav>
-    <a href={markdownPathToHref(nav.home)}>Home</a>
+  <nav id="nav">
+    <a href="/" class="nav-item">
+      <span class="icon">📍</span>
+      <span>Home</span>
+    </a>
 
-    {
-      nav.sections.map((section) => (
-        <details open>
-          <summary>{section.label}</summary>
-          <div class="section-block">
-            {section.overview && <a href={markdownPathToHref(section.overview)}>Overview</a>}
+    {nav.sections.map((section) => (
+      <details class="nav-section" open>
+        <summary class="nav-section-header">
+          {section.icon && <span class="icon">{section.icon}</span>}
+          <span>{section.label}</span>
+          <span class="chevron">›</span>
+        </summary>
+        <div class="nav-section-body">
+          {section.overview && (
+            <div class="nav-leaf">
+              <a href={mdToHref(section.overview)} class="nav-item">Overview</a>
+            </div>
+          )}
 
-            {(section.entries ?? []).map((entry) => (
-              <a href={markdownPathToHref(`${entry.path}/README.md`)}>{entry.label}</a>
-            ))}
+          {(section.entries ?? []).map((entry) => (
+            <div class="nav-leaf">
+              <a href={mdToHref(`${entry.path}/README.md`)} class="nav-item">{entry.label}</a>
+            </div>
+          ))}
 
-            {(section.children ?? []).map((child) => (
-              <details open>
-                <summary>{child.label}</summary>
-                <div class="section-block nested">
-                  {child.overview && <a href={markdownPathToHref(child.overview)}>Overview</a>}
-                  {(child.entries ?? []).map((entry) => (
-                    <a href={markdownPathToHref(`${entry.path}/README.md`)}>{entry.label}</a>
-                  ))}
-                </div>
-              </details>
-            ))}
-          </div>
-        </details>
-      ))
-    }
+          {(section.children ?? []).map((child) => (
+            <details class="nav-sub-section" open>
+              <summary class="nav-sub-header">
+                {child.icon && <span class="icon">{child.icon}</span>}
+                <span>{child.label}</span>
+                <span class="chevron">›</span>
+              </summary>
+              <div class="nav-sub-body">
+                {child.overview && (
+                  <div class="nav-leaf">
+                    <a href={mdToHref(child.overview)} class="nav-item">Overview</a>
+                  </div>
+                )}
+                {(child.entries ?? []).map((entry) => (
+                  <div class="nav-leaf">
+                    <a href={mdToHref(`${entry.path}/README.md`)} class="nav-item">{entry.label}</a>
+                  </div>
+                ))}
+              </div>
+            </details>
+          ))}
+        </div>
+      </details>
+    ))}
   </nav>
 </aside>

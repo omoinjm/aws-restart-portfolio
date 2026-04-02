@@ -18,5 +18,5 @@ const { doc } = Astro.props;
 ---
 
 <BaseLayout title={doc.title} description={doc.description}>
-  <article set:html={doc.html} />
+  <div set:html={doc.html} />
 </BaseLayout>

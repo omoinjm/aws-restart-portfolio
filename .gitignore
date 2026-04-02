@@ -22,3 +22,8 @@ override.tf.json
 *_override.tf.json
 
 *:Zone.Identifier
+
+# Node / Astro
+node_modules/
+dist/
+.astro/
