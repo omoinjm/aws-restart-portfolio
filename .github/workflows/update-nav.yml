@@ -1,0 +1,76 @@
+# update-nav.yml
+# ─────────────────────────────────────────────────────────────────────
+# Automatically keeps nav.json in sync with the repository structure.
+#
+# Triggers:
+#   - On every push to main that adds/modifies files under Labs/,
+#     Projects/, or Certs-Badges/ (or the script/nav files themselves).
+#   - Can also be run manually via the Actions tab (workflow_dispatch).
+#
+# What it does:
+#   1. Checks out the repo.
+#   2. Runs scripts/update_nav.py to scan for new folders.
+#   3. If nav.json changed, commits and pushes the update back to main.
+#      The commit is skipped entirely when nothing changed.
+
+name: Sync nav.json
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      # Re-run whenever content folders or the script itself change
+      - "Labs/**"
+      - "Projects/**"
+      - "Certs-Badges/**"
+      - "scripts/update_nav.py"
+      - "nav.json"
+
+  # Allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  sync-nav:
+    name: Scan & update nav.json
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed to push the commit back
+
+    steps:
+      # ── 1. Checkout ──────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Use a token with write access so the commit push is allowed
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ── 2. Set up Python ─────────────────────────────────────────
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # ── 3. Run scanner ───────────────────────────────────────────
+      - name: Run nav scanner
+        id: scan
+        run: |
+          python scripts/update_nav.py
+          # Capture whether nav.json was modified
+          if git diff --quiet nav.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # ── 4. Commit & push (only if nav.json changed) ──────────────
+      - name: Commit updated nav.json
+        if: steps.scan.outputs.changed == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add nav.json
+          git commit -m "chore: sync nav.json with repo structure [skip ci]
+
+          Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
+          git push

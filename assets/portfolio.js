@@ -290,34 +290,111 @@ document.getElementById('nav').addEventListener('click', e => {
 });
 
 /* ── Collapsible section toggle + parent auto-open ───────── */
+/* ── Sidebar builder ─────────────────────────────────────── */
+
+// Builds a leaf row (nav-item + optional instructions toggle)
+function buildLeaf(entry) {
+  const readmePath = `${entry.path}/README.md`;
+  const instrPath  = `${entry.path}/Instructions.md`;
+  const instr = entry.instructions
+    ? `<button class="instr-toggle"
+         data-readme="${readmePath}"
+         data-instr="${instrPath}"
+         onclick="openMdModal(this.dataset.instr, 'Instructions')"
+         title="Show Instructions">📄</button>`
+    : '';
+  return `
+    <div class="nav-leaf">
+      <a class="nav-item" data-path="${readmePath}" href="#${readmePath}">${entry.label}</a>
+      ${instr}
+    </div>`;
+}
+
+// Builds a collapsible sub-section (e.g. Labs > Compute)
+function buildSubSection(child) {
+  const overviewItem = child.overview
+    ? `<a class="nav-item" data-path="${child.overview}" href="#${child.overview}" style="padding-left:40px">
+         <span class="icon">📋</span> Overview
+       </a>`
+    : '';
+  const entries = (child.entries || []).map(buildLeaf).join('');
+  return `
+    <div class="nav-sub-section" id="${child.id}">
+      <div class="nav-sub-header" onclick="toggleSection('${child.id}')">
+        <span>${child.icon}</span> ${child.label}
+        <span class="chevron">▶</span>
+      </div>
+      <div class="nav-sub-body">
+        ${overviewItem}
+        ${entries}
+      </div>
+    </div>`;
+}
+
+// Builds a top-level section (Labs, Projects, Certs & Badges)
+function buildSection(section) {
+  const overviewItem = section.overview
+    ? `<a class="nav-item" data-path="${section.overview}" href="#${section.overview}">
+         <span class="icon">📋</span> Overview
+       </a>`
+    : '';
+
+  // Sections can have either direct entries (flat) or nested children (categorised)
+  const body = section.children
+    ? (section.children.map(buildSubSection).join(''))
+    : (section.entries || []).map(buildLeaf).join('');
+
+  return `
+    <div class="nav-section" id="${section.id}">
+      <div class="nav-section-header" onclick="toggleSection('${section.id}')">
+        <span>${section.icon}</span> ${section.label}
+        <span class="chevron">▶</span>
+      </div>
+      <div class="nav-section-body">
+        ${overviewItem}
+        ${body}
+      </div>
+    </div>
+    <div class="nav-divider"></div>`;
+}
+
+// Fetches nav.json and renders the full sidebar
+async function buildSidebar(nav) {
+  const navEl = document.getElementById('nav');
+  let html = `
+    <a class="nav-item" data-path="${nav.home}" href="#${nav.home}">
+      <span class="icon">🏠</span> Home
+    </a>
+    <div class="nav-divider"></div>`;
+
+  html += nav.sections.map(buildSection).join('');
+  navEl.innerHTML = html;
+}
+
+/* ── Collapsible section toggle + parent auto-open ───────── */
 function toggleSection(id) {
   document.getElementById(id).classList.toggle('open');
 }
 
-// Auto-open parent sections for the active path
+// Auto-open parent sections for the active path by matching segment → section id
 function openParentsForPath(path) {
-  const sectionMap = {
-    'Labs':           'sec-labs',
-    'Projects':       'sec-projects',
-    'Certs-Badges':   'sec-certs',
-    'Compute':        'sec-compute',
-    'Databases':      'sec-databases',
-    'Linux':          'sec-linux',
-    'Networking':     'sec-networking',
-    'Security':       'sec-security',
-    'Storage':        'sec-storage',
-    'Simu-Learn':     'sec-simulearn',
-  };
-  path.split('/').forEach(segment => {
-    if (sectionMap[segment]) {
-      document.getElementById(sectionMap[segment])?.classList.add('open');
-    }
+  // Collect all section ids from nav elements in the DOM
+  document.querySelectorAll('[id^="sec-"]').forEach(el => {
+    // Check if any nav-item inside this section matches the path
+    const match = el.querySelector(`a.nav-item[data-path="${path}"]`);
+    if (match) el.classList.add('open');
+    // Also open parent by checking if path starts with any child's data-path prefix
+    el.querySelectorAll('a.nav-item[data-path]').forEach(a => {
+      if (path.startsWith(a.dataset.path.split('/').slice(0, -1).join('/'))) {
+        el.classList.add('open');
+      }
+    });
   });
 }
 
 /* ── Hash routing ────────────────────────────────────────── */
 function loadFromHash() {
-  const hash = window.location.hash.slice(1); // strip '#'
+  const hash = window.location.hash.slice(1);
   const path = hash || 'README.md';
   openParentsForPath(path);
   navigate(path);
@@ -355,4 +432,15 @@ document.addEventListener('keydown', e => {
 });
 
 /* ── Initialisation ──────────────────────────────────────── */
-loadFromHash();
+// Fetch nav.json, build the sidebar, then load the current hash
+(async () => {
+  try {
+    const res = await fetch('nav.json');
+    const nav = await res.json();
+    await buildSidebar(nav);
+  } catch (e) {
+    document.getElementById('nav').innerHTML =
+      `<div class="state-msg" style="height:auto;padding:1em"><p style="font-size:12px;color:var(--muted)">⚠️ Could not load nav.json</p></div>`;
+  }
+  loadFromHash();
+})();

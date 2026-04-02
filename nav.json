@@ -1,0 +1,174 @@
+{
+  "home": "README.md",
+  "sections": [
+    {
+      "id": "sec-labs",
+      "label": "Labs",
+      "icon": "\ud83e\uddea",
+      "overview": "Labs/README.md",
+      "children": [
+        {
+          "id": "sec-compute",
+          "label": "Compute",
+          "icon": "\ud83d\udda5\ufe0f",
+          "overview": "Labs/Compute/README.md",
+          "entries": [
+            {
+              "label": "EC2 Setup",
+              "path": "Labs/Compute/ec2_setup",
+              "instructions": true
+            }
+          ]
+        },
+        {
+          "id": "sec-databases",
+          "label": "Databases",
+          "icon": "\ud83d\udcca",
+          "overview": "Labs/Databases/README.md",
+          "entries": [
+            {
+              "label": "Aurora MySQL",
+              "path": "Labs/Databases/create_an_aurora_mysql_db",
+              "instructions": true
+            },
+            {
+              "label": "DynamoDB",
+              "path": "Labs/Databases/create_and_query_dynamo_db",
+              "instructions": true
+            }
+          ]
+        },
+        {
+          "id": "sec-linux",
+          "label": "Linux",
+          "icon": "\ud83d\udc7e",
+          "overview": "Labs/Linux/README.md",
+          "entries": [
+            {
+              "label": "Amazon Linux AMI",
+              "path": "Labs/Linux/amazon_linux_ami",
+              "instructions": true
+            },
+            {
+              "label": "Editing Files",
+              "path": "Labs/Linux/editing_files",
+              "instructions": true
+            },
+            {
+              "label": "Linux CLI",
+              "path": "Labs/Linux/linux_cli",
+              "instructions": true
+            },
+            {
+              "label": "Users & Groups",
+              "path": "Labs/Linux/users_and_groups",
+              "instructions": true
+            }
+          ]
+        },
+        {
+          "id": "sec-networking",
+          "label": "Networking",
+          "icon": "\ud83c\udf10",
+          "overview": "Labs/Networking/README.md",
+          "entries": [
+            {
+              "label": "Build VPC & Web Server",
+              "path": "Labs/Networking/build_vpc_and_launch_web_server",
+              "instructions": true
+            },
+            {
+              "label": "Public & Private IPs",
+              "path": "Labs/Networking/public_and_private_ip_addresses",
+              "instructions": true
+            }
+          ]
+        },
+        {
+          "id": "sec-security",
+          "label": "Security",
+          "icon": "\ufffd\ufffd",
+          "overview": "Labs/Security/README.md",
+          "entries": [
+            {
+              "label": "Data Protection",
+              "path": "Labs/Security/data_protection_using_encryption",
+              "instructions": true
+            },
+            {
+              "label": "Firewall & Malware",
+              "path": "Labs/Security/firewall_malware",
+              "instructions": true
+            }
+          ]
+        },
+        {
+          "id": "sec-storage",
+          "label": "Storage",
+          "icon": "\ud83d\udcbe",
+          "overview": "Labs/Storage/README.md",
+          "entries": []
+        }
+      ]
+    },
+    {
+      "id": "sec-projects",
+      "label": "Projects",
+      "icon": "\ud83d\ude80",
+      "overview": "Projects/README.md",
+      "entries": [
+        {
+          "label": "3D E-Commerce Arch",
+          "path": "Projects/design_3d_e_commerce_architecture",
+          "instructions": true
+        },
+        {
+          "label": "Static Website",
+          "path": "Projects/static_website",
+          "instructions": true
+        }
+      ]
+    },
+    {
+      "id": "sec-certs",
+      "label": "Certs & Badges",
+      "icon": "\ud83c\udf93",
+      "overview": "Certs-Badges/README.md",
+      "children": [
+        {
+          "id": "sec-simulearn",
+          "label": "Simu-Learn",
+          "icon": "\ud83c\udfc5",
+          "overview": "Certs-Badges/Simu-Learn/README.md",
+          "entries": [
+            {
+              "label": "Cloud Economics",
+              "path": "Certs-Badges/Simu-Learn/cloud_economics",
+              "instructions": false
+            },
+            {
+              "label": "Core Security",
+              "path": "Certs-Badges/Simu-Learn/core_security_concepts",
+              "instructions": false
+            },
+            {
+              "label": "Databases in Practice",
+              "path": "Certs-Badges/Simu-Learn/databases_in_practice",
+              "instructions": false
+            },
+            {
+              "label": "File Systems",
+              "path": "Certs-Badges/Simu-Learn/file_systems_in_the_cloud",
+              "instructions": false
+            },
+            {
+              "label": "Networking Concepts",
+              "path": "Certs-Badges/Simu-Learn/networking_concepts",
+              "instructions": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
