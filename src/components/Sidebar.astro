@@ -1,0 +1,76 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+
+type NavEntry = {
+  label: string;
+  path: string;
+  instructions?: boolean;
+};
+
+type NavSection = {
+  id: string;
+  label: string;
+  overview?: string;
+  entries?: NavEntry[];
+  children?: NavSection[];
+};
+
+type NavRoot = {
+  home: string;
+  sections: NavSection[];
+};
+
+const navPath = path.join(process.cwd(), 'nav.json');
+const nav = JSON.parse(fs.readFileSync(navPath, 'utf8')) as NavRoot;
+
+function markdownPathToHref(mdPath: string): string {
+  const normalized = mdPath.replace(/\\/g, '/');
+  const parts = normalized.split('/');
+  const file = parts[parts.length - 1].toLowerCase();
+
+  if (file === 'readme.md') {
+    const dir = parts.slice(0, -1).join('/');
+    if (!dir) return '/';
+    return `/${dir}/`;
+  }
+
+  return `/${normalized.replace(/\.md$/i, '')}`;
+}
+---
+
+<aside class="sidebar">
+  <h1>AWS re/Start</h1>
+  <p>Portfolio Navigator</p>
+
+  <nav>
+    <a href={markdownPathToHref(nav.home)}>Home</a>
+
+    {
+      nav.sections.map((section) => (
+        <details open>
+          <summary>{section.label}</summary>
+          <div class="section-block">
+            {section.overview && <a href={markdownPathToHref(section.overview)}>Overview</a>}
+
+            {(section.entries ?? []).map((entry) => (
+              <a href={markdownPathToHref(`${entry.path}/README.md`)}>{entry.label}</a>
+            ))}
+
+            {(section.children ?? []).map((child) => (
+              <details open>
+                <summary>{child.label}</summary>
+                <div class="section-block nested">
+                  {child.overview && <a href={markdownPathToHref(child.overview)}>Overview</a>}
+                  {(child.entries ?? []).map((entry) => (
+                    <a href={markdownPathToHref(`${entry.path}/README.md`)}>{entry.label}</a>
+                  ))}
+                </div>
+              </details>
+            ))}
+          </div>
+        </details>
+      ))
+    }
+  </nav>
+</aside>

@@ -1,0 +1,76 @@
+graph TD
+    subgraph On-Premises Environment
+        OP_APP[On-Premises Applications]
+        OP_DB[On-Premises Databases]
+        OP_VM[On-Premises VMs]
+    end
+
+    subgraph Migration Services
+        DMS[AWS DMS\nDatabase Migration]
+        SMS[AWS SMS\nServer Migration]
+    end
+
+    subgraph AWS Cloud Infrastructure
+        direction LR
+
+        subgraph Compute Services
+            EC2[Amazon EC2\nApps, Web Servers, DBs]
+            LAMBDA[AWS Lambda\nServerless Functions]
+        end
+
+        subgraph Storage Services
+            S3[Amazon S3\nStatic Website & Content]
+            EBS[Amazon EBS\nBlock Storage]
+        end
+
+        subgraph Database Services
+            RDS[Amazon RDS\nRelational DBs]
+            DYNAMODB[Amazon DynamoDB\nNoSQL DB]
+        end
+
+        subgraph Security Services
+            IAM[AWS IAM\nAccess Control]
+            COGNITO[Amazon Cognito\nUser Authentication]
+        end
+
+        subgraph Networking & Monitoring
+            CF[Amazon CloudFront\nCDN]
+            R53[Amazon Route 53\nDomain Service]
+            CW[Amazon CloudWatch\nMonitoring]
+        end
+
+        Client[Users / Clients]
+        API_GW[API Gateway]
+
+        %% Data Flow
+        Client --> R53
+        R53 --> CF
+        CF --> S3
+        Client --> COGNITO
+        COGNITO --> IAM
+        IAM --> EC2
+        IAM --> LAMBDA
+        API_GW --> LAMBDA
+
+        EC2 --> EBS
+        EC2 --> RDS
+        EC2 --> S3
+        LAMBDA --> DYNAMODB
+        LAMBDA --> S3
+
+        %% Monitoring
+        EC2 --> CW
+        LAMBDA --> CW
+        S3 --> CW
+        RDS --> CW
+        DYNAMODB --> CW
+        CF --> CW
+        R53 --> CW
+
+        %% Migration Flows
+        OP_DB --> DMS
+        DMS --> RDS
+        DMS --> DYNAMODB
+        OP_VM --> SMS
+        SMS --> EC2
+    end

@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getDocByUrl } from '../lib/content.mjs';
+
+const doc = getDocByUrl('/');
+
+if (!doc) {
+  throw new Error('Root README.md could not be found.');
+}
+---
+
+<BaseLayout title={doc.title} description={doc.description}>
+  <article set:html={doc.html} />
+</BaseLayout>

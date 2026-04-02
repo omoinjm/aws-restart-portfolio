@@ -1,0 +1,140 @@
+:root {
+  --bg: #f5f4ee;
+  --ink: #1f2a2e;
+  --muted: #5b676c;
+  --line: #c9c2ae;
+  --surface: #fffef8;
+  --accent: #9b5a2e;
+  --accent-soft: #ead9c8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 20% 20%, #efe7d4 0%, transparent 45%),
+    radial-gradient(circle at 80% 10%, #e8dbc4 0%, transparent 38%),
+    var(--bg);
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  border-right: 1px solid var(--line);
+  background: var(--surface);
+  padding: 1.25rem;
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.sidebar h1 {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+.sidebar p {
+  margin: 0.35rem 0 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.sidebar a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.2rem 0.35rem;
+  border-radius: 0.25rem;
+}
+
+.sidebar a:hover {
+  background: var(--accent-soft);
+}
+
+.sidebar summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.45rem;
+}
+
+.section-block {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0.35rem 0 0.4rem 0.25rem;
+}
+
+.section-block.nested {
+  margin-left: 0.65rem;
+}
+
+.content-shell {
+  padding: 2rem 2.25rem;
+}
+
+article {
+  max-width: 900px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  box-shadow: 0 8px 30px rgba(44, 34, 15, 0.08);
+  padding: 1.8rem;
+}
+
+article h1,
+article h2,
+article h3 {
+  line-height: 1.2;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
+article a {
+  color: var(--accent);
+}
+
+article pre {
+  overflow-x: auto;
+  background: #2a2e30;
+  color: #f3f5f7;
+  padding: 0.9rem;
+  border-radius: 0.45rem;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+    max-height: none;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .content-shell {
+    padding: 1rem;
+  }
+
+  article {
+    padding: 1.1rem;
+  }
+}
