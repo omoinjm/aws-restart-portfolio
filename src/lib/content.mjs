@@ -4,10 +4,20 @@ import matter from 'gray-matter';
 import { Marked } from 'marked';
 
 const REPO_ROOT = process.cwd();
+const CONTENT_ROOT = 'docs';
 const IGNORED_DIRS = new Set(['.git', '.github', '.obsidian', 'node_modules', 'dist', '.astro', 'public']);
 
 function toPosix(p) {
   return p.split(path.sep).join('/');
+}
+
+function stripContentPrefix(relPath) {
+  const normalized = toPosix(relPath).replace(/^\/+/, '');
+  if (normalized === CONTENT_ROOT) return '';
+  if (normalized.startsWith(`${CONTENT_ROOT}/`)) {
+    return normalized.slice(CONTENT_ROOT.length + 1);
+  }
+  return normalized;
 }
 
 function walkMarkdownFiles(dirAbs, out) {
@@ -29,7 +39,7 @@ function walkMarkdownFiles(dirAbs, out) {
 }
 
 function markdownPathToUrl(relPath) {
-  const normalized = toPosix(relPath);
+  const normalized = stripContentPrefix(relPath);
   const base = path.posix.basename(normalized).toLowerCase();
 
   if (base === 'readme.md') {
@@ -49,11 +59,13 @@ function resolveAssetUrl(ref, sourceRelPath) {
     ? ref.replace(/^\/+/, '')
     : path.posix.normalize(path.posix.join(sourceDir, ref));
 
-  if (/\.md$/i.test(resolved)) {
-    return markdownPathToUrl(resolved);
+  const publicResolved = stripContentPrefix(resolved);
+
+  if (/\.md$/i.test(publicResolved)) {
+    return markdownPathToUrl(publicResolved);
   }
 
-  return `/${resolved.replace(/^\/+/, '')}`;
+  return `/${publicResolved.replace(/^\/+/, '')}`;
 }
 
 function buildMarkedForDoc(sourceRelPath) {
@@ -132,8 +144,10 @@ export function getAllDocs() {
   walkMarkdownFiles(REPO_ROOT, mdFiles);
 
   return mdFiles
+    .filter((p) => p.startsWith(`${CONTENT_ROOT}/`) || p === 'README.md')
     .filter((p) => !p.startsWith('memories/'))
     .filter((p) => p !== 'ASTRO_MIGRATION_PLAN.md')
+    .filter((p) => p !== `${CONTENT_ROOT}/ASTRO_MIGRATION_PLAN.md`)
     .map((p) => loadDoc(p))
     .sort((a, b) => a.urlPath.localeCompare(b.urlPath));
 }

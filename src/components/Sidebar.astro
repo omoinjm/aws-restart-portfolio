@@ -6,7 +6,7 @@ const navPath = path.join(process.cwd(), 'nav.json');
 const nav = JSON.parse(fs.readFileSync(navPath, 'utf8'));
 
 function mdToHref(mdPath) {
-  const normalized = mdPath.replace(/\\/g, '/');
+  const normalized = mdPath.replace(/\\/g, '/').replace(/^docs\//, '');
   const parts = normalized.split('/');
   const file = parts[parts.length - 1].toLowerCase();
   if (file === 'readme.md') {

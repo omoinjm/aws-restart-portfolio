@@ -4,13 +4,13 @@
     {
       "id": "sec-labs",
       "label": "Labs",
-      "icon": "\ud83e\uddea",
+      "icon": "🧪",
       "overview": "Labs/README.md",
       "children": [
         {
           "id": "sec-compute",
           "label": "Compute",
-          "icon": "\ud83d\udda5\ufe0f",
+          "icon": "🖥️",
           "overview": "Labs/Compute/README.md",
           "entries": [
             {
@@ -22,8 +22,8 @@
         },
         {
           "id": "sec-databases",
-          "icon": "🔒",
-          "icon": "\ud83d\udcca",
+          "label": "Databases",
+          "icon": "📊",
           "overview": "Labs/Databases/README.md",
           "entries": [
             {
@@ -41,7 +41,7 @@
         {
           "id": "sec-linux",
           "label": "Linux",
-          "icon": "\ud83d\udc7e",
+          "icon": "👾",
           "overview": "Labs/Linux/README.md",
           "entries": [
             {
@@ -69,7 +69,7 @@
         {
           "id": "sec-networking",
           "label": "Networking",
-          "icon": "\ud83c\udf10",
+          "icon": "🌐",
           "overview": "Labs/Networking/README.md",
           "entries": [
             {
@@ -87,7 +87,7 @@
         {
           "id": "sec-security",
           "label": "Security",
-          "icon": "\ufffd\ufffd",
+          "icon": "🔒",
           "overview": "Labs/Security/README.md",
           "entries": [
             {
@@ -105,7 +105,7 @@
         {
           "id": "sec-storage",
           "label": "Storage",
-          "icon": "\ud83d\udcbe",
+          "icon": "💾",
           "overview": "Labs/Storage/README.md",
           "entries": []
         }
@@ -114,7 +114,7 @@
     {
       "id": "sec-projects",
       "label": "Projects",
-      "icon": "\ud83d\ude80",
+      "icon": "🚀",
       "overview": "Projects/README.md",
       "entries": [
         {
@@ -132,13 +132,13 @@
     {
       "id": "sec-certs",
       "label": "Certs & Badges",
-      "icon": "\ud83c\udf93",
+      "icon": "🎓",
       "overview": "Certs-Badges/README.md",
       "children": [
         {
           "id": "sec-simulearn",
           "label": "Simu-Learn",
-          "icon": "\ud83c\udfc5",
+          "icon": "🏅",
           "overview": "Certs-Badges/Simu-Learn/README.md",
           "entries": [
             {
