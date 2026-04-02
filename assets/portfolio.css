@@ -1,0 +1,738 @@
+/**
+ * portfolio.css
+ * ─────────────────────────────────────────────────────────────
+ * Styles for the AWS re/Start Portfolio markdown viewer.
+ * Organised into the following sections:
+ *   1. Reset & CSS variables
+ *   2. Layout (app shell, topbar, sidebar, main)
+ *   3. Navigation items
+ *   4. Content area & markdown typography
+ *   5. Modals (markdown preview, PDF preview)
+ *   6. Component styles (meta card, badges, buttons)
+ *   7. Scrollbar & responsive / mobile
+ */
+
+/* ── Reset & base, CSS variables ────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #0d1117;
+  --surface:   #161b22;
+  --border:    #30363d;
+  --green:     #39d353;
+  --green-dim: #1a7f37;
+  --text:      #c9d1d9;
+  --muted:     #8b949e;
+  --link:      #58a6ff;
+  --sidebar-w: 280px;
+  --header-h:  48px;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ── Layout shell (app, topbar) ─────────────────────────── */
+#app {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Topbar — fixed bar shown only on mobile viewports */
+/* ── Topbar (mobile) ────────────────────────────────────── */
+#topbar {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-h);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  padding: 0 16px;
+  gap: 12px;
+  z-index: 100;
+}
+
+#hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+#hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+#hamburger:hover span { background: var(--green); }
+
+#topbar-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Sidebar structure and header ───────────────────────── */
+#sidebar {
+  width: var(--sidebar-w);
+  min-width: var(--sidebar-w);
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+  z-index: 50;
+}
+
+#sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+#sidebar-header h1 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--green);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+#sidebar-header p {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+#nav {
+  overflow-y: auto;
+  flex: 1;
+  padding: 8px 0 24px;
+}
+
+/* ── Navigation items, section headers, sub-sections, leaf items, dividers ── */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 6px;
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: none;
+  user-select: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-item:hover { background: rgba(57, 211, 83, 0.08); color: var(--green); }
+.nav-item.active { background: rgba(57, 211, 83, 0.14); color: var(--green); font-weight: 600; }
+
+.nav-item .icon { flex-shrink: 0; font-size: 13px; }
+
+/* Section headers (collapsible parents) */
+.nav-section { margin-top: 4px; }
+
+.nav-section-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  user-select: none;
+  transition: color 0.15s;
+}
+.nav-section-header:hover { color: var(--text); }
+
+.nav-section-header .chevron {
+  margin-left: auto;
+  transition: transform 0.2s;
+  font-size: 10px;
+  color: var(--muted);
+}
+.nav-section.open > .nav-section-header .chevron { transform: rotate(90deg); }
+
+.nav-section-body { display: none; }
+.nav-section.open > .nav-section-body { display: block; }
+
+/* Sub-section (e.g. Labs > Compute) */
+.nav-sub-section { margin-left: 12px; }
+
+.nav-sub-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 16px 4px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  user-select: none;
+  transition: color 0.15s;
+}
+.nav-sub-header:hover { color: var(--text); }
+.nav-sub-header .chevron {
+  margin-left: auto;
+  transition: transform 0.2s;
+  font-size: 10px;
+}
+.nav-sub-section.open > .nav-sub-header .chevron { transform: rotate(90deg); }
+
+.nav-sub-body { display: none; }
+.nav-sub-section.open > .nav-sub-body { display: block; }
+
+/* Leaf item row with optional instructions toggle */
+.nav-leaf {
+  display: flex;
+  align-items: center;
+  margin: 0 6px 1px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.nav-leaf .nav-item {
+  flex: 1;
+  margin: 0;
+  border-radius: 0;
+  padding-left: 32px;
+}
+.nav-leaf .instr-toggle {
+  flex-shrink: 0;
+  padding: 5px 8px;
+  font-size: 10px;
+  color: var(--muted);
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+.nav-leaf .instr-toggle:hover { color: var(--green); }
+.nav-leaf .instr-toggle.active { color: var(--green); }
+
+/* Divider */
+.nav-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 8px 16px;
+}
+
+/* ── Main content area and content header ───────────────── */
+#main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#content-header {
+  padding: 12px 32px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#breadcrumb {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+#breadcrumb span { color: var(--text); }
+
+#content-wrap {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+}
+
+#content {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ── Loading / Error states ─────────────────────────────── */
+.state-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  color: var(--muted);
+  gap: 12px;
+}
+
+.state-msg .icon { font-size: 40px; }
+.state-msg p { font-size: 14px; }
+
+/* ── Markdown typography (headings, links, lists, blockquotes, code, tables, images, hr) ── */
+#content h1, #content h2, #content h3,
+#content h4, #content h5, #content h6 {
+  color: #e6edf3;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 1.5em 0 0.6em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3em;
+}
+#content h1 { font-size: 2em; margin-top: 0; }
+#content h2 { font-size: 1.5em; }
+#content h3 { font-size: 1.25em; border-bottom: none; }
+#content h4, #content h5, #content h6 { border-bottom: none; font-size: 1em; }
+
+#content p { margin: 0.8em 0; }
+
+#content a { color: var(--link); text-decoration: none; }
+#content a:hover { text-decoration: underline; }
+
+#content ul, #content ol {
+  margin: 0.6em 0 0.6em 1.5em;
+}
+#content li { margin: 0.3em 0; }
+
+#content blockquote {
+  border-left: 4px solid var(--green-dim);
+  margin: 1em 0;
+  padding: 8px 16px;
+  color: var(--muted);
+  background: rgba(57, 211, 83, 0.04);
+  border-radius: 0 4px 4px 0;
+}
+
+#content code {
+  background: rgba(110, 118, 129, 0.15);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 0.875em;
+  color: #f0883e;
+}
+
+#content pre {
+  background: #0d1117;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+#content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+  font-size: 0.875em;
+}
+
+#content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  font-size: 14px;
+}
+
+#content th {
+  background: rgba(57, 211, 83, 0.08);
+  color: var(--green);
+  font-weight: 600;
+  text-align: left;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+}
+
+#content td {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+#content tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+#content img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 0.5em 0;
+}
+
+#content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2em 0;
+}
+
+/* ── Front matter meta card ─────────────────────────────── */
+.meta-card {
+  background: rgba(57, 211, 83, 0.05);
+  border: 1px solid var(--green-dim);
+  border-radius: 8px;
+  padding: 14px 18px;
+  margin-bottom: 1.8em;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.meta-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--green);
+}
+
+.meta-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.meta-tag {
+  font-size: 11px;
+  background: rgba(57, 211, 83, 0.1);
+  color: var(--green);
+  border: 1px solid var(--green-dim);
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+/* ── Markdown modal ─────────────────────────────────────── */
+#md-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  backdrop-filter: blur(4px);
+}
+#md-modal.open { display: flex; }
+
+#md-modal-inner {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 860px;
+  height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+  animation: modal-in 0.2s ease;
+}
+
+#md-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+#md-modal-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+#md-modal-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+  transition: color 0.15s;
+}
+#md-modal-close:hover { color: var(--text); }
+
+#md-modal-wrap {
+  flex: 1;
+  overflow-y: auto;
+  padding: 32px;
+}
+
+#md-modal-content {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* Inherit all markdown styles inside the modal */
+#md-modal-content h1, #md-modal-content h2, #md-modal-content h3,
+#md-modal-content h4, #md-modal-content h5, #md-modal-content h6 {
+  color: #e6edf3; font-weight: 700; line-height: 1.3;
+  margin: 1.5em 0 0.6em; border-bottom: 1px solid var(--border); padding-bottom: 0.3em;
+}
+#md-modal-content h1 { font-size: 2em; margin-top: 0; }
+#md-modal-content h2 { font-size: 1.5em; }
+#md-modal-content h3 { font-size: 1.25em; border-bottom: none; }
+#md-modal-content h4, #md-modal-content h5, #md-modal-content h6 { border-bottom: none; font-size: 1em; }
+#md-modal-content p { margin: 0.8em 0; }
+#md-modal-content a { color: var(--link); text-decoration: none; }
+#md-modal-content a:hover { text-decoration: underline; }
+#md-modal-content ul, #md-modal-content ol { margin: 0.6em 0 0.6em 1.5em; }
+#md-modal-content li { margin: 0.3em 0; }
+#md-modal-content blockquote {
+  border-left: 4px solid var(--green-dim); margin: 1em 0;
+  padding: 8px 16px; color: var(--muted);
+  background: rgba(57,211,83,0.04); border-radius: 0 4px 4px 0;
+}
+#md-modal-content code {
+  background: rgba(110,118,129,0.15); border-radius: 4px;
+  padding: 2px 6px; font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.875em; color: #f0883e;
+}
+#md-modal-content pre {
+  background: #0d1117; border: 1px solid var(--border);
+  border-radius: 8px; padding: 16px; overflow-x: auto; margin: 1em 0;
+}
+#md-modal-content pre code { background: none; padding: 0; color: inherit; font-size: 0.875em; }
+#md-modal-content table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 14px; }
+#md-modal-content th {
+  background: rgba(57,211,83,0.08); color: var(--green);
+  font-weight: 600; text-align: left; padding: 8px 12px; border: 1px solid var(--border);
+}
+#md-modal-content td { padding: 8px 12px; border: 1px solid var(--border); vertical-align: middle; }
+#md-modal-content tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+#md-modal-content img { max-width: 100%; border-radius: 6px; margin: 0.5em 0; }
+#md-modal-content hr { border: none; border-top: 1px solid var(--border); margin: 2em 0; }
+
+/* ── Inline instructions button ─────────────────────────── */
+.md-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  background: rgba(88, 166, 255, 0.08);
+  border: 1px solid rgba(88, 166, 255, 0.3);
+  border-radius: 6px;
+  color: var(--link);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+  margin: 4px 0;
+}
+.md-link-btn:hover {
+  background: rgba(88, 166, 255, 0.16);
+  border-color: var(--link);
+  transform: translateY(-1px);
+}
+.md-link-btn:active { transform: translateY(0); }
+
+/* ── PDF button ─────────────────────────────────────────── */
+.pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  background: rgba(57, 211, 83, 0.1);
+  border: 1px solid var(--green-dim);
+  border-radius: 6px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+  text-decoration: none;
+  margin: 4px 0;
+}
+.pdf-btn:hover {
+  background: rgba(57, 211, 83, 0.2);
+  border-color: var(--green);
+  transform: translateY(-1px);
+}
+.pdf-btn:active { transform: translateY(0); }
+
+/* ── PDF modal ──────────────────────────────────────────── */
+#pdf-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  backdrop-filter: blur(4px);
+}
+#pdf-modal.open { display: flex; }
+
+#pdf-modal-inner {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 960px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+  animation: modal-in 0.2s ease;
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+#pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+#pdf-modal-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+#pdf-modal-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 22px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+  transition: color 0.15s;
+}
+#pdf-modal-close:hover { color: var(--text); }
+
+#pdf-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: #fff;
+}
+
+/* ── GitHub badge pills ─────────────────────────────────── */
+.gh-badge {
+  display: inline-flex;
+  align-items: stretch;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 11px;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  vertical-align: middle;
+  margin: 2px 3px;
+  line-height: 1;
+}
+a .gh-badge { pointer-events: none; } /* let the <a> handle clicks */
+
+.gh-badge-label {
+  background: #3a3f47;
+  color: #cdd;
+  padding: 4px 8px;
+}
+
+.gh-badge-value {
+  background: var(--green-dim);
+  color: #fff;
+  padding: 4px 8px;
+  min-width: 24px;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.gh-badge-value.loading { background: #444; color: var(--muted); }
+
+#content a:has(.gh-badge):hover .gh-badge-value,
+#md-modal-content a:has(.gh-badge):hover .gh-badge-value {
+  background: var(--green);
+  color: #000;
+}
+
+/* ── Instruction section separator ─────────────────────── */
+
+/* Visual rule rendered between the README body and its instructions block */
+.instr-separator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 2em 0 1em;
+}
+.instr-separator::before, .instr-separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.instr-separator span {
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+
+/* ── Scrollbar styles ───────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* ── Mobile / responsive ────────────────────────────────── */
+@media (max-width: 768px) {
+  #topbar { display: flex; }
+
+  #app { padding-top: var(--header-h); }
+
+  #sidebar {
+    position: fixed;
+    top: var(--header-h);
+    left: 0;
+    bottom: 0;
+    transform: translateX(-100%);
+  }
+
+  #sidebar.open {
+    transform: translateX(0);
+    box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+  }
+
+  #content-wrap { padding: 20px 16px; }
+  #content-header { padding: 10px 16px; }
+}
