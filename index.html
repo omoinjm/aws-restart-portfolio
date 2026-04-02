@@ -687,15 +687,6 @@
 
     /* ── GitHub badge pills ─────────────────────────────────── */
 
-    #content .badge-row,
-    #md-modal-content .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      align-items: center;
-      margin: 0.6em 0;
-    }
-
     /* Instructions section separator */
     .instr-separator {
       display: flex;
@@ -1127,7 +1118,10 @@
 
   function stripNavigation(body) {
     // Remove the ## 🔗 Navigation section and its trailing --- divider
-    return body.replace(/^##[^\n]*Navigation[^\n]*\n[\s\S]*?\n---/m, '');
+    return body
+      .replace(/^##[^\n]*Navigation[^\n]*\n[\s\S]*?\n---/m, '')
+      // Remove any line that contains only shields.io badge markdown (images/links pointing to img.shields.io)
+      .replace(/^[^\n]*img\.shields\.io[^\n]*$/gm, '');
   }
 
   /* ── marked.js config ────────────────────────────────────── */
@@ -1140,12 +1134,9 @@
   const renderer = new marked.Renderer();
 
   renderer.heading = function({ text, depth }) {
-    // If heading content is purely images/links with no readable text (e.g. badge lines),
-    // render as a plain paragraph to avoid heading border/sizing on badge rows.
+    // If heading content is purely images/links with no readable text (e.g. badge lines), suppress it entirely.
     const textOnly = text.replace(/<[^>]+>/g, '').trim();
-    if (!textOnly) {
-      return `<p class="badge-row">${text}</p>\n`;
-    }
+    if (!textOnly) return '';
     const id = textOnly.toLowerCase().replace(/[^\w]+/g, '-');
     return `<h${depth} id="${id}">${text}</h${depth}>\n`;
   };
