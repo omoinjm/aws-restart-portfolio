@@ -645,6 +645,57 @@
       background: #fff;
     }
 
+    /* ── GitHub badge pills ─────────────────────────────────── */
+    .gh-badge {
+      display: inline-flex;
+      align-items: stretch;
+      border-radius: 4px;
+      overflow: hidden;
+      font-size: 11px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      vertical-align: middle;
+      margin: 2px 3px;
+      line-height: 1;
+    }
+    a .gh-badge { pointer-events: none; } /* let the <a> handle clicks */
+
+    .gh-badge-label {
+      background: #3a3f47;
+      color: #cdd;
+      padding: 4px 8px;
+    }
+
+    .gh-badge-value {
+      background: var(--green-dim);
+      color: #fff;
+      padding: 4px 8px;
+      min-width: 24px;
+      text-align: center;
+      transition: background 0.2s;
+    }
+
+    .gh-badge-value.loading { background: #444; color: var(--muted); }
+
+    #content a:has(.gh-badge):hover .gh-badge-value,
+    #md-modal-content a:has(.gh-badge):hover .gh-badge-value {
+      background: var(--green);
+      color: #000;
+    }
+
+    /* ── GitHub badge pills ─────────────────────────────────── */
+
+    #content .badge-row,
+    #md-modal-content .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+      margin: 0.6em 0;
+    }
+
     /* Instructions section separator */
     .instr-separator {
       display: flex;
@@ -1088,7 +1139,28 @@
   // Custom renderer: open external links in new tab, intercept internal .md links
   const renderer = new marked.Renderer();
 
+  renderer.heading = function({ text, depth }) {
+    // If heading content is purely images/links with no readable text (e.g. badge lines),
+    // render as a plain paragraph to avoid heading border/sizing on badge rows.
+    const textOnly = text.replace(/<[^>]+>/g, '').trim();
+    if (!textOnly) {
+      return `<p class="badge-row">${text}</p>\n`;
+    }
+    const id = textOnly.toLowerCase().replace(/[^\w]+/g, '-');
+    return `<h${depth} id="${id}">${text}</h${depth}>\n`;
+  };
+
   renderer.image = function({ href, title, text }) {
+    // Intercept shields.io badges → styled CSS pill
+    if (href && href.includes('img.shields.io')) {
+      const id = 'gh-badge-' + (ghBadgeCounter++);
+      pendingBadges.push({ id, src: href });
+      return `<span class="gh-badge" id="${id}" title="${text}">` +
+             `<span class="gh-badge-label">${text}</span>` +
+             `<span class="gh-badge-value loading">…</span>` +
+             `</span>`;
+    }
+
     const isExternal = href && (href.startsWith('http://') || href.startsWith('https://'));
     const src = isExternal ? href : resolvePath(currentPath, href);
     const titleAttr = title ? ` title="${title}"` : '';
@@ -1133,6 +1205,8 @@
 
   /* ── State ───────────────────────────────────────────────── */
   let currentPath = 'README.md';
+  let ghBadgeCounter = 0;
+  let pendingBadges  = [];
 
   /* ── Path helpers ────────────────────────────────────────── */
   function resolvePath(base, relative) {
@@ -1155,6 +1229,33 @@
     ).join(' › ');
   }
 
+  /* ── GitHub badge resolver ───────────────────────────────── */
+  const GH_REPO = 'omoinjm/aws-restart-portfolio';
+  let ghCache = null; // cache API response for the session
+
+  async function resolveGhBadges(badges) {
+    if (!badges.length) return;
+    try {
+      if (!ghCache) {
+        const [repo, contribs] = await Promise.all([
+          fetch(`https://api.github.com/repos/${GH_REPO}`).then(r => r.json()),
+          fetch(`https://api.github.com/repos/${GH_REPO}/contributors?per_page=100`).then(r => r.json()),
+        ]);
+        ghCache = { stars: repo.stargazers_count, contributors: Array.isArray(contribs) ? contribs.length : '—' };
+      }
+
+      badges.forEach(({ id, src }) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const val = el.querySelector('.gh-badge-value');
+        if (src.includes('stars'))        { val.textContent = '★ ' + ghCache.stars; }
+        else if (src.includes('contributors')) { val.textContent = '👥 ' + ghCache.contributors; }
+        else                              { val.textContent = '—'; }
+        val.classList.remove('loading');
+      });
+    } catch { /* fail silently — badges just stay as … */ }
+  }
+
   /* ── Fetch & render ──────────────────────────────────────── */
   async function fetchMd(path) {
     const res = await fetch(path);
@@ -1169,6 +1270,8 @@
 
   async function navigate(path, appendInstr = false) {
     currentPath = path;
+    pendingBadges = [];
+    ghBadgeCounter = 0;
 
     // Update hash without triggering hashchange loop
     history.replaceState(null, '', '#' + path);
@@ -1200,6 +1303,7 @@
       }
       contentEl.innerHTML = buildMetaCard(meta) + marked.parse(stripNavigation(body));
       contentEl.querySelectorAll('pre code').forEach(block => hljs.highlightElement(block));
+      resolveGhBadges(pendingBadges);
     } catch (e) {
       contentEl.innerHTML = `
         <div class="state-msg">
