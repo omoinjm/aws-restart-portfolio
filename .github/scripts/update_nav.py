@@ -25,7 +25,7 @@ import sys
 import argparse
 
 # ── Config ────────────────────────────────────────────────────────
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 NAV_FILE  = os.path.join(REPO_ROOT, "nav.json")
 
 # Top-level sections and how to scan them
